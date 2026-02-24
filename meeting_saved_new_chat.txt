@@ -1,0 +1,2404 @@
+2026-02-24 10:00:48 From read.ai meeting notes to Everyone:
+	Dominique added read.ai meeting notes to the meeting.
+	
+	Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+	
+	Type "read stop" to disable, or "opt out" to delete meeting data.
+	
+2026-02-24 10:01:06 From Anastasia Nasonova to Everyone:
+	Would it be possible to receive the recording of the lecture today so we can review it again later?
+	
+2026-02-24 10:01:19 From AdVenture Media Group to Everyone:
+	Long Island!
+	
+2026-02-24 10:02:56 From sam.irizarry to Everyone:
+	Please note that an AI meeting summary has been activated for this meeting.
+	Docebo and its AI technology partners will not record any audio, video, screen sharing or similar content to provide the meeting summary, but only process its transcript. If you are not comfortable with this technology, please let us know., I’m using www.granola.ai to take notes. It transcribes the meeting but doesn’t record it
+	
+2026-02-24 10:04:20 From Dan Sleeman to Everyone:
+	Replying to "Would it be possible to receive the recording of t...":
+	Of course! You’ll receive the recording afterward
+	
+2026-02-24 10:04:55 From John Mellor (@mellortime) to Everyone:
+	WTF is all the Claude Code buzz about???
+	
+2026-02-24 10:05:02 From Nin Vraitch to Everyone:
+	FOMO..!!!!
+	
+2026-02-24 10:05:04 From Misty Stinnett to Everyone:
+	I want to be able to build things for work and my life that make me more efficient
+	
+2026-02-24 10:05:05 From Diego Trejo to Everyone:
+	I want to know the limits of Claude Code
+	
+2026-02-24 10:05:09 From Ross Broms to Everyone:
+	Want to learn the flow of starting from nothing and shipping something
+	
+2026-02-24 10:05:09 From chris giliberti to Everyone:
+	To better relate to my eng team!
+	
+2026-02-24 10:05:10 From Jeff Stuart to Everyone:
+	Ready to go to next level
+	
+2026-02-24 10:05:12 From Alex to Everyone:
+	yeah same with the buzz ...
+	
+2026-02-24 10:05:13 From Johanna Salem to Everyone:
+	Not fall behind !!
+	
+2026-02-24 10:05:14 From Jason Meyer to Everyone:
+	Learn ways to improve efficiency in work
+	
+2026-02-24 10:05:14 From Kelly Chandler to Everyone:
+	Hello! I’m here to help improve our teams systems and data analytics. Hope to build a dashboard today!
+	
+2026-02-24 10:05:14 From David Poch to Everyone:
+	Better understand the breathe of capabilities and uses of claude
+	
+2026-02-24 10:05:15 From Adam Lowe to Everyone:
+	Strong design and UX background, but want to be able to BUILD
+	
+2026-02-24 10:05:15 From Laura Mantell to Everyone:
+	Learn how to build something
+	
+2026-02-24 10:05:15 From misterbomb to Everyone:
+	find out if there is a structured workflow
+	
+2026-02-24 10:05:16 From Mick to Everyone:
+	Workflow!
+	
+2026-02-24 10:05:17 From Rowan Brewer to Everyone:
+	Start building again!
+	
+2026-02-24 10:05:18 From Keera Ketterman to Everyone:
+	Want to build a complex scheduling tool with Claude Code
+	
+2026-02-24 10:05:18 From kevinryutob to Everyone:
+	Don’t want to fall behind
+	
+2026-02-24 10:05:19 From Andrew Crone to Everyone:
+	No experience with Claude code, want to understand how to use it and integrate it more into my work and personal life
+	
+2026-02-24 10:05:20 From juanluna to Everyone:
+	To build products I don’t know how to build
+	
+2026-02-24 10:05:20 From Danoosh Kapadia to Everyone:
+	Create content more efficiently.
+	
+2026-02-24 10:05:21 From Travis Davis to Everyone:
+	To excel in my current job!
+	
+2026-02-24 10:05:21 From Jared Solomon to Everyone:
+	i don't want to be left behind
+	
+2026-02-24 10:05:22 From sam.irizarry to Everyone:
+	Clear structure, best practices to follow
+	
+2026-02-24 10:05:22 From David Berkal to Everyone:
+	Want to understand the power of Claude Code. 
+	Hope to build a simple web app that I can use as a simple but real project.
+	
+2026-02-24 10:05:24 From Lisa Henkel to Everyone:
+	It's the latest shiny object!
+	
+2026-02-24 10:05:25 From Kevin to Everyone:
+	I want to learn how to do what you describe in your articles where something gets built while refilling your coffee
+	
+2026-02-24 10:05:25 From Carlos Lau to Everyone:
+	Learn to build something and build something new!
+	
+2026-02-24 10:05:26 From Eugene Skrypnyk to Everyone:
+	Be more effective at what I do at work
+	
+2026-02-24 10:05:26 From Wenzel Proksch to Everyone:
+	not fall behind in the finance job market
+	
+2026-02-24 10:05:26 From Rob H. to Everyone:
+	Building rad personal and business websites that aren’t templatized and generic.
+	
+2026-02-24 10:05:26 From kathrynsnelling to Everyone:
+	Role of PM changing and now expected to code and do more
+	
+2026-02-24 10:05:27 From steve dilla to Everyone:
+	I am early in my coding experience with Claude. Interested in workflows and best practices.
+	
+2026-02-24 10:05:27 From Katherine O'Kelly to Everyone:
+	I wanna see how hard it really is for a non-technical person to get something up and running!
+	
+2026-02-24 10:05:27 From Philip Kulishov to Everyone:
+	Leverage my work to maximize my output
+	
+2026-02-24 10:05:27 From Dominique Pahud to Everyone:
+	Learn how to use it to enhance web app I built with Droid and simple daily productivity for consulting work.
+	
+2026-02-24 10:05:27 From andrewreuben to Everyone:
+	Take an idea to prototype
+	
+2026-02-24 10:05:28 From Seth Greenberg to Everyone:
+	Just start using Claude Code. Been using Cowork a lot and wanted to see what Code is all about.
+	
+2026-02-24 10:05:28 From Stephen Biernacki to Everyone:
+	I’m a marketer who was recently laid off and feel like if I don’t do this and upskill when I have the chance, I won’t have a job in a year.
+	
+2026-02-24 10:05:28 From kamilahgriffin to Everyone:
+	Build ideas
+	
+2026-02-24 10:05:29 From Spencer Mahoney to Everyone:
+	Using Claude and Cowork a lot but looking to see what I’m missing in Code
+	
+2026-02-24 10:05:30 From liv to Everyone:
+	New direction in my career
+	
+2026-02-24 10:05:30 From Alex Magill to Everyone:
+	Building cool things
+	
+2026-02-24 10:05:30 From Ryan Healy to Everyone:
+	Automate my day to day
+	
+2026-02-24 10:05:31 From Pete Dalrymple to Everyone:
+	Excited to gain a basic understanding of the tool / application, gain comfort in using it for daily tasks, and build something
+	
+2026-02-24 10:05:31 From Leonard Barry to Everyone:
+	Goal is to build a short calculator we can use as a lead magnet on website. And learn to use Claude Code in general. Never coded before.
+	
+2026-02-24 10:05:34 From Matt C to Everyone:
+	I somewhat new to Claude so looking to further my skills for work.
+	
+2026-02-24 10:05:34 From Nish Patel to Everyone:
+	I want to be more independent — translate more of my ideas into reality — without needing an engineer
+	
+2026-02-24 10:05:36 From Anthony Venta to Everyone:
+	Content creation
+	
+2026-02-24 10:05:39 From Anastasia Nasonova to Everyone:
+	I want to know all details about Claude Code and how to use it in a cooler way
+	
+2026-02-24 10:05:42 From Allan Sun to Everyone:
+	my team is relying on me to build some great memes
+	
+2026-02-24 10:05:42 From Peter Francis to Everyone:
+	Want to convert thousands of pages of my materials into a book.
+	
+2026-02-24 10:05:43 From Jeff Scherer to Everyone:
+	Understand the art of the possible with Claude Code in all aspects of my life
+	
+2026-02-24 10:05:43 From nicholashurst to Everyone:
+	Use Claude Code to start making money more efficiently - path to buying a business
+	
+2026-02-24 10:05:45 From schoneck shoaf to Everyone:
+	Take the leap and get more comfortable with git. Goal is to build out a custom financial dashboard with alerts
+	
+2026-02-24 10:05:45 From Alexander Tilipman to Everyone:
+	I’d love to learn to build an MVP for SaaS with proper code structure and great UX as a non-technical person
+	
+2026-02-24 10:05:47 From aliciapolicinski to Everyone:
+	Accelerate GTM.  Contribute to AI- driven product build
+	
+2026-02-24 10:05:48 From Rs. to Everyone:
+	I am a non coder, I always wanted to develop applications , hence I would like to use this to develop
+	
+2026-02-24 10:05:50 From Sulaiman Rahman to Everyone:
+	Understand the end to end process so I can build day to day tools to make my professional and personal life easier.
+	
+2026-02-24 10:05:50 From Diego Escosteguy to Everyone:
+	Build things that I couldn’t because of lack of coding expertise
+	
+2026-02-24 10:05:55 From Lisa Henkel to Everyone:
+	dynamic dashboard creation
+	
+2026-02-24 10:06:00 From Apryl Pilolli to Everyone:
+	Do more with less to support the Black Press
+	
+2026-02-24 10:06:01 From Shelli to Everyone:
+	Automating work tasks
+	
+2026-02-24 10:06:04 From Travis Davis to Everyone:
+	I want to be able integrate AI into my daily workflow.
+	
+2026-02-24 10:06:08 From Alex to Everyone:
+	never sleep again
+	
+2026-02-24 10:06:09 From Pinay Jones to Everyone:
+	I’m a humanities nerd who’s trying to lean more into tech and AI despite a non-technical background! This makes it feel accessible.
+	
+2026-02-24 10:06:10 From Anna Moore to Everyone:
+	Establish and learn about workflows with multi-agents working in parallel 
+	Don't sit and watch one agent work—spin up 2-3 more to work concurrently on one task or multiple tasks. Claude can run "sub-agents" in parallel for unrelated tasks, or switch into "think ultra hard" mode for complex reasoning problems:
+	
+2026-02-24 10:06:16 From Garrett Carpenter to Everyone:
+	Eliminate manual workflows
+	
+2026-02-24 10:06:17 From Natasha Jen to Everyone:
+	Build a financial overview dashboard for the business
+	
+2026-02-24 10:06:20 From MM to Everyone:
+	Create a digital clone of my brain and obtain IP protection for everything I know lololol
+	
+2026-02-24 10:06:21 From patrickmceleneymusic@gmail.com to Everyone:
+	Trying to avoid AI blindspots
+	
+2026-02-24 10:06:21 From Shawden S to Everyone:
+	want to be able to build my own apps and agents
+	
+2026-02-24 10:06:23 From Rs. to Everyone:
+	I am planning to use this tool to use in my internal process - developing apps and dashboarding and do data analytics
+	
+2026-02-24 10:06:49 From Pinay Jones to Everyone:
+	I’m from the 757 as well!
+	
+2026-02-24 10:06:52 From Mick to Everyone:
+	Stop burning tokens inefficiently
+	
+2026-02-24 10:06:55 From Doug Stewart to Everyone:
+	Refine and modernize my law firm's operations.
+	
+2026-02-24 10:07:07 From Kaivan Shah to Everyone:
+	I want to be a 10X person.
+	
+2026-02-24 10:13:21 From Alex to Everyone:
+	clarke
+	
+2026-02-24 10:13:23 From Alex to Everyone:
+	?
+	
+2026-02-24 10:13:23 From Nish Patel to Everyone:
+	Marshall!
+	
+2026-02-24 10:13:25 From Gavin to Everyone:
+	mccluhan
+	
+2026-02-24 10:13:25 From Alex to Everyone:
+	arthur
+	
+2026-02-24 10:13:25 From Barclay Blair to Everyone:
+	marshall
+	
+2026-02-24 10:13:26 From andrewreuben to Everyone:
+	Marshall Mcluan
+	
+2026-02-24 10:14:01 From AdVenture Media Group to Everyone:
+	He probably isn’t that good at hockey if he’s canadian
+	
+2026-02-24 10:14:55 From Johanna Salem to Everyone:
+	All of the above 😄
+	
+2026-02-24 10:17:15 From Rob Ross to Everyone:
+	Will we have access to the recording at some point after today?
+	
+2026-02-24 10:17:36 From Dan Sleeman to Everyone:
+	Replying to "Will we have access to the recording at some point...":
+	Yep, you will get it tomorrow!
+	
+2026-02-24 10:17:57 From chris giliberti to Everyone:
+	Will there be any breaks? Trying to juggle work / mtgs in the background 🙂
+	
+2026-02-24 10:18:04 From Will Mannon to Everyone:
+	Replying to "Will there be any breaks? Trying to juggle work / ...":
+	Yes, agenda coming next
+	
+2026-02-24 10:18:23 From Nin Vraitch to Everyone:
+	At some point, please could you briefly cover difference between Claude Code and Claude Cowork - Thanks.!
+	
+2026-02-24 10:18:42 From Dan Sleeman to Everyone:
+	Replying to "Will there be any breaks? Trying to juggle work / ...":
+	Yes, we’ll have a few throughout the day. The long break will be at 1:30pm.
+	
+2026-02-24 10:19:35 From Dan Sleeman to Everyone:
+	Replying to "At some point, please could you briefly cover diff...":
+	A good one for Dan’s Q&A
+	
+2026-02-24 10:20:47 From Johanna Salem to Everyone:
+	Will we touch on how to customize the style and brand colors of dashboards??
+	
+2026-02-24 10:20:47 From Mick Costigan to Everyone:
+	Replying to "Will there be any breaks? Trying to juggle work / ...":
+	Is there a persistent link to the agenda? Missed it there
+	
+2026-02-24 10:20:53 From Will Mannon to Everyone:
+	Replying to "Will we touch on how to customize the style and br...":
+	Yes 100%
+	
+2026-02-24 10:21:53 From kevinryutob to Everyone:
+	Will be working in terminal or in the desktop app? I know the desktop app is relatively new but the engineers in my org have been saying the desktop app has been getting much better
+	
+2026-02-24 10:22:07 From Will Mannon to Everyone:
+	Replying to "Will be working in terminal or in the desktop app?...":
+	About to cover that. We recommend the app
+	
+2026-02-24 10:22:12 From Will Mannon to Everyone:
+	Replying to "Will be working in terminal or in the desktop app?...":
+	Although both are viable
+	
+2026-02-24 10:22:15 From Barclay Blair to Everyone:
+	Replying to "At some point, please could you briefly cover diff...":
+	Also Claude Code v Cursor v Lovable v Replit v Vercel etc. Where do they all fit in the ecosystem.
+	
+2026-02-24 10:23:10 From Jeff Scherer to Everyone:
+	are there any advantages to the terminal?
+	
+2026-02-24 10:23:26 From Anna Moore to Everyone:
+	can i use terminal. I am all setup
+	
+2026-02-24 10:23:55 From Jason Meyer to Everyone:
+	IT guy set me up with Warp app. Will that work
+	
+2026-02-24 10:24:13 From Nityesh Agarwal to Everyone:
+	Replying to "are there any advantages to the terminal?":
+	Mostly if you’re a developer. If not, the Desktop app is almost equally as powerful but with an infinitely less intimidating interface.
+	
+2026-02-24 10:24:55 From Nityesh Agarwal to Everyone:
+	Replying to "can i use terminal. I am all setup":
+	If you’re all setup, feel free to use it. All future instructions today will be valid for terminal just as well
+	
+2026-02-24 10:25:17 From Dan Sleeman to Everyone:
+	Here is the agenda for the day, for you to refer back to as you need: 
+	https://docs.google.com/document/d/1eXFbMFjTi63E4HvzEubTRljAjcLUB9hE2j5e7eTHsIM/edit?tab=t.0
+	
+2026-02-24 10:25:24 From Nityesh Agarwal to Everyone:
+	Replying to "IT guy set me up with Warp app. Will that work":
+	Yes that’s a terminal app. If you have Claude Code installed there, it will work just as well.
+	
+2026-02-24 10:25:31 From liv to Everyone:
+	If we wanted to build apps with Claude as per the next course, would knowing the desktop version be sufficient?
+	
+2026-02-24 10:26:14 From Randy Shipper to Everyone:
+	Could not get Claude installed
+	
+2026-02-24 10:26:18 From Barclay Blair to Everyone:
+	Xerox
+	
+2026-02-24 10:26:26 From Alexander Tilipman to Everyone:
+	Which Claude Plan should we be using? Is Max @100$ enough?
+	
+2026-02-24 10:26:28 From Dan Sleeman to Everyone:
+	Replying to "If we wanted to build apps with Claude as per the ...":
+	For that course we’ll be using the terminal. If that’s something you want to do, I’d recommend trying it today. We can help you get set up this afternoon if you need
+	
+2026-02-24 10:26:31 From Varun Malhotra to Everyone:
+	Can we dangerously-skip-permissions in the App? Or is it terminal only?
+	
+2026-02-24 10:26:50 From Nityesh Agarwal to Everyone:
+	Replying to "Which Claude Plan should we be using? Is Max @100$...":
+	Yep - that should be enough for today
+	
+2026-02-24 10:27:15 From Ross Broms to Everyone:
+	Replying to "Which Claude Plan should we be using? Is Max @100$...":
+	Do we need the $100 or is $20 sufficient?
+	
+2026-02-24 10:27:18 From Alexander Tilipman to Everyone:
+	Replying to "Which Claude Plan should we be using? Is Max @100$...":
+	@Nityesh Agarwal great. Been hitting limits quickly on the 20$ plan. Upgraded for today
+	
+2026-02-24 10:27:25 From Rob Ross to Everyone:
+	I transferred out of CS in college bc I couldn’t remember all the terminal shortcuts haha
+	
+2026-02-24 10:27:30 From Nityesh Agarwal to Everyone:
+	Replying to "Could not get Claude installed":
+	Can you tell me more? Did the app not get downloaded?
+	
+2026-02-24 10:27:34 From Ross Broms to Everyone:
+	Replying to "Which Claude Plan should we be using? Is Max @100$...":
+	Just got it set up for today and wasn’t sure if the $100 was necessary
+	
+2026-02-24 10:27:41 From kevinryutob to Everyone:
+	Replying to "I transferred out of CS in college bc I couldn’t r...":
+	cd wait what was my file path again
+	
+2026-02-24 10:28:04 From Wang Lingyu to Everyone:
+	im architect and using windows. I  want to  paste image /snip (100+ per day) into CLI, but not folder path. is there a way? currently using claude code extension via vs code.
+	
+2026-02-24 10:28:07 From Alexander Tilipman to Everyone:
+	@Mike Taylor Could you briefly talk about Claude vs Codex?
+	
+2026-02-24 10:28:14 From Ross Broms to Everyone:
+	Replying to "Which Claude Plan should we be using? Is Max @100$...":
+	@Nityesh Agarwal
+	
+2026-02-24 10:28:25 From Mateo García to Everyone:
+	It’s the basic $20 plan enough?
+	
+2026-02-24 10:28:32 From Dan Sleeman to Everyone:
+	Replying to "It’s the basic $20 plan enough?":
+	For today, yes!
+	
+2026-02-24 10:28:41 From kevinryutob to Everyone:
+	Will there be any instructions on building agents?
+	
+2026-02-24 10:28:56 From Rob Ross to Everyone:
+	Every Camp Request: Claude Code with Warp
+	
+2026-02-24 10:28:57 From Nityesh Agarwal to Everyone:
+	Replying to "Which Claude Plan should we be using? Is Max @100$...":
+	$100 plan is best for today. You may hit limits too often with the $20 plan
+	
+2026-02-24 10:29:18 From Sasha Temerte to Everyone:
+	If I install Claude for terminal instead of desktop, will I be able to toggle it on/off easily so it’s not pulling credits when I don’t need it? (My laptop is mixed personal/work use and I use terminal personally but Claude for work)
+	
+2026-02-24 10:29:40 From Nityesh Agarwal to Everyone:
+	Replying to "I transferred out of CS in college bc I couldn’t r...":
+	Time to go back to CS because you don’t need to remember any of them today. Claude uses them for you like a terminal pro
+	
+2026-02-24 10:29:56 From Misty Stinnett to Everyone:
+	I installed it in both the terminal and the desktop app. Anything I need to worry about there?
+	
+2026-02-24 10:30:36 From Dhruv Tyagi to Everyone:
+	Not using Dark mode gives me anxiety
+	
+2026-02-24 10:30:52 From Jeff Scherer to Everyone:
+	why does my desktop app not have co-work option?
+	
+2026-02-24 10:31:08 From Alex to Everyone:
+	Replying to "why does my desktop app not have co-work option?":
+	need max
+	
+2026-02-24 10:31:21 From Jeff Scherer to Everyone:
+	Replying to "why does my desktop app not have co-work option?":
+	I have Enterprise - is that not enough?
+	
+2026-02-24 10:31:23 From Chris Gray to Everyone:
+	I tried to download the Claude App but I’m not sure if I did it correctly. How can I check. I have a Claude subscription.
+	
+2026-02-24 10:31:37 From Misty Stinnett to Everyone:
+	Replying to "why does my desktop app not have co-work option?":
+	Same issue here — but mine actually says an OS update is required
+	
+2026-02-24 10:31:37 From Randy Shipper to Everyone:
+	Replying to "Could not get Claude installed":
+	It says it was installed, but when I launch, it says it cannot load connectors directory
+	
+2026-02-24 10:31:40 From Alex to Everyone:
+	Replying to "why does my desktop app not have co-work option?":
+	maybe .. then when was last time you updated it?
+	
+2026-02-24 10:31:46 From chris giliberti to Everyone:
+	Replying to "Could not get Claude installed":
+	Im getting this same error ^
+	
+2026-02-24 10:32:00 From Barclay Blair to Everyone:
+	Replying to "why does my desktop app not have co-work option?":
+	Try updating. Not sure that Cowork is avail with Enterprise plans. It is avail with Pro, don’t need Max.
+	
+2026-02-24 10:32:14 From Rob Ross to Everyone:
+	Replying to "Not using Dark mode gives me anxiety":
+	I’m the opposite. Dark mode heeby jeebies
+	
+2026-02-24 10:32:30 From kevinryutob to Everyone:
+	Always use opus 4.6
+	
+2026-02-24 10:32:30 From Nityesh Agarwal to Everyone:
+	Replying to "why does my desktop app not have co-work option?":
+	Cowork might not be available in enterprise plans
+	
+2026-02-24 10:32:52 From Nityesh Agarwal to Everyone:
+	Replying to "Could not get Claude installed":
+	Are you on Mac or windows?
+	
+2026-02-24 10:33:00 From Randy Shipper to Everyone:
+	Replying to "Could not get Claude installed":
+	Win11Pro
+	
+2026-02-24 10:33:25 From Johanna Salem to Everyone:
+	Screenshot2026_02_24_193317.jpg
+	
+2026-02-24 10:33:31 From Johanna Salem to Everyone:
+	Replying to "Screenshot2026_02_24_193317.jpg":
+	??
+	Screenshot2026_02_24_193328.jpg
+	
+2026-02-24 10:34:02 From Kevin Slavin to Everyone:
+	Sorry just confirming — I use the Claude desktop app on pro plan, and Claude Code desktop is just the “code” tab at the top of the primary window, nothing more
+	
+2026-02-24 10:34:05 From Alexander Tilipman to Everyone:
+	Can you also mention Opus 4.6 vs Sonnet 4.6? @Mike Taylor
+	
+2026-02-24 10:34:06 From Nityesh Agarwal to Everyone:
+	Replying to "Screenshot2026_02_24_193317.jpg":
+	Yes install this
+	
+2026-02-24 10:34:17 From Nityesh Agarwal to Everyone:
+	Replying to "Sorry just confirming — I use the Claude desktop a...":
+	That’s right
+	
+2026-02-24 10:34:24 From Kevin Slavin to Everyone:
+	Replying to "Sorry just confirming — I use the Claude desktop a...":
+	thx
+	
+2026-02-24 10:34:36 From Sasha Temerte to Everyone:
+	Replying to "If I install Claude for terminal instead of deskto...":
+	Anyone who knows the answer here? 🙂
+	
+2026-02-24 10:34:49 From Jenna Ghidaleson to Everyone:
+	Replying to "Could not get Claude installed":
+	same here
+	
+2026-02-24 10:35:01 From Alexander Tilipman to Everyone:
+	Screenshot 2026-02-24 at 16.34.51.png
+	
+2026-02-24 10:35:18 From Jeff Scherer to Everyone:
+	I am getting this error:
+	Git is required for local sessions. Download Git for Windows, or set the CLAUDE_CODE_GIT_BASH_PATH environment variable to your git executable, then restart the app.
+	
+2026-02-24 10:35:18 From Leonard Barry to Everyone:
+	Will want to hear about security. Eventually let it run without permissions so it can work quickly, but only access certain folders/areas. We likely will not be comfortable with it accessing confidential client information.
+	
+2026-02-24 10:35:24 From Seth Greenberg to Everyone:
+	oakland_ascii_art.txt
+	
+2026-02-24 10:35:35 From Arjun M to Everyone:
+	My desktop app does not look like yours ... Maybe i setup billing wrong/ have the wrong version therefore... I 
+	Visited console.anthropic.com
+	went to billing and added cash directly...
+	
+2026-02-24 10:35:47 From Brenda to Everyone:
+	I’ve downloaded git but it’s still giving the connection error
+	
+2026-02-24 10:35:47 From Clayton Fuller to Everyone:
+	I must’ve missed it, sorry, but how do you make sure the folder is linked to Claude?
+	
+2026-02-24 10:35:55 From Misty Stinnett to Everyone:
+	Replying to "I installed it in both the terminal and the deskto...":
+	@Nityesh Agarwal
+	
+2026-02-24 10:35:57 From Johanna Salem to Everyone:
+	Replying to "Screenshot2026_02_24_193317.jpg":
+	GIT is taking forever to download..
+	
+2026-02-24 10:35:58 From Chris Gray to Everyone:
+	Please walk through the steps of downloading the app
+	
+2026-02-24 10:36:03 From juanluna to Everyone:
+	bogota_mountains.txt
+	
+2026-02-24 10:36:04 From kathrynsnelling to Everyone:
+	Tried to do image and got error “ the directory is empty”
+	
+2026-02-24 10:36:04 From Rob H. to Everyone:
+	“it’s a dry heat” lmao
+	CleanShot 2026-02-24 at 08.35.38@2x.png
+	
+2026-02-24 10:36:05 From Jenna Ghidaleson to Everyone:
+	Replying to "Screenshot2026_02_24_193317.jpg":
+	were you able to click install? it just an image that came up and its not clickable
+	
+2026-02-24 10:36:17 From Anna Moore to Everyone:
+	● _   _______      __  __   __
+	         | \ | \ \ \ \    / / \ \ / /
+	         |  \| |\ \ \ \  / /   \ V /
+	         | . ` | \ \ \ \/ /     > <
+	         | |\  |  \ \ \  /     / . \
+	         |_| \_|   \_\_\/     /_/ \_\
+	
+	      |||||  |||||  ||| |||||  ||||||
+	      ||  \\ ||  \\ ||| ||  \\ ||
+	      |||||  ||  || ||| ||  || ||||
+	      ||  \  ||  || ||| ||  || ||
+	      ||  \\ |||||  ||| |||||  ||||||
+	
+	    _______________________________________
+	   |  _   _  _  _  _ |  _  ___  _  _  _  |
+	   | |_  [_  |  |_/ ||_   | |  |_  | [_  |
+	   | |_  [_  |_ | \_ |_]  |_|  |_  |_ _] |
+	   |_______________________________________|
+	
+	          [=] [=] [=] [=] [=] [=]
+	         /   \   /   \   /   \   \
+	        / SKY \/ SKY  \/ SKY  \   \
+	    ___/  LINE  LINE   LINE    \___\___
+	   |  |__|  |__|  |__|  |__|  |__|  |  |
+	   |  |  |  |  |  |  |  |  |  |  |  |  |
+	  _|__|__|__|__|__|__|__|__|__|__|__|__|__
+	  ~  HUDSON RIVER  ~~  EAST RIVER  ~~~~~
+	
+2026-02-24 10:36:29 From Johanna Salem to Everyone:
+	Replying to "Screenshot2026_02_24_193317.jpg":
+	Had the same issue… swipe back to home
+	
+2026-02-24 10:36:37 From Danoosh Kapadia to Everyone:
+	Replying to "Screenshot2026_02_24_193317.jpg":
+	inner_richmond.txt
+	
+2026-02-24 10:36:38 From Dan Sleeman to Everyone:
+	Download the App here: https://claude.com/download
+	
+2026-02-24 10:36:40 From Johanna Salem to Everyone:
+	Replying to "Screenshot2026_02_24_193317.jpg":
+	And ull get a notification to download
+	
+2026-02-24 10:36:45 From Barclay Blair to Everyone:
+	brooklyn.txt
+	
+2026-02-24 10:36:47 From Jeff Stuart to Everyone:
+	Git is required but not found.. I downloaded and installed.. what now?
+	
+2026-02-24 10:36:49 From Adam Lowe to Everyone:
+	“Where the sun Spends the Winter” 😂
+	CleanShot 2026-02-24 at 10.36.19@2x.png
+	
+2026-02-24 10:37:16 From Alex Magill to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	East Bay!
+	Screenshot2026_02_24_073705.jpg
+	
+2026-02-24 10:37:20 From Rob Ross to Everyone:
+	Do we need a different folder for every single app we build?
+	
+2026-02-24 10:37:21 From steve dilla to Everyone:
+	🇨🇦 city, mountains, and beach… what more could you want?
+	Screenshot 2026-02-24 at 07.36.06.png
+	
+2026-02-24 10:37:31 From Stephen Biernacki to Everyone:
+	pittsburgh-ascii-art.jpg
+	
+2026-02-24 10:37:50 From Anthony Venta to Everyone:
+	Replying to "Git is required but not found.. I downloaded and i...":
+	I'm having the same issue
+	
+2026-02-24 10:37:51 From Seth Greenberg to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	Ha love the different representations!
+	
+2026-02-24 10:37:52 From schoneck shoaf to Everyone:
+	All the bats
+	Screenshot 2026-02-24 at 9.37.43 AM.png
+	
+2026-02-24 10:37:54 From kamilahgriffin to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	🤩
+	
+2026-02-24 10:37:59 From Alexander Tilipman to Everyone:
+	Replying to "pittsburgh-ascii-art.jpg":
+	Love the dark mode
+	
+2026-02-24 10:38:02 From Jeff Scherer to Everyone:
+	sorry - repeating this
+	Git is required for local sessions. Download Git for Windows, or set the CLAUDE_CODE_GIT_BASH_PATH environment variable to your git executable, then restart the app.
+	
+2026-02-24 10:38:07 From Travis Davis to Everyone:
+	{F4B15C6F-9F74-4F11-8034-99AEE28D0B06}.png
+	
+2026-02-24 10:38:12 From Leonard Barry to Everyone:
+	Screenshot2026_02_24_093808.jpg
+	
+2026-02-24 10:38:14 From chris giliberti to Everyone:
+	Can you explain local vs other?
+	
+2026-02-24 10:38:24 From Philip Kulishov to Everyone:
+	Does it matter which version of Claude? (Sonnet, Opus, etc.)
+	
+2026-02-24 10:38:39 From Natalia Q to Everyone:
+	Replying to "sorry - repeating this Git is required for local s...":
+	@Nityesh Agarwal
+	
+2026-02-24 10:38:44 From Rob Ross to Everyone:
+	Screenshot 2026-02-24 at 7.38.35 AM.png
+	
+2026-02-24 10:39:04 From David Berkal to Everyone:
+	Should we be using the default model (Sonnet 4.6) or switch to Opus?
+	
+2026-02-24 10:39:08 From Mick to Everyone:
+	Screenshot 2026-02-24 at 16.38.56.png
+	
+2026-02-24 10:39:12 From Jeff Scherer to Everyone:
+	Replying to "sorry - repeating this Git is required for local s...":
+	Help please
+	
+2026-02-24 10:39:13 From Seth Greenberg to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	Where you at @Alex Magill @kamilahgriffin? Up in Montclair now but used to live by Lake Merritt
+	
+2026-02-24 10:39:17 From andrewreuben to Everyone:
+	How do you save the image to a file?
+	
+2026-02-24 10:39:21 From Brenda to Everyone:
+	Replying to "At some point, please could you briefly cover diff...":
+	I still have an issue; saying git required, which i have downloaded
+	
+2026-02-24 10:39:22 From Misty Stinnett to Everyone:
+	@Nityesh Agarwal I’m trying to download Git to my computer but it says it takes 15GB and I don’t have enough disk space. 15GB seems huge — is this right?
+	
+2026-02-24 10:39:34 From misterbomb to Everyone:
+	chamonix.txt
+	
+2026-02-24 10:39:42 From Chris Gray to Everyone:
+	Yes, can we have a breakout room to download Claude. I have it in my downloads but it won’t open
+	
+2026-02-24 10:39:49 From Rob Ross to Everyone:
+	Do we need to create a different folder for each app we build?
+	
+2026-02-24 10:39:55 From Stephen Biernacki to Everyone:
+	Replying to "Screenshot 2026-02-24 at 16.38.56.png":
+	This is great!
+	
+2026-02-24 10:40:01 From Nityesh Agarwal to Everyone:
+	Replying to "@Nityesh Agarwal I’m trying to download Git to my ...":
+	This is right. It will need to install Git with developer tools on Mac
+	
+2026-02-24 10:40:02 From Jeff Scherer to Everyone:
+	Replying to "sorry - repeating this Git is required for local s...":
+	It will not let me do anything locally without this. I cannot cluck the orange arrow
+	
+2026-02-24 10:40:08 From Mateo García to Everyone:
+	Claude asks to download a git software
+	
+2026-02-24 10:40:09 From Nityesh Agarwal to Everyone:
+	Replying to "@Nityesh Agarwal I’m trying to download Git to my ...":
+	Which is about 15Gb
+	
+2026-02-24 10:40:13 From Jeff Stuart to Everyone:
+	not allowing me to do anything.. without git
+	
+2026-02-24 10:40:23 From Jeff Scherer to Everyone:
+	Replying to "sorry - repeating this Git is required for local s...":
+	For some reason, I do need it. Can't proceed
+	
+2026-02-24 10:40:27 From Alexander Tilipman to Everyone:
+	Opus VS Sonnet
+	
+2026-02-24 10:40:28 From Lisa Henkel to Everyone:
+	The arrow is not allowing me to click it
+	
+2026-02-24 10:40:30 From Shelli to Everyone:
+	what is echo $home
+	
+2026-02-24 10:40:32 From Alex to Everyone:
+	man NYC ASCII is so much boring than Hoboken's. this is insulting :-)
+	
+2026-02-24 10:40:34 From Jenna Ghidaleson to Everyone:
+	i downloaded the git software, but im still getting the error of not being able to code
+	
+2026-02-24 10:40:34 From Kevin Slavin to Everyone:
+	I keep getting prompts for permissions (e.g., Allow Claude to Write generate_map_10471.py) and assuming that’s normal
+	
+2026-02-24 10:40:44 From Misty Stinnett to Everyone:
+	Replying to "@Nityesh Agarwal I’m trying to download Git to my ...":
+	Yikes okay, I’ll have to clear disk space then.
+	
+2026-02-24 10:40:46 From Claire to Everyone:
+	Hi , I downloaded code to desktop. I dont have it in a folder though. Does it need to be ? can you explain again 
+	
+2026-02-24 10:40:48 From Alex Magill to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	I’m in West Oakland. Also an updated “make it hella Oakland” image
+	oakland.txt
+	
+2026-02-24 10:40:51 From Dan Sleeman to Everyone:
+	Replying to "I keep getting prompts for permissions (e.g., Allo...":
+	Yes that is right
+	
+2026-02-24 10:40:56 From MM to Everyone:
+	PROSPECT PARK, BROOKLYN
+	    
+	           .  ~  .  ~  .  ~  .  ~  .  ~  .  ~  .  ~  .
+	        ~     PROSPECT PARK LAKE        __/\__        ~
+	       .   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~/      \~~~~   .
+	      ~   ~~  ~~  ~~  ~~  ~~  ~~  ~~ /  BOAT  \ ~~   ~
+	       . ~~  ~~  ~~  ~~  ~~  ~~  ~~ /  HOUSE   \~~   .
+	      ~  ~~  ~~   ><>  ~~  ~~  ~~  /____________\ ~   ~
+	       . ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  .
+	        ~  ~~  ~~  ~~  ~~  ><>  ~~  ~~  ~~  ~~  ~~  ~
+	           .  ~  .  ~  .  ~  .  ~  .  ~  .  ~  .
+	
+	   ~
+	
+2026-02-24 10:41:19 From Nish Patel to Everyone:
+	my first ever prompt
+	
+2026-02-24 10:41:30 From Andrew Crone to Everyone:
+	my first ever prompt
+	
+2026-02-24 10:41:35 From Anne to Everyone:
+	What is the next step after the ascii appears? How do you save it?
+	
+2026-02-24 10:41:35 From Varun Malhotra to Everyone:
+	my first ascii image.txt
+	
+2026-02-24 10:41:37 From andrewreuben to Everyone:
+	I created the image but not sure how to save the image to a file
+	
+2026-02-24 10:41:38 From Ross Broms to Everyone:
+	Screenshot2026_02_24_104131.jpg
+	
+2026-02-24 10:41:43 From Lisa Henkel to Everyone:
+	My arrow is greyed out.
+	
+2026-02-24 10:41:48 From Lisa Henkel to Everyone:
+	Can't submit
+	
+2026-02-24 10:42:00 From kathrynsnelling to Everyone:
+	my first ever prompt
+	
+2026-02-24 10:42:08 From Anastasia Nasonova to Everyone:
+	my first ever prompt
+	
+2026-02-24 10:42:08 From Sulaiman Rahman to Everyone:
+	Screenshot 2026-02-24 at 7.41.56 AM.png
+	
+2026-02-24 10:42:15 From Seth Greenberg to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	Love “The Town” emphasis 💪
+	
+2026-02-24 10:42:18 From Jeff Scherer to Everyone:
+	I am totally stuck. Can someone help me in a breakout room?
+	
+2026-02-24 10:42:33 From patrickmceleneymusic@gmail.com to Everyone:
+	Screenshot2026_02_24_154226.jpg
+	
+2026-02-24 10:42:33 From Kevin Slavin to Everyone:
+	map_10471.txt
+	
+2026-02-24 10:42:34 From Kevin to Everyone:
+	Mine did not add a file extension
+	
+2026-02-24 10:42:40 From Wenzel Proksch to Everyone:
+	same can some help me in a breakout room
+	
+2026-02-24 10:42:43 From Pete Dalrymple to Everyone:
+	I think Jeff and I are having similar issues
+	
+2026-02-24 10:42:46 From Jeff Stuart to Everyone:
+	Still stuck.. cannot  create image or do anything in code says I need git (which I installed already??)
+	
+2026-02-24 10:42:47 From Sasha Temerte to Everyone:
+	Are we going to cover setting up Claude Skills today?
+	
+2026-02-24 10:42:53 From Nityesh Agarwal to Everyone:
+	We’ll have a breakout room in a few minutes
+	
+2026-02-24 10:42:57 From aliciapolicinski to Everyone:
+	It asked if it can access my desktop files.  Do I say yes?
+	
+2026-02-24 10:43:00 From Dhruv Tyagi to Everyone:
+	My first ever prompt.txt
+	
+2026-02-24 10:43:09 From Kevin to Everyone:
+	my first ever prompt.txt
+	
+2026-02-24 10:43:16 From Seth Greenberg to Everyone:
+	Replying to "Are we going to cover setting up Claude Skills tod...":
+	+1 to this!
+	
+2026-02-24 10:43:19 From Randy Shipper to Everyone:
+	How do you save it?
+	
+2026-02-24 10:43:32 From Daniela to Everyone:
+	Screenshot at Feb 24 16-43-05.png
+	
+2026-02-24 10:43:41 From Lisa Henkel to Everyone:
+	HELP
+	
+2026-02-24 10:44:00 From Stephen Biernacki to Everyone:
+	Once you begin a chat, are you ‘stuck’ working in the same location/folder? It seems like once you start, you can’t change. Is that true?
+	
+2026-02-24 10:44:02 From Jeff Stuart to Everyone:
+	windows for me
+	
+2026-02-24 10:44:06 From Laura Mantell to Everyone:
+	I’m having the issue on Mac
+	
+2026-02-24 10:44:09 From nicholashurst to Everyone:
+	__
+	
+2026-02-24 10:44:10 From Stephen Biernacki to Everyone:
+	Replying to "How do you save it?":
+	I just asked it to save it.
+	
+2026-02-24 10:44:10 From Pinay Jones to Everyone:
+	same
+	
+2026-02-24 10:44:19 From juanluna to Everyone:
+	Replying to "How do you save it?":
+	You can ask Claude ”save it in a local file” and It’ll save it
+	
+2026-02-24 10:44:20 From Pete Sockett to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	{340146F6-F92B-4400-9E32-7F35813EFA07}.png
+	
+2026-02-24 10:44:30 From Amanda to Everyone:
+	after installing if you go to the menu in the top left and click exit and then reopen it fixed it for me (on windows)
+	
+2026-02-24 10:44:43 From Kaivan Shah to Everyone:
+	Emeryville Marina.txt
+	
+2026-02-24 10:44:44 From nicholashurst to Everyone:
+	Milton, Massachusetts
+	                                      ~~~~~~~~~~~~~~~~~~~~
+	
+	                        ⌂       .  *  .       ⌂
+	               *    .        _/\_           .        *
+	          .              . /    \  .                      .
+	                __/\__    /  ⌂   \    __/\__
+	      .       /  Blue  \ /       \ /  Hills  \        .
+	 ~~~~~~~~~~~/   Hills   \_________/  Reservation\~~~~~~~~~~~
+	           /              Great      Blue Hill   \
+	~~~~~~~~~~/ - - - - - - - - - - - - - - - - - - - \~~~~~~~~~
+	         |    .    *    .    *    .    *    .    *   |
+	         |        _____         _____               |
+	  *      |       |     |  ⌂   |     |    ⌂         |    *
+	         |   ⌂   | ||| |      | ||| |              |
+	
+2026-02-24 10:45:07 From kamilahgriffin to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	@Seth Greenberg im in Boston, but I lived  around the lake for years
+	
+2026-02-24 10:45:10 From Peter Francis to Everyone:
+	Should I be using Opus or is Sonnet 4.6 as good?
+	
+2026-02-24 10:45:16 From David Berkal to Everyone:
+	Replying to "oakland_ascii_art.txt":
+	I had this issue. The fix was downloading GIT and doing the following: 
+	Find your Git installation path (usually C:\Program Files\Git\bin\git.exe)
+	Set the environment variable:
+	• Press Windows + R, type sysdm.cpl
+	• Click "Environment Variables"
+	• Under "System Variables," click "New"
+	• Variable name: CLAUDE_CODE_GIT_BASH_PATH
+	• Variable value: Your Git executable path
+	Restart Claude Code completely
+	
+2026-02-24 10:45:22 From Stephen Biernacki to Everyone:
+	Replying to "Should I be using Opus or is Sonnet 4.6 as good?":
+	Sonnet 4.6 just as good for our purposes.
+	
+2026-02-24 10:45:28 From nicholashurst to Everyone:
+	Made a water color of my building:
+	
+2026-02-24 10:45:31 From Mateo García to Everyone:
+	=========================================================
+	   |  MITAD DEL MUNDO  |  LAT: 0 deg 0' 0"  |  2,850m ASL |
+	   =========================================================
+	        |          |
+	       ( )        ( )       ~ ECUADOR: THE MIDDLE OF
+	      /   \      /   \              THE WORLD ~
+	     /     \    /     \
+	    /  * *  \  /  * *  \     Elevation: 2,850 m (9,350 ft)
+	   /  *   *  \/  *   *  \    Capital since: 1830
+	  /___________\/__________\   UNESCO Heritage: 1978
+	
+	    .    *    .    *    .  *    .    *    .  *    .    *    .
+	      *    .    *    .       *    .    *    .       *    .
+	         .  *    .       *    .  *    .       *    .  *    .
+	
+2026-02-24 10:45:33 From nicholashurst to Everyone:
+	Screenshot2026_02_24_104529.jpg
+	
+2026-02-24 10:45:35 From Wenzel Proksch to Everyone:
+	how can i join the breakout roo
+	
+2026-02-24 10:45:50 From misterbomb to Everyone:
+	you might have to click “more”
+	
+2026-02-24 10:45:51 From Adam Lowe to Everyone:
+	Might be in your “More” option at the bottom of screen
+	
+2026-02-24 10:45:56 From Stephen Biernacki to Everyone:
+	Click More and then Breakout Rooms.
+	
+2026-02-24 10:46:08 From Stephen Biernacki to Everyone:
+	Replying to "austin_animated.gif":
+	Animated!
+	
+2026-02-24 10:46:24 From Kevin Pauly to Everyone:
+	Replying to "austin_animated.gif":
+	well that's awesome
+	
+2026-02-24 10:46:34 From Ryan Healy to Everyone:
+	dc-ascii-art.txt
+	
+2026-02-24 10:46:36 From Philip Kulishov to Everyone:
+	my first ever prompt
+	
+2026-02-24 10:46:44 From Kevin Pauly to Everyone:
+	MSP (current city). STL (hometown)
+	msp.png, CleanShot 2026-02-24 at 09.45.39@2x.png
+	
+2026-02-24 10:47:01 From Alex to Everyone:
+	or is people followed your prereqs from the emails ...
+	
+2026-02-24 10:47:08 From Claire to Everyone:
+	Hi , I downloaded code to desktop. I dont have it in a folder though. Does it need to be ? can you explain again
+	
+2026-02-24 10:47:16 From Ross Broms to Everyone:
+	Replying to "MSP (current city). STL (hometown) msp.png, CleanS...":
+	Foshay, Wells Fargo…love the specificity!
+	
+2026-02-24 10:48:58 From Sasha Temerte to Everyone:
+	Is there any way to “undo” if it takes an action that doesn’t execute as expected?
+	
+2026-02-24 10:50:43 From kevinryutob to Everyone:
+	Is plan mode on the desktop app?
+	
+2026-02-24 10:50:49 From Mateo García to Everyone:
+	Have you see different outputs when prompting with voice (with something like Wispr flow) compare to typing?
+	
+2026-02-24 10:50:50 From Will Mannon to Everyone:
+	Replying to "Is plan mode on the desktop app?":
+	Yes
+	
+2026-02-24 10:50:53 From Dalos Dov to Everyone:
+	Im getting “Pr not yet created”
+	
+2026-02-24 10:51:10 From Kelly Chandler to Everyone:
+	Replying to "Im getting “Pr not yet created”":
+	same
+	
+2026-02-24 10:51:56 From Randy Shipper to Everyone:
+	Replying to "Im getting “Pr not yet created”":
+	same (Pr not yet created)
+	
+2026-02-24 10:51:57 From Will Mannon to Everyone:
+	Replying to "Im getting “Pr not yet created”":
+	Just sent this one across to the team, back to you soon
+	
+2026-02-24 10:52:00 From Sasha Temerte to Everyone:
+	Replying to "Is plan mode on the desktop app?":
+	We can’t do this if in terminal, right?
+	
+2026-02-24 10:52:16 From Will Mannon to Everyone:
+	Replying to "Is plan mode on the desktop app?":
+	You can, you just have to tell it to “enter Plan mode”
+	
+2026-02-24 10:52:19 From Seth Greenberg to Everyone:
+	How much do you use Claude chat to help decide what to iterate and what to put into Plan mode? (Or not)
+	
+2026-02-24 10:52:31 From kevinryutob to Everyone:
+	Replying to "Is plan mode on the desktop app?":
+	How do you enter it on the desktop app? Same way?
+	
+2026-02-24 10:52:52 From Nish Patel to Everyone:
+	So clarity of intention is key
+	
+2026-02-24 10:53:23 From Jack Chorowsky to Everyone:
+	The desktop app basically hung while making my ascii art and gave me this error message. ???  API Error: Claude's response exceeded the 32000 output token maximum. To configure this behavior, set the CLAUDE_CODE_MAX_OUTPUT_TOKENS environment variable.
+	
+2026-02-24 10:53:37 From Michael Jaynes to Everyone:
+	Replying to "Im getting “Pr not yet created”":
+	I got the same with Shift-tab, but the GUI worked.
+	Screenshot 2026-02-24 at 7.52.51 AM.png
+	
+2026-02-24 10:53:37 From Misty Stinnett to Everyone:
+	How do we catch up if we were in a breakout room?
+	
+2026-02-24 10:53:56 From Misty Stinnett to Everyone:
+	Replying to "How do we catch up if we were in a breakout room?":
+	I don’t want to miss Plan mode! Ack
+	
+2026-02-24 10:53:57 From Will Mannon to Everyone:
+	Replying to "How do we catch up if we were in a breakout room?":
+	Hey Misty we’re going to review these slides again a bit later for anyone who was in a breakout
+	
+2026-02-24 10:54:07 From Will Mannon to Everyone:
+	Replying to "How do we catch up if we were in a breakout room?":
+	It’s ok! We’ll make sure everyone hears the full explanation
+	
+2026-02-24 10:54:11 From Mateo García to Everyone:
+	Where do you enter into plan mode?
+	
+2026-02-24 10:54:16 From Rob Ross to Everyone:
+	Replying to "Have you see different outputs when prompting with...":
+	@Mateo García I use Monologue (Every’s (much better) voice input app. Monologue is better (for me) than text input bc a) it’s much quicker b) language, grammar & the way it slightly modifies my sentences are better
+	
+2026-02-24 10:54:23 From Misty Stinnett to Everyone:
+	Replying to "How do we catch up if we were in a breakout room?":
+	👍🏻
+	
+2026-02-24 10:54:44 From Will Mannon to Everyone:
+	Replying to "Where do you enter into plan mode?":
+	CleanShot 2026-02-24 at 10.54.32@2x.png
+	
+2026-02-24 10:54:54 From Nin Vraitch to Everyone:
+	‘Files are making a comeback’ - ❤️
+	
+2026-02-24 10:55:09 From Mateo García to Everyone:
+	Replying to "Have you see different outputs when prompting with...":
+	Thanks @Rob Ross for the reply I will definitely  try it. I’m using Wispr flow now and have seen better results
+	
+2026-02-24 10:55:45 From Mateo García to Everyone:
+	Replying to "Where do you enter into plan mode?":
+	Thanks I was clicking the plus instead of the “ask permissions”
+	
+2026-02-24 10:56:09 From Kevin Pauly to Everyone:
+	Replying to "‘Files are making a comeback’ - ❤️":
+	here for it! 😄
+	
+2026-02-24 10:56:21 From Rob Ross to Everyone:
+	Replying to "Have you see different outputs when prompting with...":
+	I switched to Monologue from Wispr bc Naveen (Every’s GM/dev for Monologue) shows you how he builds it & you have direct access to him in Discord
+	
+2026-02-24 10:56:26 From Jared Solomon to Everyone:
+	i need help with GitHub.  did i miss a breakout room for this?
+	
+2026-02-24 10:56:44 From kevinryutob to Everyone:
+	Just asked Claude, plan mode in the desktop app is on the bottom in permissions (ask permissions). Dropdown menu —> plan mode
+	
+2026-02-24 10:57:12 From Clark Peterson to Everyone:
+	How do local files stay in synch with Github. Does Github write back to local or do we need to manually “refresh”?
+	
+2026-02-24 10:57:20 From Alexander Tilipman to Everyone:
+	I keep getting ‘Could not load connectors directory.’ Error popup in Claude app
+	
+2026-02-24 10:57:51 From Will Mannon to Everyone:
+	Replying to "i need help with GitHub.  did i miss a breakout ro...":
+	If you’re getting an error you can join the Support Room #2 with Dan (look for “Breakout Rooms” at the bottom of your screen)
+	
+2026-02-24 10:57:53 From Johanna Salem to Everyone:
+	Finally
+	dubai.png
+	
+2026-02-24 10:57:58 From Mateo García to Everyone:
+	Where do you connect Claude with Github?
+	
+2026-02-24 10:58:22 From Sasha Temerte to Everyone:
+	Replying to "Where do you connect Claude with Github?":
+	Also wondering this
+	
+2026-02-24 10:58:51 From Will Mannon to Everyone:
+	Replying to "Where do you connect Claude with Github?":
+	Mike will walk through this later in the workshop!
+	
+2026-02-24 10:58:53 From kevinryutob to Everyone:
+	Replying to "Where do you connect Claude with Github?":
+	Bottom left press your account —> settings —> connectors
+	
+2026-02-24 10:59:11 From juanluna to Everyone:
+	Replying to "How do local files stay in synch with Github. Does...":
+	Usually you “download” the code before beginning a session. It is called “git pull”
+	
+2026-02-24 10:59:51 From Diego Escosteguy to Everyone:
+	Can you briefly touch on basic opec hygiene when using Claude Code?
+	
+2026-02-24 11:00:12 From Sasha Temerte to Everyone:
+	I also see ‘could not load connectors directory’
+	
+2026-02-24 11:00:39 From Kevin Pauly to Everyone:
+	Could you speak a few words on the "Allow network egress" setting?
+	
+2026-02-24 11:01:11 From Nish Patel to Everyone:
+	Is there a list of Every-curated resources to get into some of the more advanced concepts? Especially interested in skills and MCPs.
+	
+2026-02-24 11:01:19 From Kevin Pauly to Everyone:
+	Replying to "Could you speak a few words on the "Allow network ...":
+	maybe this is advanced
+	
+2026-02-24 11:01:29 From Seth Greenberg to Everyone:
+	Would it be possible to do a quick, even 10-15 min overview of best practices setting up Claude Skills during lunch?
+	
+2026-02-24 11:01:43 From Diego Trejo to Everyone:
+	Im interested in Skills too
+	
+2026-02-24 11:01:50 From Alexander Tilipman to Everyone:
+	I keep getting ‘Could not load connectors directory.’ Error popup in Claude app
+	
+2026-02-24 11:02:01 From Dominique Pahud to Everyone:
+	How do I connect GitHub to Claude code?
+	
+2026-02-24 11:02:02 From Daniela to Everyone:
+	skills skills!!!
+	
+2026-02-24 11:02:27 From meganbuerger to Everyone:
+	Replying to "I keep getting ‘Could not load connectors director...":
+	Same same
+	
+2026-02-24 11:02:40 From Travis Davis to Everyone:
+	What is the name of the next course mentioned and when will it be held?
+	
+2026-02-24 11:02:54 From Daniela to Everyone:
+	Replying to "How do I connect GitHub to Claude code?":
+	i've asked claude how to do it :) also there is a + on the side of the chat and there you have connectors. find github there and authorise it
+	
+2026-02-24 11:03:01 From Clark Peterson to Everyone:
+	Replying to "How do local files stay in synch with Github. Does...":
+	Thanks. So before you work on a coding session you should basically download the latest code and overwrite what was there locally prior to the pull?
+	
+2026-02-24 11:03:45 From Rob Ross to Everyone:
+	@Will Mannon you & Mike are doing such a great job of juggling the issues ppl are having 🌻
+	
+2026-02-24 11:03:53 From Lisa Henkel to Everyone:
+	How did you get to plan mode?
+	
+2026-02-24 11:04:08 From Seth Greenberg to Everyone:
+	Replying to "@Will Mannon you & Mike are doing such a great job...":
+	Agree!
+	
+2026-02-24 11:04:12 From Misty Stinnett to Everyone:
+	Replying to "How did you get to plan mode?":
+	Same drop down on the bottom left hand side where you select “permissions”
+	
+2026-02-24 11:04:35 From Stephen Biernacki to Everyone:
+	Mine came up with multiple choice / multi-select questions I could just click and select.
+	
+2026-02-24 11:04:40 From Kevin to Everyone:
+	Replying to "How did you get to plan mode?":
+	Click “ask permissions” for the options. There is a screenshot higher in the chat
+	
+2026-02-24 11:04:47 From shivamchopra to Everyone:
+	Mine launched into a series of interactive polls to answer, which seems easier. Is there a way to ensure it does that rather than the manual answering?
+	
+2026-02-24 11:04:47 From Seth Greenberg to Everyone:
+	Also in Cowork, I’ve seen this “plan mode” be even more user friendly prompting questions sequentially.
+	
+2026-02-24 11:04:49 From Nin Vraitch to Everyone:
+	Will Claude.md be covered.?
+	
+2026-02-24 11:05:02 From Chase to Everyone:
+	Late joining (was on my cal for 8pst sorry!) - 1. will there be a recording that I can listen to the first 45 min? 2. sounds like there are breakouts or other things happening - what if anything else do I need to do?
+	
+2026-02-24 11:05:12 From Rob Ross to Everyone:
+	Replying to "How did you get to plan mode?":
+	Screenshot 2026-02-24 at 8.04.56 AM.png
+	
+2026-02-24 11:05:22 From Stephen Biernacki to Everyone:
+	Replying to "Mine launched into a series of interactive polls t...":
+	Same. Good question.
+	
+2026-02-24 11:05:29 From Sasha Temerte to Everyone:
+	I’m not seeing Github as an option in my connectors directory
+	
+2026-02-24 11:05:57 From Rob Ross to Everyone:
+	Replying to "Late joining (was on my cal for 8pst sorry!) - 1. ...":
+	@Chase yes, they’re recording, they said it will be avail after
+	
+2026-02-24 11:06:00 From Seth Greenberg to Everyone:
+	Replying to "Mine launched into a series of interactive polls t...":
+	Yeah the interactive polls are so much easier to work through.
+	
+2026-02-24 11:06:13 From Pete Sockett to Everyone:
+	how did you enter plan mode?
+	
+2026-02-24 11:06:17 From Johanna Salem to Everyone:
+	Replying to "Mine launched into a series of interactive polls t...":
+	Yes wondering if its sonnet vs opus thing?
+	
+2026-02-24 11:06:25 From Kevin Slavin to Everyone:
+	And sorry if I just missed this, but “plan mode” is triggered by the “help me think about x”?
+	
+2026-02-24 11:06:37 From Johanna Salem to Everyone:
+	Replying to "how did you enter plan mode?":
+	Click on “ask for permission"
+	
+2026-02-24 11:06:50 From Andrew Crone to Everyone:
+	Can someone delete the annotations they accidentally made in blue on the screen lol
+	
+2026-02-24 11:07:05 From Johanna Salem to Everyone:
+	Replying to "And sorry if I just missed this, but “plan mode” i...":
+	You access it by clicking on “ask for permission"
+	
+2026-02-24 11:09:07 From Johanna Salem to Everyone:
+	Replying to "how did you enter plan mode?":
+	Screenshot2026_02_24_200900.jpg
+	
+2026-02-24 11:09:07 From Johanna Salem to Everyone:
+	Replying to "And sorry if I just missed this, but “plan mode” i...":
+	Screenshot2026_02_24_200858.jpg
+	
+2026-02-24 11:09:42 From Kevin Slavin to Everyone:
+	It’s not obvious to me that “ask for permissions” triggered plan mode on its own, maybe I’m misunderstanding
+	
+2026-02-24 11:09:57 From Will Mannon to Everyone:
+	Replying to "@Will Mannon you & Mike are doing such a great job...":
+	Hah thank you @Rob Ross
+	
+2026-02-24 11:10:01 From Misty Stinnett to Everyone:
+	Replying to "It’s not obvious to me that “ask for permissions” ...":
+	It didn’t, it just happens to be in the same dropdown menu as permissions.
+	
+2026-02-24 11:10:20 From Kevin Slavin to Everyone:
+	Replying to "It’s not obvious to me that “ask for permissions” ...":
+	Oh god, that’s my bad thx
+	
+2026-02-24 11:11:07 From Mike Taylor to Everyone:
+	https://github.com/hammer-mt/every-cc/blob/main/nps_and_descriptions_only.csv
+	
+2026-02-24 11:13:20 From Johanna Salem to Everyone:
+	How to download
+	
+2026-02-24 11:13:23 From Misty Stinnett to Everyone:
+	Add it to our desktop folder?
+	
+2026-02-24 11:13:30 From Will Mannon to Everyone:
+	Replying to "How to download":
+	CleanShot 2026-02-24 at 11.11.30@2x.png
+	
+2026-02-24 11:13:35 From Will Mannon to Everyone:
+	Replying to "How to download":
+	Dots in the top righthand corner
+	
+2026-02-24 11:14:10 From Will Mannon to Everyone:
+	Replying to "Add it to our desktop folder?":
+	Yes the Claude Code course folder
+	
+2026-02-24 11:14:59 From Randy Shipper to Everyone:
+	Now you lost me
+	
+2026-02-24 11:15:05 From kathrynsnelling to Everyone:
+	If we keep it in desktop file is that a problem. How do we save it to the specific folder ?
+	
+2026-02-24 11:15:06 From Johanna Salem to Everyone:
+	Replying to "How to download":
+	Thanks
+	
+2026-02-24 11:15:30 From Johanna Salem to Everyone:
+	Replying to "If we keep it in desktop file is that a problem. H...":
+	U have to save it to the file in claude that ur working on
+	
+2026-02-24 11:15:59 From Kevin Pauly to Everyone:
+	Replying to "If we keep it in desktop file is that a problem. H...":
+	You set the folder when you're getting started with a new session. So just create a folder on the desktop then point the session to it
+	
+2026-02-24 11:16:12 From Seth Greenberg to Everyone:
+	Interesting to see the difference in responses
+	Screenshot2026_02_24_081542.jpg
+	
+2026-02-24 11:16:16 From Mick to Everyone:
+	The lines are actually 196  :-D
+	
+2026-02-24 11:16:24 From Nityesh Agarwal to Everyone:
+	Replying to "If we keep it in desktop file is that a problem. H...":
+	You can keep it in whatever folder you want to. Just be sure to select that folder in the Claude Code session
+	
+2026-02-24 11:16:30 From kathrynsnelling to Everyone:
+	Replying to "If we keep it in desktop file is that a problem. H...":
+	@Johanna Salem  how do I change that -= I just uploaded it in ? How do I change file ? I am in plan mode and underneath it has a folder but when I click on it - I can’t change it just copy it
+	
+2026-02-24 11:16:32 From Stephen Biernacki to Everyone:
+	Replying to "Interesting to see the difference in responses Scr...":
+	This is extremely similar as mine.
+	
+2026-02-24 11:16:36 From Stephen Biernacki to Everyone:
+	Replying to "Interesting to see the difference in responses Scr...":
+	*to
+	
+2026-02-24 11:16:55 From Clark Peterson to Everyone:
+	Replying to "The lines are actually 196  :-D":
+	Yeah had the same question. Good eye…
+	
+2026-02-24 11:17:05 From kathrynsnelling to Everyone:
+	Replying to "If we keep it in desktop file is that a problem. H...":
+	Got it thanks!
+	
+2026-02-24 11:17:16 From Carlos Lau to Everyone:
+	Can you pull info/data from Google Drive? (Just out of curiosity)
+	
+2026-02-24 11:18:16 From Kevin Pauly to Everyone:
+	Replying to "Can you pull info/data from Google Drive? (Just ou...":
+	should be able to, it's one of the connector options
+	CleanShot 2026-02-24 at 10.17.57@2x.png
+	
+2026-02-24 11:18:23 From Anastasia Nasonova to Everyone:
+	Where to find this nps in git?
+	
+2026-02-24 11:18:41 From Kevin Pauly to Everyone:
+	Replying to "Where to find this nps in git?":
+	https://github.com/hammer-mt/every-cc/blob/main/nps_and_descriptions_only.csv
+	
+2026-02-24 11:18:42 From Sasha Temerte to Everyone:
+	If it opens in your browser (is that local host?), can other people still access/view it, or only you can? How would you make it able to viewable by others?
+	
+2026-02-24 11:18:55 From Nityesh Agarwal to Everyone:
+	Replying to "Can you pull info/data from Google Drive? (Just ou...":
+	Afaik this connector is a read-only connector. Claude won’t be able to download file using this.
+	
+2026-02-24 11:18:55 From Will Mannon to Everyone:
+	Replying to "Where to find this nps in git?":
+	Then download via the three dots in the top right
+	
+2026-02-24 11:18:57 From Will Mannon to Everyone:
+	Replying to "Where to find this nps in git?":
+	CleanShot 2026-02-24 at 11.11.30@2x(1).png
+	
+2026-02-24 11:19:16 From Kevin Slavin to Everyone:
+	And it’s normal that I keep getting interim prompts like “Allow Claude to Run awk -F',' 'NR>1 {if(NF > 2) print NR": "$0}' /Users/fairfield/Documents/claude\ code/nps_and_descriptions_only.csv | wc -l?” 
+	
+	Or is that a setting of some kind
+	
+2026-02-24 11:19:29 From Johanna Salem to Everyone:
+	Do I allow this?
+	Screenshot2026_02_24_201919.jpg
+	
+2026-02-24 11:19:33 From Randy Shipper to Everyone:
+	THis isnot working for me
+	
+2026-02-24 11:19:34 From Mateo García to Everyone:
+	Replying to "If it opens in your browser (is that local host?),...":
+	You will have to share the file Claude created and they will open locally
+	
+2026-02-24 11:19:46 From Stephen Biernacki to Everyone:
+	Replying to "If it opens in your browser (is that local host?),...":
+	You can only view the HTML file unless you send it to someone or publish it online.
+	
+2026-02-24 11:19:49 From Nityesh Agarwal to Everyone:
+	Replying to "If it opens in your browser (is that local host?),...":
+	That is localhost (congrats!). no one else except you can see it. To make it viewable by others you’ll need to make it into a web app and host it someplace.
+	
+2026-02-24 11:19:49 From Kevin Pauly to Everyone:
+	Replying to "Can you pull info/data from Google Drive? (Just ou...":
+	@Nityesh Agarwal  ah, good to know!
+	
+2026-02-24 11:19:58 From Stephen Biernacki to Everyone:
+	Replying to "If it opens in your browser (is that local host?),...":
+	Sorry, OTHERS can only...
+	
+2026-02-24 11:20:02 From Jeff Scherer to Everyone:
+	I have a very fast internet connection. Is there a reason that my Claude is taking much longer to 'think'/process than Mike's Claude?
+	
+2026-02-24 11:20:14 From Anastasia Nasonova to Everyone:
+	Replying to "Where to find this nps in git?":
+	Using this link? https://github.com/hammer-mt/every-cc/blob/main/nps_and_descriptions_only.csv
+	
+2026-02-24 11:20:38 From Will Mannon to Everyone:
+	Replying to "Where to find this nps in git?":
+	correct
+	
+2026-02-24 11:20:46 From Nityesh Agarwal to Everyone:
+	Replying to "Do I allow this? Screenshot2026_02_24_201919.jpg":
+	This is Claude trying to install a tool to use the browser. You can allow if you wanted Claude to do this. It’s a commonly used tool.
+	
+2026-02-24 11:21:16 From kathrynsnelling to Everyone:
+	What was your original prompt?
+	
+2026-02-24 11:21:19 From Sasha Temerte to Everyone:
+	Replying to "If it opens in your browser (is that local host?),...":
+	Ok got it, thank you! Making it a web app is something we don’t cover today, is it? Will that require buying domains and etc
+	
+2026-02-24 11:21:24 From Randy Shipper to Everyone:
+	Mike is going so fast, I cannot keep up
+	
+2026-02-24 11:21:32 From Misty Stinnett to Everyone:
+	Replying to "What was your original prompt?":
+	“I want you to make me an NPS dashboard which shows insights from the data so that I can tell my boss how well we’re doing, and I want to have it in a file that I can open locally in my browser.”
+	
+2026-02-24 11:21:44 From meganbuerger to Everyone:
+	If we get a notification that says “Allow Claude to Write index.html?” Is the general practice to “allow once”?
+	
+2026-02-24 11:21:52 From Nityesh Agarwal to Everyone:
+	Replying to "If it opens in your browser (is that local host?),...":
+	That’s right. We’ll be covering that in another course happening in March.
+	
+2026-02-24 11:21:56 From Johanna Salem to Everyone:
+	Replying to "If we get a notification that says “Allow Claude t...":
+	Have the same q.
+	
+2026-02-24 11:22:39 From Mick to Everyone:
+	Q: I started the conversation with Claude in “Ask Permission” mode, then switched to “Plan Mode” after an initial brainstorming of what I wanted to do. Does that have any implications compared to, say, start from Plan Mode
+	
+2026-02-24 11:22:44 From Nityesh Agarwal to Everyone:
+	Replying to "I have a very fast internet connection. Is there a...":
+	That just depends upon how hard your Claude is thinking. Which itself can depend upon a variety of factors including how your Claude is feeling today hahah
+	
+2026-02-24 11:22:45 From Jack Chorowsky to Everyone:
+	W/re to the current dashboard devlpt exercise, it would be helpful to understand what Code can do that Chat cannot - obviously:  access the local folder for the data and write the responsive file locally.  What else?
+	
+2026-02-24 11:23:17 From Chase to Everyone:
+	Replying to "If we get a notification that says “Allow Claude t...":
+	Yeah for me It’s asking me for all kinds of “allow claud to [long technical description of stuff I don’t understand] - a lot of them
+	
+2026-02-24 11:23:23 From patrickmceleneymusic@gmail.com to Everyone:
+	Replying to "I have a very fast internet connection. Is there a...":
+	Can also run slower on lower tier Claude plans I think right
+	
+2026-02-24 11:23:36 From Chase to Everyone:
+	Replying to "If we get a notification that says “Allow Claude t...":
+	Oh must be plan vs ask permission mode
+	
+2026-02-24 11:23:51 From meganbuerger to Everyone:
+	Replying to "If we get a notification that says “Allow Claude t...":
+	I think I was in Plan mode..!
+	
+2026-02-24 11:23:57 From Alexander Tilipman to Everyone:
+	Love it
+	Screenshot 2026-02-24 at 17.23.27.png, Screenshot 2026-02-24 at 17.23.45.png
+	
+2026-02-24 11:23:58 From kevinryutob to Everyone:
+	neat
+	Screenshot 2026-02-24 at 8.23.51 AM.png
+	
+2026-02-24 11:24:00 From Mateo García to Everyone:
+	Is there a reason that my Claude didn’t enter in plan mode and just started building the dashboard? 
+	
+	Is it because of the memory chat that Claude knows Mike prefers first plan mode?
+	
+2026-02-24 11:24:03 From nicholashurst to Everyone:
+	Monologue is great! I use it
+	
+2026-02-24 11:24:06 From Alex Klein to Everyone:
+	What’s the best practice for auditing /checking Claude’s work? Like can we build in a safeguard to make sure Claude didn’t accidentally miss 10 of the NPS entries from the CSV? Do you do that for every task?
+	
+2026-02-24 11:24:06 From Nin Vraitch to Everyone:
+	Replying to "I have a very fast internet connection. Is there a...":
+	@Nityesh Agarwal don’t tell me it gets brain fog too..??!!! Damn.
+	
+2026-02-24 11:24:34 From Barclay Blair to Everyone:
+	Replying to "W/re to the current dashboard devlpt exercise, it ...":
+	Write and execute the code in a single environment, I think is one of the biggest differences
+	
+2026-02-24 11:25:08 From Pete Sockett to Everyone:
+	How do i stop it from generating? stop sn't working?
+	
+2026-02-24 11:25:20 From Carlos Lau to Everyone:
+	For the Jam you use Plan mode?
+	
+2026-02-24 11:25:26 From Carlos Lau to Everyone:
+	Ok just answered that
+	
+2026-02-24 11:25:33 From Misty Stinnett to Everyone:
+	Can we have it make the dashboard in an editable image, like a google slide or canva file?
+	
+2026-02-24 11:26:05 From Spencer Mahoney to Everyone:
+	It’s interesting how there’s no “loading” visual like in chat or cowork. Not obvious at a glance that anything is happening until it pops back up with the next update
+	
+2026-02-24 11:26:53 From Rob Ross to Everyone:
+	https://www.monologue.to/
+	
+2026-02-24 11:27:01 From Barclay Blair to Everyone:
+	Replying to "It’s interesting how there’s no “loading” visual l...":
+	It seems inconsistent. Sometimes  there is not indicator, and other times I get the evolving “crafting…synthesizing” etc.
+	
+2026-02-24 11:27:02 From Stephen Biernacki to Everyone:
+	Replying to "It’s interesting how there’s no “loading” visual l...":
+	I find this fascinating as well; keep thinking about the differences between what we’re doing now/today and Cowork. So far not much of a difference, but I understand the difference is more advanced.
+	
+2026-02-24 11:27:39 From Barclay Blair to Everyone:
+	Replying to "It’s interesting how there’s no “loading” visual l...":
+	The biggest difference, at a simple level, is that you cannot run the code directly in Cowork
+	
+2026-02-24 11:28:01 From meganbuerger to Everyone:
+	Can you elaborate a little bit here? How small do the requests need to be in the post-build phase? I think for non-technical folks, this is a bit of a barrier. Once it has been built, how much can you tweak the foundation?
+	
+2026-02-24 11:28:09 From Johanna Salem to Everyone:
+	Screenshot2026_02_24_202759.jpg
+	
+2026-02-24 11:28:11 From Rob Ross to Everyone:
+	Can you show your nps prompts again?
+	
+2026-02-24 11:28:13 From Spencer Mahoney to Everyone:
+	Replying to "It’s interesting how there’s no “loading” visual l...":
+	I also joined this course as it wasn’t obvious to me what I was missing, but know I’m missing something!
+	
+2026-02-24 11:28:14 From nicholashurst to Everyone:
+	file:///Users/nicholashurst/ai-workspace/claude-code/Every.ai%20Claude%20Code%20Course%201.0/dashboard.html
+	
+2026-02-24 11:28:16 From shivamchopra to Everyone:
+	Kept running for me, and finally gave me this error -
+	API Error: Claude's response exceeded the 32000 output token maximum. To configure this behavior, set the CLAUDE_CODE_MAX_OUTPUT_TOKENS environment variable.
+	
+2026-02-24 11:28:18 From chris giliberti to Everyone:
+	Can we take it from the top pls?
+	
+2026-02-24 11:28:19 From kathrynsnelling to Everyone:
+	Mine has just been thinking forever
+	
+2026-02-24 11:28:20 From Kevin Pauly to Everyone:
+	Been loving Monologue. Included with Every sub, includes option to add prompt to format your ramblings haha
+	
+2026-02-24 11:28:20 From David Berkal to Everyone:
+	Got this error message: 
+	API Error: Claude's response exceeded the 32000 output token maximum. To configure this behavior, set the CLAUDE_CODE_MAX_OUTPUT_TOKENS environment variable.
+	
+2026-02-24 11:28:22 From Dalos Dov to Everyone:
+	Screenshot2026_02_24_102819.jpg
+	
+2026-02-24 11:28:23 From John Mellor (@mellortime) to Everyone:
+	holy hell!  This is nuts.
+	
+2026-02-24 11:28:26 From Sasha Temerte to Everyone:
+	Replying to "Can we have it make the dashboard in an editable i...":
+	Interested in this too, especially if google drive is connected!
+	
+2026-02-24 11:28:26 From Adam Lowe to Everyone:
+	CleanShot 2026-02-24 at 11.28.12@2x.png
+	
+2026-02-24 11:28:28 From Mike Taylor to Everyone:
+	https://github.com/hammer-mt/every-cc/blob/main/nps_and_descriptions_only.csv
+	
+2026-02-24 11:28:35 From Sulaiman Rahman to Everyone:
+	Screenshot 2026-02-24 at 8.28.29 AM.png
+	
+2026-02-24 11:28:41 From Mateo García to Everyone:
+	Mine is still thinking like forever
+	
+2026-02-24 11:28:43 From Ross Broms to Everyone:
+	Screenshot2026_02_24_112838.jpg
+	
+2026-02-24 11:28:54 From Leonard Barry to Everyone:
+	I am sure Monologue is very good. On Mac what are other ways to talk to Claude? Will regular Mac voice dictation work well? What are advantages of an app like Monologue vs regular Mac voice dictation?
+	
+2026-02-24 11:28:56 From Aspen Clevenger to Everyone:
+	Oooh these colors are rough but good visualization
+	Screenshot 2026-02-24 at 11.28.24 AM.png
+	
+2026-02-24 11:28:57 From Jeff Scherer to Everyone:
+	Replying to "Mine is still thinking like forever":
+	mine too
+	
+2026-02-24 11:29:02 From Stephen Biernacki to Everyone:
+	Replying to "Mine is still thinking like forever":
+	I’m surprised how long mine is taking as well.
+	
+2026-02-24 11:29:02 From schoneck shoaf to Everyone:
+	Screenshot 2026-02-24 at 10.28.51 AM.png
+	
+2026-02-24 11:29:04 From Jeff Scherer to Everyone:
+	Replying to "Mine is still thinking like forever":
+	it seems sutck
+	
+2026-02-24 11:29:13 From AdVenture Media Group to Everyone:
+	I received this error: API Error: Claude's response exceeded the 32000 output token maximum. To configure this behavior, set the CLAUDE_CODE_MAX_OUTPUT_TOKENS environment variable.
+	
+2026-02-24 11:29:19 From David Berkal to Everyone:
+	Replying to "I received this error: API Error: Claude's respons...":
+	Same here
+	
+2026-02-24 11:29:30 From kathrynsnelling to Everyone:
+	Replying to "Mine is still thinking like forever":
+	Me too
+	
+2026-02-24 11:29:31 From Pinay Jones to Everyone:
+	Replying to "I received this error: API Error: Claude's respons...":
+	same
+	
+2026-02-24 11:29:35 From Sulaiman Rahman to Everyone:
+	Replying to "Oooh these colors are rough but good visualization...":
+	I gave it my company brand colors and looks a bit better!
+	
+2026-02-24 11:29:51 From Chase to Everyone:
+	Screenshot2026_02_24_082943.jpg
+	
+2026-02-24 11:29:52 From Alexander Tilipman to Everyone:
+	Replying to "Oooh these colors are rough but good visualization...":
+	How did you do this? Did you run a skill, or ask it to use specific brand colors in chat?
+	
+2026-02-24 11:29:52 From Peter Francis to Everyone:
+	When I do /Plan to start my prompt, Claude came back with "I don't know that command." A little surprised. That said, it went ahead and started planning.
+	
+2026-02-24 11:29:55 From Mick Costigan to Everyone:
+	Screenshot2026_02_24_082951.jpg
+	
+2026-02-24 11:30:16 From Aspen Clevenger to Everyone:
+	Replying to "Oooh these colors are rough but good visualization...":
+	Use specific brand colors
+	
+2026-02-24 11:30:17 From Clayton Fuller to Everyone:
+	Mine is just cycling through a bunch of the orange text
+	
+2026-02-24 11:30:19 From kathrynsnelling to Everyone:
+	Yes - orange text but been doing that for 7 minutes
+	
+2026-02-24 11:30:23 From Aspen Clevenger to Everyone:
+	Replying to "Oooh these colors are rough but good visualization...":
+	You can upload your logo, etch
+	
+2026-02-24 11:30:35 From Sulaiman Rahman to Everyone:
+	Replying to "Oooh these colors are rough but good visualization...":
+	I just copy and pasted all of our brand colors and told it “To keep it on brand for my company, use our brand colors”
+	
+2026-02-24 11:30:37 From Danoosh Kapadia to Everyone:
+	Screenshot 2026-02-24 at 8.30.31 AM.png
+	
+2026-02-24 11:30:39 From travis to Everyone:
+	Screenshot 2026-02-24 at 11.30.22 AM.png
+	
+2026-02-24 11:30:58 From Alexander Tilipman to Everyone:
+	Replying to "Oooh these colors are rough but good visualization...":
+	@Sulaiman Rahman love it! Which company do you work for?
+	
+2026-02-24 11:30:59 From Johanna Salem to Everyone:
+	I asked it to create in html and in pdf. It created two holy different dashboards…  hehe
+	Screenshot2026_02_24_203033.jpg, Screenshot2026_02_24_203047.jpg
+	
+2026-02-24 11:31:08 From Kevin to Everyone:
+	Screenshot 2026-02-24 at 8.30.41 AM.png
+	
+2026-02-24 11:31:10 From Travis Davis to Everyone:
+	{3427B64D-E0A9-4DFE-91DB-BE2159B3EBBC}.png
+	
+2026-02-24 11:31:31 From Sulaiman Rahman to Everyone:
+	Replying to "Oooh these colors are rough but good visualization...":
+	I work at Ripple (www.ripple.com) - can’t take any credit for the colors though, not on the design team 🙂
+	
+2026-02-24 11:31:43 From Andrew Crone to Everyone:
+	I also got the same error
+	
+2026-02-24 11:31:48 From Barclay Blair to Everyone:
+	Not too shabby:
+	Screenshot2026_02_24_113142.jpg
+	
+2026-02-24 11:31:52 From Keera Ketterman to Everyone:
+	Screenshot2026_02_24_103149.jpg
+	
+2026-02-24 11:31:57 From Johanna Salem to Everyone:
+	Replying to "Can we have it make the dashboard in an editable i...":
+	Ive just asked it to!
+	
+2026-02-24 11:32:07 From Anthony Venta to Everyone:
+	@Nityesh, any progress? Still stuck here.
+	
+2026-02-24 11:32:12 From Misty Stinnett to Everyone:
+	Replying to "Can we have it make the dashboard in an editable i...":
+	Ooh please let me know how it goes!
+	
+2026-02-24 11:32:14 From kevinryutob to Everyone:
+	Do you have any best practice suggestions for sessions/re-running? As I”ve worked on more complex projects as a complete non-technical guy, I’ve found myself wondering at what point it’s better to go back to the drawing board with a new instance of Claude with my new knowledge of what I want vs. keep tweaking and adding to what I already have.
+	
+2026-02-24 11:32:17 From Clayton Fuller to Everyone:
+	Are these dashboard images being shown within Claude Code?
+	
+2026-02-24 11:32:30 From Christine to Everyone:
+	Replying to "Are these dashboard images being shown within Clau...":
+	Mine gave me an html link which I popped into my browser
+	
+2026-02-24 11:32:37 From chris giliberti to Everyone:
+	Where can I find the prompt again?
+	
+2026-02-24 11:32:43 From Misty Stinnett to Everyone:
+	Replying to "Where can I find the prompt again?":
+	“I want you to make me an NPS dashboard which shows insights from the data so that I can tell my boss how well we’re doing, and I want to have it in a file that I can open locally in my browser
+	
+2026-02-24 11:32:48 From Kevin Slavin to Everyone:
+	Also a few minutes now of “shlepping, marinating,” et al but (pro plan) let’s see how it shakes out
+	
+2026-02-24 11:32:52 From Leonard Barry to Everyone:
+	Screenshot2026_02_24_103248.jpg
+	
+2026-02-24 11:33:02 From kathrynsnelling to Everyone:
+	Its just so slow … still thinking
+	
+2026-02-24 11:33:10 From Anna Moore to Everyone:
+	nps-dashboard.html
+	
+2026-02-24 11:33:10 From Will Mannon to Everyone:
+	“I want you to make me an NPS dashboard which shows insights from the data so that I can tell my boss how well we’re doing, and I want to have it in a file that I can open locally in my browser
+	
+2026-02-24 11:33:14 From Misty Stinnett to Everyone:
+	Mine has been thinking for 3+ minutes so far. Is that normal?
+	
+2026-02-24 11:33:15 From Randy Shipper to Everyone:
+	Cannot get into Plan mode
+	
+2026-02-24 11:33:21 From Pinay Jones to Everyone:
+	I tried this in a new session under plan mode and it seems to be working better
+	
+2026-02-24 11:33:26 From Kevin Pauly to Everyone:
+	Replying to "I am sure Monologue is very good. On Mac what are ...":
+	My personal experience: Wispr flow/Monologue do a better job of understanding my speech, and they're a little smarter. You can say something like "make a list" and start listing stuff, it'll format the last, not just transcribe your exact words. Monologue also lets you add prompts to format or modify the output of your convo
+	
+2026-02-24 11:33:32 From Dhruv Tyagi to Everyone:
+	What’s your suggestion on sense checking the data? It is great at analysis, but I want to make sure with such data that we can ensure there’s no inaccuracies or false conclusions being drawn
+	
+2026-02-24 11:33:36 From Sasha Temerte to Everyone:
+	Replying to "What’s the best practice for auditing /checking Cl...":
+	Also wondering this!
+	
+2026-02-24 11:33:39 From Kevin Slavin to Everyone:
+	Replying to "Mine has been thinking for 3+ minutes so far. Is t...":
+	Same here
+	
+2026-02-24 11:33:47 From Seth Greenberg to Everyone:
+	Replying to "Mine has been thinking for 3+ minutes so far. Is t...":
+	same
+	
+2026-02-24 11:33:47 From Leonard Barry to Everyone:
+	Screenshot2026_02_24_103343.jpg
+	
+2026-02-24 11:33:49 From Stephen Biernacki to Everyone:
+	Replying to "I am sure Monologue is very good. On Mac what are ...":
+	Great example - thanks for sharing, Kevin.
+	
+2026-02-24 11:34:02 From Anastasia Nasonova to Everyone:
+	Replying to "Mine has been thinking for 3+ minutes so far. Is t...":
+	Same, with a pro plan
+	
+2026-02-24 11:34:07 From steve dilla to Everyone:
+	Asked it to add a keyword analysis module. Very easy tune of the default dashboard.
+	Screenshot 2026-02-24 at 08.31.28(1).png
+	
+2026-02-24 11:34:11 From Dominique Pahud to Everyone:
+	CleanShot 2026-02-24 at 10.33.55@2x.png
+	
+2026-02-24 11:34:52 From Alex Klein to Everyone:
+	Replying to "Asked it to add a keyword analysis module. Very ea...":
+	Niiiiice, such a cool add on
+	
+2026-02-24 11:35:19 From Shelli to Everyone:
+	What did the "make" slide say?
+	
+2026-02-24 11:35:25 From Kevin Slavin to Everyone:
+	Screenshot2026_02_24_113523.jpg
+	
+2026-02-24 11:35:36 From schoneck shoaf to Everyone:
+	Had it play around with animations and made a gif of the intro
+	nps_dashboard.gif
+	
+2026-02-24 11:35:45 From Nin Vraitch to Everyone:
+	“Having a geez…” - apparently these are customisable.? That would be fun
+	
+2026-02-24 11:35:53 From Alexander Tilipman to Everyone:
+	Replying to "Had it play around with animations and made a gif ...":
+	Wow! Love it
+	
+2026-02-24 11:36:05 From kathrynsnelling to Everyone:
+	Got html code back not a visual ?
+	
+2026-02-24 11:36:07 From Seth Greenberg to Everyone:
+	Thanks for the pause 🙂
+	
+2026-02-24 11:36:25 From Randy Shipper to Everyone:
+	Same
+	
+2026-02-24 11:36:31 From Kevin Pauly to Everyone:
+	Replying to "Had it play around with animations and made a gif ...":
+	How specific are your instructions for the animations? Are you including library suggestions, or just asking it to animate it? So cool
+	
+2026-02-24 11:36:37 From kamilahgriffin to Everyone:
+	Do you need to upgrade your plan?
+	
+2026-02-24 11:36:41 From chris giliberti to Everyone:
+	Loooot of ‘fossicking' going on
+	
+2026-02-24 11:36:48 From Alexander Tilipman to Everyone:
+	Maybe for the sake of speed, people should switch to sonnet
+	
+2026-02-24 11:36:51 From Will Mannon to Everyone:
+	Replying to "What did the "make" slide say?":
+	CleanShot 2026-02-24 at 11.36.42@2x.png
+	
+2026-02-24 11:37:13 From kathrynsnelling to Everyone:
+	Got mine but the data is blank even though it has access to the folder and data
+	
+2026-02-24 11:37:57 From Alex Klein to Everyone:
+	I created an action plan feature in the dashboard to drive towards improvements/specific tactics.
+	Screenshot 2026-02-24 at 10.36.45 AM.png
+	
+2026-02-24 11:38:10 From Shelli to Everyone:
+	Could you show the "make" slide again please
+	
+2026-02-24 11:38:25 From schoneck shoaf to Everyone:
+	It took a while for mine to crunch after approving the plan. On the $100 max plan. Sometimes it was just blank, no orange text saying it was working
+	
+2026-02-24 11:38:26 From Jared Solomon to Everyone:
+	one thing i am finding is that my dashboard has rendered and i am still getting lots of permission asks to do things i don't really understand?  is this normal?
+	
+2026-02-24 11:38:26 From kathrynsnelling to Everyone:
+	Where do we go for help - where is breakout
+	
+2026-02-24 11:38:43 From Jared Solomon to Everyone:
+	{1924CE7C-2688-44B9-874C-50111FAFB7AE}.png
+	
+2026-02-24 11:38:44 From nicholashurst to Everyone:
+	Added every branding
+	Screenshot2026_02_24_113836.jpg
+	
+2026-02-24 11:38:45 From Kevin Pauly to Everyone:
+	Replying to "Could you show the "make" slide again please":
+	make.png
+	
+2026-02-24 11:38:55 From Randy Shipper to Everyone:
+	Mine keeps asking permissions to get to the next step.
+	
+2026-02-24 11:38:58 From Mike Taylor to Everyone:
+	The peaceful guitar music is helpful when running into bugs with claude
+	
+2026-02-24 11:39:03 From Jared Solomon to Everyone:
+	Replying to "Mine keeps asking permissions to get to the next s...":
+	me too
+	
+2026-02-24 11:39:21 From Mike Taylor to Everyone:
+	Replying to "Mine keeps asking permissions to get to the next s...":
+	You can change it to “auto accept edits”
+	
+2026-02-24 11:39:55 From Daniela to Everyone:
+	NPS.png
+	
+2026-02-24 11:40:00 From Mike Taylor to Everyone:
+	Replying to "one thing i am finding is that my dashboard has re...":
+	I had this too - it was because it decided to keep working and improve it
+	
+2026-02-24 11:40:16 From Mike Taylor to Everyone:
+	Replying to "Where do we go for help - where is breakout":
+	Bottom of zoom in the “more” tab
+	
+2026-02-24 11:40:23 From Anthony Venta to Everyone:
+	I never got past the Git issue. Nityesh was going to troubleshoot for me. Still stuck here, unable to participate.
+	
+2026-02-24 11:40:35 From Mike Taylor to Everyone:
+	Replying to "It took a while for mine to crunch after approving...":
+	Claude was having issues earlier this morning - sometimes they run out of GPUs
+	
+2026-02-24 11:40:36 From Rob Ross to Everyone:
+	Replying to "The peaceful guitar music is helpful when running ...":
+	@Will Mannon  can you share the Spotify link (or whatever link) for this?
+	
+2026-02-24 11:41:12 From Ross Broms to Everyone:
+	Asked for something more compact
+	Screenshot2026_02_24_114102.jpg
+	
+2026-02-24 11:41:14 From Mateo García to Everyone:
+	Is there a difference running this with sonnet or with opus?
+	
+2026-02-24 11:41:18 From kathrynsnelling to Everyone:
+	It’s still building but has blanks for most of the data ?
+	
+2026-02-24 11:41:20 From Will Mannon to Everyone:
+	Replying to "I never got past the Git issue. Nityesh was going ...":
+	Hey Anthony, messaging the team now to get you some 1:1 support
+	
+2026-02-24 11:41:37 From Aspen Clevenger to Everyone:
+	Curious, Mike mentioned he would have 5 projects going at once. How do you add a tab or similar to get multiple going at once? I don’t see an option 🤔
+	
+2026-02-24 11:41:44 From Mike Taylor to Everyone:
+	Replying to "Is there a difference running this with sonnet or ...":
+	Sonnet is slightly faster and less powerful but they’re both up to this task
+	
+2026-02-24 11:41:46 From Anthony Venta to Everyone:
+	Replying to "I never got past the Git issue. Nityesh was going ...":
+	Thank you!
+	
+2026-02-24 11:41:51 From shivamchopra to Everyone:
+	Asked it add a Suggested Action plan, weighted by effort and impact, v cool
+	Screenshot 2026-02-24 at 10.10.33 PM.png
+	
+2026-02-24 11:41:54 From Alexander Tilipman to Everyone:
+	Screenshot 2026-02-24 at 17.41.45.png
+	
+2026-02-24 11:42:00 From Chase to Everyone:
+	Replying to "The peaceful guitar music is helpful when running ...":
+	my internal soundtrack is more like Refused- New Noise (the intense music in The Bear)
+	
+2026-02-24 11:42:14 From Barclay Blair to Everyone:
+	Replying to "Curious, Mike mentioned he would have 5 projects g...":
+	Create New Session top left
+	
+2026-02-24 11:42:17 From Mike Taylor to Everyone:
+	Replying to "Curious, Mike mentioned he would have 5 projects g...":
+	The sessions on the left are what is running or has run. If you create a new session it doesnt stop the old one, you can have a bunch of them happening at once
+	
+2026-02-24 11:42:41 From Claire to Everyone:
+	I was in a breakout room, how do I catch up?
+	
+2026-02-24 11:42:45 From Randy Shipper to Everyone:
+	Have Auto Accept edits turned on, but it still stops
+	
+2026-02-24 11:42:47 From Lisa Henkel to Everyone:
+	Are there advantages to using Opus, Sonnet or Haiku?
+	
+2026-02-24 11:43:00 From misterbomb to Everyone:
+	is there a way to rename my session?
+	
+2026-02-24 11:43:23 From Will Mannon to Everyone:
+	Replying to "I was in a breakout room, how do I catch up?":
+	One sec! Will share steps here
+	
+2026-02-24 11:43:26 From Kaivan Shah to Everyone:
+	I had a question regarding context window. How to make sure our context window does not get full. In planning mode my context window was utilized 21%. I usually ask Claude to summarize actions in Claude md to reduce the window utilization but I am not sure if that is the best practice.
+	
+2026-02-24 11:43:27 From Mike Taylor to Everyone:
+	Replying to "I am sure Monologue is very good. On Mac what are ...":
+	I use Handy - it works locally on your Mac without anything being sent elsewhere (recently learned monologue has privacy mode too so switching soon)
+	
+2026-02-24 11:43:55 From kevinryutob to Everyone:
+	“Build the most convoluted dashboard known to man”
+	Screenshot 2026-02-24 at 8.43.22 AM.png, Screenshot 2026-02-24 at 8.43.31 AM.png, Screenshot 2026-02-24 at 8.43.39 AM.png
+	
+2026-02-24 11:44:00 From Rob Ross to Everyone:
+	Everyone who may be frustrated…you’re not alone…it took me 3 months to realize Claude Code needed a folder to work in 😂I
+	
+	t’s a little like learning to ride a bike…the initial balance is a bit tough, but then you get a feel of what issues to expect
+	
+2026-02-24 11:44:10 From Aspen Clevenger to Everyone:
+	Replying to "Curious, Mike mentioned he would have 5 projects g...":
+	Screenshot 2026-02-24 at 11.44.04 AM.png
+	
+2026-02-24 11:44:11 From Randy Shipper to Everyone:
+	How has the dashboard shown up for some of you so quickly and for the rest of us, nada?
+	
+2026-02-24 11:44:19 From kathrynsnelling to Everyone:
+	Where are my called folders - hard to find them ?
+	
+2026-02-24 11:44:21 From Mike Taylor to Everyone:
+	Replying to "I had a question regarding context window. How to ...":
+	This is where using git can help quite a bit - if you get it to do a smaller task and save it to GitHub, then you can start a new session and the new claude can pick up where the other left off
+	
+2026-02-24 11:44:38 From Alex Magill to Everyone:
+	Mine took 14 minutes, but it’s done! (Far too much fore one screenshot)
+	
+	file:///Users/amagill/Documents/Claude%20Outputs/nps_dashboard.html
+	Screenshot2026_02_24_084426.jpg
+	
+2026-02-24 11:44:54 From Mike Taylor to Everyone:
+	Replying to "Everyone who may be frustrated…you’re not alone…it...":
+	A bike with rockets on the wheels!
+	
+2026-02-24 11:44:59 From Will Mannon to Everyone:
+	Replying to "I was in a breakout room, how do I catch up?":
+	Step 1: Open this link: https://github.com/hammer-mt/every-cc/blob/main/nps_and_descriptions_only.csv
+	Step 2: Download the data (3 dots in upper righthand corner)
+	Step 3: Drag the downloaded data to their Claude Course folder (whatever they made earlier, which Claude has access to)
+	Step 4: Use Plan mode to ask for an NPS dashboard (Talk), and go back and forth with Claude on specifics (Jam)
+	Step 5: Have Claude make the NPS dashbaord
+	Step 6: Tune (customize / enhance)
+	
+2026-02-24 11:45:08 From Aspen Clevenger to Everyone:
+	Replying to "Curious, Mike mentioned he would have 5 projects g...":
+	Interesting I don’t have a sessions tab as your does
+	
+2026-02-24 11:45:09 From Mateo García to Everyone:
+	I want to ask this in a really polite way. 
+	
+	I found this very helpful but can see the added value of using Claude code on desktop rather than sharing the csv to Claude or Gemini and asking for the same thing. Plus this takes considerable longer. 
+	
+	Or is it that with the same framework you will be able to do more complex things than in the browser are not possible?
+	
+2026-02-24 11:45:13 From Will Mannon to Everyone:
+	Steps for the NPS Dashboard if anyone is feeling behind: 
+	
+	Step 1: Open this link: https://github.com/hammer-mt/every-cc/blob/main/nps_and_descriptions_only.csv
+	Step 2: Download the data (3 dots in upper righthand corner)
+	Step 3: Drag the downloaded data to their Claude Course folder (whatever they made earlier, which Claude has access to)
+	Step 4: Use Plan mode to ask for an NPS dashboard (Talk), and go back and forth with Claude on specifics (Jam)
+	Step 5: Have Claude make the NPS dashbaord
+	Step 6: Tune (customize / enhance)
+	
+2026-02-24 11:45:22 From Aspen Clevenger to Everyone:
+	Replying to "Curious, Mike mentioned he would have 5 projects g...":
+	Screenshot 2026-02-24 at 11.45.17 AM.png
+	
+2026-02-24 11:45:28 From Mike Taylor to Everyone:
+	Replying to "How has the dashboard shown up for some of you so ...":
+	Sometimes the vibe coding gods shine on you, sometimes they dont. Try spinning up a few new sessions and see they’ll all be quite different
+	
+2026-02-24 11:45:39 From Sasha Temerte to Everyone:
+	Replying to "I had a question regarding context window. How to ...":
+	Are we going to review the process of “git pulls” and how to save, version control, etc?
+	
+2026-02-24 11:45:42 From Mike Taylor to Everyone:
+	Replying to "How has the dashboard shown up for some of you so ...":
+	In terms of how quickly or creatively they do the task
+	
+2026-02-24 11:45:46 From Chase to Everyone:
+	Replying to "How has the dashboard shown up for some of you so ...":
+	my first was super fast - second… veery slow
+	
+2026-02-24 11:46:18 From Chase to Everyone:
+	Screenshot2026_02_24_084615.jpg
+	
+2026-02-24 11:46:21 From aliciapolicinski to Everyone:
+	I just got back from the breakout room fixing a bug.  Curious what I missed? 🙂
+	
+2026-02-24 11:46:32 From Barclay Blair to Everyone:
+	Made a PPT
+	nps-dashboard.pptx
+	
+2026-02-24 11:46:48 From Misty Stinnett to Everyone:
+	Replying to "Made a PPT nps-dashboard.pptx":
+	Ooh how? This is my question!
+	
+2026-02-24 11:47:05 From Rob Ross to Everyone:
+	screencapture-file-Users-robrossnov2018-Documents-Every-Claude-Code-Class-every-nps-dashboard-html-2026-02-24-08_46_51.png
+	kamilahgriffin, MM, Seth Greenberg, shivamchopra, Keera Ketterman:❤️
+	Michael Jaynes:👍
+	
+2026-02-24 11:47:09 From Wenzel Proksch to Everyone:
+	how do i get back into a breakout room? i think they closed
+	
+2026-02-24 11:47:44 From Misty Stinnett to Everyone:
+	Guys please I just want to know how to connect it to Canva or Google Slides instead of html
+	
+2026-02-24 11:47:50 From Kevin to Everyone:
+	Screenshot 2026-02-24 at 8.47.21 AM.png
+	
+2026-02-24 11:47:50 From Misty Stinnett to Everyone:
+	Several questions in the chat about tthis
+	
+2026-02-24 12:00:03 From Mick to Everyone:
+	Upvoting skills (vs commands) as well
+	
+2026-02-24 12:00:09 From Anna Moore to Everyone:
+	which file we are using for vacation tools? can you share prompts?
+	
+2026-02-24 12:00:15 From Misty Stinnett to Everyone:
+	Screenshot 2026-02-24 at 9.00.08 AM.png
+	schoneck shoaf:❤️
+	
+2026-02-24 12:00:19 From Misty Stinnett to Everyone:
+	Added brand colors and company logo!!
+	Katherine O'Kelly:🔥
+	
+2026-02-24 12:00:38 From Christine to Everyone:
+	Someone in my breakout chat got a different score (+65) than the rest of us?
+	
+2026-02-24 12:00:41 From Alex to Everyone:
+	mine still not finishing but iguess i get the idea
+	
+2026-02-24 12:00:46 From Katherine O'Kelly to Everyone:
+	Replying to "Guys please I just want to know how to connect it ...":
+	Didja get to resolution on this?
+	
+2026-02-24 12:00:48 From Kevin to Everyone:
+	Do you hit enter to approve everything?
+	
+2026-02-24 12:01:03 From Misty Stinnett to Everyone:
+	Replying to "Guys please I just want to know how to connect it ...":
+	Yes! One sec
+	
+2026-02-24 12:01:04 From Kaivan Shah to Everyone:
+	I had a question regarding context window. How to make sure our context window does not get full. In planning mode my context window was utilized 40%. I usually ask Claude to summarize actions in Claude md to reduce the window utilization but I am not sure if that is the best practice.
+	Misty Stinnett:☝🏻
+	
+2026-02-24 12:01:05 From Kevin Pauly to Everyone:
+	Replying to "screencapture-file-Users-robrossnov2018-Documents-...":
+	love this!
+	
+2026-02-24 12:01:15 From Spencer Mahoney to Everyone:
+	I went rogue and used my own data for a dashboard, but pretty cool how it came out!
+	
+2026-02-24 12:01:17 From nicholashurst to Everyone:
+	Make a branded gif
+	nps-dashboard.gif
+	
+2026-02-24 12:01:17 From Ross Broms to Everyone:
+	Replying to "Someone in my breakout chat got a different score ...":
+	We had the same…someone’s data got changed. Asked Claude to check against the CSV and it showed the differences
+	
+2026-02-24 12:01:26 From Seth Greenberg to Everyone:
+	Wanted an Exec summary and some industry benchmarks
+	Screenshot2026_02_24_090108.jpg
+	
+2026-02-24 12:01:27 From MM to Everyone:
+	Just reflecting that the experience for a non debt is equally a) discursive b) learning c) actual building, which is amazing
+	
+2026-02-24 12:01:37 From Sulaiman Rahman to Everyone:
+	Made an interactive version that updates voice of customer comments based on theme
+	interactive themes.mov
+	Kevin, Rob Ross:❤️
+	
+2026-02-24 12:01:39 From Andrew Crone to Everyone:
+	What is the purpose of “preview”? I figured that would let you preview the dashboard as it’s being built. All it did was think a bunch and then say, “You've hit your limit · resets 1pm (America/Chicago)”
+	
+2026-02-24 12:01:39 From Misty Stinnett to Everyone:
+	Replying to "Guys please I just want to know how to connect it ...":
+	Mike said for Canva the key is MCP — and you can set it up via:
+	
+	https://www.canva.com/help/mcp-agent-setup/ 
+	
+	Also, Calude Code has a PowerPoint skill
+	Katherine O'Kelly:🔥
+	
+2026-02-24 12:01:42 From kathrynsnelling to Everyone:
+	Can someone do a 1/1 support with me - I am getting json error and java script string silently breaking etc.. dashboard is often blank and missing the data.
+	
+2026-02-24 12:02:08 From kamilahgriffin to Everyone:
+	1000%
+	
+2026-02-24 12:02:10 From Misty Stinnett to Everyone:
+	Replying to "screencapture-file-Users-robrossnov2018-Documents-...":
+	What did you prompt to get this aesthetic??
+	
+2026-02-24 12:02:33 From Nin Vraitch to Everyone:
+	Replying to "Can someone do a 1/1 support with me - I am gettin...":
+	Me too @kathrynsnelling
+	
+2026-02-24 12:02:38 From kathrynsnelling to Everyone:
+	Replying to "Can someone do a 1/1 support with me - I am gettin...":
+	@Will Mannon @Mike Taylor  who can help me please
+	
+2026-02-24 12:02:45 From Philip Kulishov to Everyone:
+	Replying to "Made an interactive version that updates voice of ...":
+	How did you do this?
+	
+2026-02-24 12:02:46 From David Berkal to Everyone:
+	How do we know how many tokens we have used / the associated cost as we build things?
+	
+2026-02-24 12:02:59 From Will Mannon to Everyone:
+	Replying to "Can someone do a 1/1 support with me - I am gettin...":
+	@Dan Sleeman Will be able to get you added to a support room for troubleshooting in just a moment
+	
+2026-02-24 12:03:02 From Carlos Lau to Everyone:
+	Finally!
+	Screenshot2026_02_24_090258.jpg
+	Dan Sleeman:🔥
+	Natalia Q:🙌
+	
+2026-02-24 12:03:02 From Rob Ross to Everyone:
+	https://furoku.github.io/bananaX/projects/infographic-evaluation/en/
+	Kevin:❤️
+	
+2026-02-24 12:03:06 From Mike Taylor to Everyone:
+	Replying to "How do we know how many tokens we have used / the ...":
+	Theres a usage section in settings
+	
+2026-02-24 12:03:08 From Misty Stinnett to Everyone:
+	Replying to "Made an interactive version that updates voice of ...":
+	Yes how!
+	
+2026-02-24 12:03:13 From Will Mannon to Everyone:
+	Replying to "Finally! Screenshot2026_02_24_090258.jpg":
+	Let’s go!
+	
+2026-02-24 12:03:32 From Carlos Lau to Everyone:
+	Replying to "Finally! Screenshot2026_02_24_090258.jpg":
+	Had to do it again in a new session. Thanks Dan for the help!
+	
+2026-02-24 12:03:39 From Barclay Blair to Everyone:
+	Replying to "How do we know how many tokens we have used / the ...":
+	Screenshot2026_02_24_120335.jpg
+	
+2026-02-24 12:03:50 From misterbomb to Everyone:
+	is there a recommended way to reassure ourselves that, say, data analysis done by CC is actually correct?
+	John Mellor (@mellortime):👍
+	
+2026-02-24 12:03:54 From Mike Taylor to Everyone:
+	Replying to "Can someone do a 1/1 support with me - I am gettin...":
+	You can also ask claude to help fix it
+	
+2026-02-24 12:04:10 From kathrynsnelling to Everyone:
+	Replying to "Can someone do a 1/1 support with me - I am gettin...":
+	Did and it doesn’t do it - says it does but everything keep getting stuck
+	
+2026-02-24 12:04:12 From misterbomb to Everyone:
+	ask another agent to check the work?
+	
+2026-02-24 12:04:13 From Varun Malhotra to Everyone:
+	CleanShot 2026-02-24 at 12.03.46@2x.png
+	
+2026-02-24 12:04:43 From Dhruv Tyagi to Everyone:
+	Added in a sentiment analysis and a section on what’s resonating with users vs. what Every can improve on based on the feedback
+	Screenshot 2026-02-24 at 12.03.37 PM.png, Screenshot 2026-02-24 at 12.03.58 PM.png
+	
+2026-02-24 12:04:46 From Chase to Everyone:
+	I had pretty significant data errors - just curious if there are best practices for checks or commands that verify the data. Like this was significantly off.
+	
+2026-02-24 12:05:07 From Stephen Biernacki to Everyone:
+	Replying to "I had pretty significant data errors - just curiou...":
+	Great question.
+	
+2026-02-24 12:05:09 From Rob Ross to Everyone:
+	screencapture-furoku-github-io-bananaX-projects-infographic-evaluation-en-2026-02-24-09_04_05-3.png
+	
+2026-02-24 12:05:13 From Rob Ross to Everyone:
+	https://furoku.github.io/bananaX/projects/infographic-evaluation/en/
+	
+2026-02-24 12:05:15 From Sulaiman Rahman to Everyone:
+	Replying to "Made an interactive version that updates voice of ...":
+	“Is there anything we can do to make it feel interactive, maybe make it the themes clickable and the voice of customer for that theme be based on that theme. Save a new version that can be opened locally”
+	
+2026-02-24 12:05:54 From kevinryutob to Everyone:
+	That’s amazing. I’m going to try to build one real quick for a conference I’m going to!
+	Will Mannon:💥
+	
+2026-02-24 12:06:24 From Stephen Biernacki to Everyone:
+	I just did this! Going to Europe soon and did this for my family. Damn, ahead of the game for once.
+	Misty Stinnett:✨
+	Pinay Jones:❤️
+	Johanna Salem, Shelli, Seth Greenberg:😂
+	
+2026-02-24 12:06:45 From Kevin to Everyone:
+	Do we start a new Claude code session, like you would a new chat?
+	Diego Trejo:👍
+	
+2026-02-24 12:07:00 From Randy Shipper to Everyone:
+	I cannot get into Plan mode
+	
+2026-02-24 12:07:04 From Dan Sleeman to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	Yep, a new session
+	
+2026-02-24 12:07:27 From Will Mannon to Everyone:
+	Replying to "I cannot get into Plan mode":
+	Hey Randy, are you able to do this?
+	CleanShot 2026-02-24 at 12.07.13@2x.png
+	
+2026-02-24 12:07:33 From Will Mannon to Everyone:
+	Replying to "I cannot get into Plan mode":
+	Or do you see that option?
+	
+2026-02-24 12:07:42 From Rob Ross to Everyone:
+	Replying to "Made an interactive version that updates voice of ...":
+	@Sulaiman Rahman SO COOL! what was the prompt you used to make it interactive?
+	
+2026-02-24 12:07:46 From Will Mannon to Everyone:
+	Replying to "That’s amazing. I’m going to try to build one real...":
+	Love it….good idea
+	
+2026-02-24 12:07:53 From Wenzel Proksch to Everyone:
+	im on the terminal, how do i get into plan mode?
+	
+2026-02-24 12:07:53 From Randy Shipper to Everyone:
+	Replying to "Made an interactive version that updates voice of ...":
+	YEs (he said sheepishly)
+	
+2026-02-24 12:08:11 From Kevin to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	@Dan Sleeman how?
+	
+2026-02-24 12:08:12 From Will Mannon to Everyone:
+	Replying to "im on the terminal, how do i get into plan mode?":
+	You just ask it “Hey let’s use Plan mode. I want to ________"
+	
+2026-02-24 12:08:33 From Will Mannon to Everyone:
+	CleanShot 2026-02-24 at 12.08.26@2x.png
+	
+2026-02-24 12:08:59 From Stephen Biernacki to Everyone:
+	Replying to "I just did this! Going to Europe soon and did this...":
+	I worked in regular Chat to build this, not even Cowork or Claude Code. I think this aspect is very interesting, as I’m increasingly not understanding the reason Claude Code is valuable compared to chat and code for things like this.
+	
+2026-02-24 12:09:00 From Sulaiman Rahman to Everyone:
+	Replying to "Made an interactive version that updates voice of ...":
+	This was the prompt, nothing too ground breaking. I have a habit of asking a question instead of just telling it what I want. 
+	
+	“Is there anything we can do to make it feel interactive, maybe make it the themes clickable and the voice of customer for that theme be based on that theme. Save a new version that can be opened locally”
+	
+2026-02-24 12:09:03 From Dan Sleeman to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	Screenshot 2026-02-24 at 12.08.56 PM.png
+	
+2026-02-24 12:09:16 From Mike Taylor to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	New session
+	
+2026-02-24 12:09:19 From Alexander Tilipman to Everyone:
+	How much time do we have
+	
+2026-02-24 12:09:22 From Mike Taylor to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	But it can be in the same folder
+	
+2026-02-24 12:09:29 From Dan Sleeman to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	Click the sidebar icon on top left, and then “New Session”
+	
+2026-02-24 12:10:28 From Kevin to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	Thanks, of course the nav column was hidden so didn’t realize it lived there
+	
+2026-02-24 12:10:41 From Dan Sleeman to Everyone:
+	Replying to "Do we start a new Claude code session, like you wo...":
+	Yeah it’s not the most intuitive!
+	
+2026-02-24 12:10:49 From Mike Taylor to Everyone:
+	Replying to "How much time do we have":
+	I think 20 mins, just confirming
+	
+2026-02-24 12:11:00 From Mike Taylor to Everyone:
+	Replying to "How much time do we have":
+	15
+	
+2026-02-24 12:11:15 From Mike Taylor to Everyone:
+	We’ll come back at 12:25, and spend some time sharing and answering questions
+	
+2026-02-24 12:11:30 From Spencer Mahoney to Everyone:
+	About to have to go into live dangerously mode based on how many “Allow Once” buttons I just had to click for web searches 😅
+	schoneck shoaf, Christine:💯
+	Brenda, Dan Sleeman:😂
+	
+2026-02-24 12:11:36 From Rob Ross to Everyone:
+	Do we need to use a different folder? Or the same folder for all the projects today?
+	
+2026-02-24 12:11:45 From Mike Taylor to Everyone:
+	You can use the same folder
+	
+2026-02-24 12:12:44 From Mateo García to Everyone:
+	The outcome should be an interactive web app? Or just a local html file?
+	
+2026-02-24 12:12:51 From Chase to Everyone:
+	Replying to "About to have to go into live dangerously mode bas...":
+	Yeah… same… and I can just imagine the reaction video of a coder watching me do it. “oh, no don’t do that one… ohp…guess we’re doing that..”
+	Christine:😂
+	

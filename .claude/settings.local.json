@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sort:*)",
+      "WebFetch(domain:unpkg.com)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

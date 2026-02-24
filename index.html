@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aspen Clevenger — AI Ops Consulting</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #fafafa;
+      --gray-100: #f4f4f5;
+      --gray-300: #d4d4d8;
+      --gray-500: #71717a;
+      --gray-700: #3f3f46;
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-dim: #eef2ff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      background: rgba(250,250,250,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-300);
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; color: var(--white) !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero-content { max-width: 680px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: "●"; font-size: 0.5rem; }
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--gray-500);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      line-height: 1.75;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary { background: var(--accent); color: var(--white); }
+    .btn-primary:hover { background: #4f46e5; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(99,102,241,0.35); }
+    .btn-outline { background: transparent; color: var(--black); border: 1.5px solid var(--gray-300); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* SECTION SHARED */
+    section { padding: 6rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      max-width: 540px;
+      line-height: 1.75;
+    }
+
+    /* PROBLEM */
+    #problem { background: var(--black); color: var(--white); }
+    #problem .section-label { color: var(--accent-light); }
+    #problem .section-sub { color: var(--gray-300); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .problem-card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+    .problem-icon {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .problem-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .problem-card p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* HOW IT WORKS */
+    #how-it-works { background: var(--gray-100); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .step {
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+    }
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      margin-bottom: 1.25rem;
+    }
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .step p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    /* ABOUT */
+    #about { background: var(--white); }
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    @media (max-width: 720px) {
+      .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    .about-avatar {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 380px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4338ca 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-avatar svg {
+      width: 75%;
+      height: 75%;
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: var(--gray-500);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .about-text p strong { color: var(--black); }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .tag {
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    /* SERVICES */
+    #services { background: var(--gray-100); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      border-radius: 14px;
+      padding: 2rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 24px rgba(99,102,241,0.12);
+    }
+    .service-icon { font-size: 2rem; margin-bottom: 1.25rem; }
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .service-features { list-style: none; }
+    .service-features li {
+      font-size: 0.88rem;
+      color: var(--gray-700);
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .service-features li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* CTA */
+    #contact {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+    }
+    #contact .section-title { color: var(--white); }
+    #contact .section-sub { color: var(--gray-300); margin: 0 auto 2.5rem; }
+    .contact-form {
+      max-width: 540px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-300);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      color: var(--white);
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+    select option { background: #161616; }
+    textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      background: var(--accent);
+      color: var(--white);
+      width: 100%;
+      padding: 0.9rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .form-submit:hover { background: #4f46e5; transform: translateY(-1px); }
+
+    .success-msg {
+      display: none;
+      background: #14532d;
+      border: 1px solid #16a34a;
+      color: #86efac;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #060606;
+      color: var(--gray-500);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+    footer span { color: var(--gray-300); font-weight: 600; }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { display: none; }
+      .hero { padding: 6rem 1.25rem 4rem; }
+      section { padding: 4rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Aspen Clevenger</a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">AI Ops Consulting</div>
+      <h1>Stop doing the work<br /><span>AI should handle.</span></h1>
+      <p class="hero-sub">
+        I sit down with busy professionals — no tech background required — and map out exactly where your time is being swallowed by repetitive tasks. Then I build the automations to get those hours back.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a Free Discovery Call</a>
+        <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <div class="section-label">Sound familiar?</div>
+      <h2 class="section-title">You're too busy to imagine<br />a less busy version of your day.</h2>
+      <p class="section-sub">Most people know they're drowning in manual work. They just don't know where to start — or that a fix exists.</p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">📋</div>
+          <h3>Copy-paste drudgery</h3>
+          <p>Moving data between spreadsheets, apps, or email — hour after hour, day after day.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📬</div>
+          <h3>Inbox overload</h3>
+          <p>Drafting the same responses, routing requests manually, following up on things that fall through the cracks.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">📊</div>
+          <h3>Manual reporting</h3>
+          <p>Building the same dashboards and summaries from scratch every week instead of having them appear automatically.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">🔁</div>
+          <h3>Repetitive approvals</h3>
+          <p>Chasing people for sign-offs, re-sending documents, manually tracking what's been done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">Simple, human, and built<br />around your actual work.</h2>
+      <p class="section-sub">No technical jargon. No homework. You just talk about your day — I find the waste.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Discovery Call</h3>
+          <p>We spend 30–60 minutes talking through your typical week. What takes the most time? What do you dread? What feels pointless? I listen and take notes.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Automation Blueprint</h3>
+          <p>I map out exactly which tasks can be automated, what tools will do it, and the ROI in hours saved per week. You get a clear plan, not a proposal full of buzzwords.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Build &amp; Hand Off</h3>
+          <p>I build the automations and walk you through how they work in plain English. No black boxes — you stay in control the whole time.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Ongoing Support</h3>
+          <p>Your work changes over time. I offer check-ins to tune and expand your automations as your needs evolve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-avatar">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer ring -->
+            <circle cx="100" cy="100" r="88" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+            <circle cx="100" cy="100" r="70" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+            <!-- Orbiting dots -->
+            <circle cx="100" cy="12" r="4" fill="#818cf8"/>
+            <circle cx="188" cy="100" r="4" fill="#a5b4fc"/>
+            <circle cx="100" cy="188" r="4" fill="#6366f1"/>
+            <circle cx="12" cy="100" r="4" fill="#818cf8"/>
+
+            <!-- Center hexagon -->
+            <polygon points="100,60 132,78 132,114 100,132 68,114 68,78"
+              fill="rgba(99,102,241,0.25)" stroke="#818cf8" stroke-width="1.5"/>
+
+            <!-- Inner glow core -->
+            <circle cx="100" cy="96" r="22" fill="rgba(99,102,241,0.35)"/>
+            <circle cx="100" cy="96" r="14" fill="#6366f1"/>
+            <circle cx="100" cy="96" r="7" fill="#e0e7ff"/>
+
+            <!-- Connection lines -->
+            <line x1="100" y1="60" x2="100" y2="12" stroke="rgba(129,140,248,0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="132" y1="78" x2="188" y2="100" stroke="rgba(129,140,248,0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="132" y1="114" x2="100" y2="188" stroke="rgba(129,140,248,0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="68" y1="114" x2="12" y2="100" stroke="rgba(129,140,248,0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="68" y1="78" x2="100" y2="12" stroke="rgba(129,140,248,0.2)" stroke-width="1" stroke-dasharray="3 3"/>
+
+            <!-- Floating nodes -->
+            <circle cx="148" cy="52" r="6" fill="rgba(129,140,248,0.5)" stroke="#818cf8" stroke-width="1"/>
+            <circle cx="160" cy="148" r="5" fill="rgba(99,102,241,0.5)" stroke="#6366f1" stroke-width="1"/>
+            <circle cx="44" cy="56" r="5" fill="rgba(165,180,252,0.5)" stroke="#a5b4fc" stroke-width="1"/>
+            <circle cx="38" cy="148" r="6" fill="rgba(129,140,248,0.5)" stroke="#818cf8" stroke-width="1"/>
+
+            <!-- Data pulse arcs -->
+            <path d="M 60 40 Q 100 20 140 40" stroke="rgba(165,180,252,0.3)" stroke-width="1" fill="none"/>
+            <path d="M 60 160 Q 100 180 140 160" stroke="rgba(165,180,252,0.3)" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="about-text">
+          <div class="section-label">About Aspen</div>
+          <h2 class="section-title">AI Ops leader.<br />Plain-English translator.</h2>
+          <p>I'm <strong>Aspen Clevenger</strong> — an AI Operations specialist who believes the most powerful thing about modern AI isn't the technology itself, it's what it gives you back: <strong>time</strong>.</p>
+          <p>I've spent years figuring out how to bridge the gap between cutting-edge AI capabilities and the real-world workflows of people who don't have time to become engineers. My superpower is listening carefully to how you work, spotting the bottlenecks, and building solutions that actually fit your life.</p>
+          <p>If you've ever thought "there has to be a better way to do this" — there almost certainly is. Let's find it together.</p>
+          <div class="tags">
+            <span class="tag">AI Strategy</span>
+            <span class="tag">Workflow Automation</span>
+            <span class="tag">No-Code / Low-Code</span>
+            <span class="tag">Process Mapping</span>
+            <span class="tag">LLM Integration</span>
+            <span class="tag">Time Audit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-label">What I offer</div>
+      <h2 class="section-title">Consulting packages<br />that match where you are.</h2>
+      <p class="section-sub">Whether you need a one-time audit or an ongoing automation partner, there's an option for you.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Time Audit Session</h3>
+          <p>A focused 90-minute deep-dive into your current workflows. Walk away with a prioritized list of automation opportunities.</p>
+          <ul class="service-features">
+            <li>90-min 1:1 session</li>
+            <li>Written automation roadmap</li>
+            <li>Tool recommendations</li>
+            <li>Hours-saved estimate per task</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Automation Sprint</h3>
+          <p>I audit your workflows, build your top 3 automations, and train you on how to run them — all in two weeks.</p>
+          <ul class="service-features">
+            <li>Full time audit included</li>
+            <li>3 custom automations built</li>
+            <li>Hands-on walkthrough &amp; training</li>
+            <li>30-day support window</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🤝</div>
+          <h3>Fractional AI Ops Partner</h3>
+          <p>Ongoing partnership where I continuously identify and build automations as your business grows and changes.</p>
+          <ul class="service-features">
+            <li>Monthly strategy session</li>
+            <li>Unlimited automation builds</li>
+            <li>Priority support &amp; iteration</li>
+            <li>Quarterly ops review</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Let's find your hidden hours.</h2>
+      <p class="section-sub">Book a free 20-minute call. No sales pitch — just a conversation about where your time is going.</p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+          </div>
+          <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+          </div>
+        </div>
+        <div>
+          <label for="email">Work Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+        </div>
+        <div>
+          <label for="role">Your Role</label>
+          <input type="text" id="role" name="role" placeholder="e.g. Operations Manager, Founder, Team Lead" />
+        </div>
+        <div>
+          <label for="biggest_drain">What's eating most of your time right now?</label>
+          <textarea id="biggest_drain" name="biggest_drain" placeholder="e.g. I spend hours every week manually compiling reports from three different spreadsheets..."></textarea>
+        </div>
+        <div>
+          <label for="service">Which service interests you?</label>
+          <select id="service" name="service">
+            <option value="">— Select one —</option>
+            <option value="audit">Time Audit Session</option>
+            <option value="sprint">Automation Sprint</option>
+            <option value="partner">Fractional AI Ops Partner</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">Send My Request →</button>
+        <div class="success-msg" id="successMsg">
+          ✓ &nbsp; Got it! Aspen will be in touch within 1 business day to schedule your call.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <span>Aspen Clevenger</span> · AI Ops Consulting · Built with intention.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.querySelector('button[type="submit"]').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout APM — Customer Health Dashboard Q1 2026</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      background: #f0f4f8;
+      color: #0f172a;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: #0d1117;
+      padding: 22px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1e293b;
+    }
+    .header-left { display: flex; align-items: center; gap: 16px; }
+    .logo {
+      background: #3b82f6;
+      color: white;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .header-title { font-size: 18px; font-weight: 700; color: #f1f5f9; }
+    .header-sub { font-size: 12px; color: #64748b; margin-top: 2px; }
+    .header-meta { text-align: right; }
+    .header-dte { font-size: 12px; color: #475569; }
+    .header-arr { font-size: 22px; font-weight: 800; color: #38bdf8; margin-top: 2px; }
+    .header-arr-label { font-size: 11px; color: #64748b; }
+
+    /* ── TABS ── */
+    .tab-nav {
+      background: #0d1117;
+      padding: 0 36px;
+      display: flex;
+      gap: 2px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .tab-btn {
+      padding: 12px 22px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #64748b;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.15s, border-color 0.15s;
+      letter-spacing: 0.2px;
+    }
+    .tab-btn:hover { color: #cbd5e1; }
+    .tab-btn.active { color: #f1f5f9; border-bottom-color: #3b82f6; }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: 28px 36px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── KPI ROW ── */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .kpi-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 22px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      border: 1px solid #e8edf2;
+    }
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+    .kpi-value {
+      font-size: 30px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 8px 0 5px;
+      line-height: 1;
+    }
+    .kpi-sub { font-size: 12px; color: #64748b; }
+    .kpi-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-top: 6px;
+    }
+    .badge-red    { background: #fef2f2; color: #dc2626; }
+    .badge-green  { background: #f0fdf4; color: #15803d; }
+    .badge-amber  { background: #fffbeb; color: #b45309; }
+    .badge-blue   { background: #eff6ff; color: #1d4ed8; }
+    .badge-gray   { background: #f8fafc; color: #475569; }
+
+    /* ── LAYOUT GRIDS ── */
+    .grid-2   { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .grid-3   { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .grid-13  { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; margin-bottom: 16px; }
+    .grid-31  { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .mb16     { margin-bottom: 16px; }
+    .mb0      { margin-bottom: 0; }
+
+    /* ── CARD ── */
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 22px 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      border: 1px solid #e8edf2;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 3px;
+    }
+    .card-sub {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 18px;
+    }
+    .card-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+
+    /* ── HEALTH BADGES ── */
+    .hb {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .hb::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      margin-right: 5px;
+      display: inline-block;
+    }
+    .hb-healthy  { background: #f0fdf4; color: #15803d; }
+    .hb-healthy::before  { background: #16a34a; }
+    .hb-lowrisk  { background: #f7fee7; color: #4d7c0f; }
+    .hb-lowrisk::before  { background: #65a30d; }
+    .hb-moderate { background: #fffbeb; color: #b45309; }
+    .hb-moderate::before { background: #f59e0b; }
+    .hb-high     { background: #fef2f2; color: #b91c1c; }
+    .hb-high::before     { background: #ef4444; }
+    .hb-churned  { background: #f8fafc; color: #475569; }
+    .hb-churned::before  { background: #94a3b8; }
+
+    /* ── TABLES ── */
+    .tbl { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+    .tbl th {
+      text-align: left;
+      padding: 7px 12px;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1px solid #e2e8f0;
+      background: #f8fafc;
+    }
+    .tbl td { padding: 9px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+    .tbl tr:last-child td { border-bottom: none; }
+    .tbl tr:hover td { background: #fafbfc; }
+    .tbl-scroll { overflow-x: auto; }
+
+    .mrr-cell { font-weight: 700; color: #0f172a; }
+    .users-zero { color: #dc2626; font-weight: 700; }
+    .users-ok   { color: #15803d; font-weight: 600; }
+    .users-none { color: #94a3b8; }
+    .champion-missing { color: #dc2626; font-size: 11px; font-weight: 600; }
+    .champion-ok      { color: #15803d; font-size: 11px; }
+
+    /* ── RISK AGE BARS ── */
+    .risk-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .risk-name { width: 185px; font-size: 12px; text-align: right; flex-shrink: 0; color: #334155; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .risk-track { flex: 1; height: 22px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+    .risk-fill  { height: 100%; border-radius: 4px; display: flex; align-items: center; padding: 0 8px; font-size: 11px; font-weight: 700; color: white; min-width: 20px; }
+    .risk-mo    { width: 55px; font-size: 11px; color: #64748b; flex-shrink: 0; }
+    .risk-mrr   { width: 55px; font-size: 11px; color: #64748b; text-align: right; flex-shrink: 0; }
+
+    /* ── FEATURE MATRIX ── */
+    .feat-cell { display: flex; justify-content: center; }
+    .feat-yes     { background: #dcfce7; color: #15803d; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 4px; }
+    .feat-pending { background: #fef9c3; color: #854d0e; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 4px; }
+    .feat-no      { background: #f1f5f9; color: #94a3b8; font-size: 11px; padding: 2px 9px; border-radius: 4px; }
+
+    /* ── EXPANSION CARDS ── */
+    .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .exp-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      transition: box-shadow 0.15s;
+    }
+    .exp-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .exp-type {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .exp-type-achieved { color: #15803d; }
+    .exp-type-confirmed { color: #1d4ed8; }
+    .exp-type-opportunity { color: #b45309; }
+    .exp-name { font-size: 14px; font-weight: 700; color: #0f172a; }
+    .exp-mrr  { font-size: 12px; color: #64748b; margin-top: 2px; }
+    .exp-signal {
+      font-size: 12px;
+      color: #334155;
+      margin-top: 10px;
+      line-height: 1.4;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .exp-icon { font-size: 18px; margin-bottom: 8px; }
+
+    /* ── CONCENTRATION BAR ── */
+    .conc-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .conc-name { width: 185px; font-size: 12px; color: #334155; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0; }
+    .conc-track { flex: 1; height: 22px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+    .conc-fill  { height: 100%; border-radius: 4px; display: flex; align-items: center; padding: 0 8px; font-size: 11px; font-weight: 600; color: white; min-width: 36px; }
+    .conc-pct   { width: 40px; font-size: 11px; color: #64748b; text-align: right; flex-shrink: 0; }
+
+    /* ── LEGEND ── */
+    .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #475569; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── SUMMARY STAT PILLS ── */
+    .stat-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+    .stat-pill {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 12px;
+    }
+    .stat-pill-val { font-size: 20px; font-weight: 800; color: #0f172a; }
+    .stat-pill-label { color: #64748b; margin-top: 1px; }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #94a3b8;
+      margin-bottom: 12px;
+      margin-top: 6px;
+    }
+
+    /* ── HIGHLIGHT BOXES ── */
+    .highlight-red   { background: #fef2f2; border-left: 3px solid #ef4444; border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 12px; color: #7f1d1d; margin-bottom: 8px; }
+    .highlight-amber { background: #fffbeb; border-left: 3px solid #f59e0b; border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 12px; color: #78350f; margin-bottom: 8px; }
+    .highlight-blue  { background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 12px; color: #1e3a8a; margin-bottom: 8px; }
+    .highlight-green { background: #f0fdf4; border-left: 3px solid #22c55e; border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 12px; color: #14532d; }
+    .highlight b { font-weight: 700; }
+
+    /* ── CHART WRAPPERS ── */
+    .chart-wrap { position: relative; }
+
+    /* ── RISK SUMMARY TILES ── */
+    .risk-tile-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 16px; }
+    .risk-tile {
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .risk-tile-val  { font-size: 22px; font-weight: 800; }
+    .risk-tile-mrr  { font-size: 13px; font-weight: 600; margin-top: 2px; }
+    .risk-tile-lbl  { font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+    .rt-healthy  { background: #f0fdf4; }
+    .rt-healthy .risk-tile-val { color: #15803d; }
+    .rt-healthy .risk-tile-mrr { color: #16a34a; }
+    .rt-healthy .risk-tile-lbl { color: #166534; }
+    .rt-lowrisk  { background: #f7fee7; }
+    .rt-lowrisk .risk-tile-val { color: #4d7c0f; }
+    .rt-lowrisk .risk-tile-mrr { color: #65a30d; }
+    .rt-lowrisk .risk-tile-lbl { color: #3f6212; }
+    .rt-moderate { background: #fffbeb; }
+    .rt-moderate .risk-tile-val { color: #b45309; }
+    .rt-moderate .risk-tile-mrr { color: #d97706; }
+    .rt-moderate .risk-tile-lbl { color: #92400e; }
+    .rt-high     { background: #fef2f2; }
+    .rt-high .risk-tile-val { color: #b91c1c; }
+    .rt-high .risk-tile-mrr { color: #ef4444; }
+    .rt-high .risk-tile-lbl { color: #991b1b; }
+    .rt-churned  { background: #f8fafc; }
+    .rt-churned .risk-tile-val { color: #475569; }
+    .rt-churned .risk-tile-mrr { color: #64748b; }
+    .rt-churned .risk-tile-lbl { color: #334155; }
+
+    /* ── ADOPTION SUMMARY ── */
+    .adoption-bars { margin-top: 8px; }
+    .adopt-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .adopt-label { width: 110px; font-size: 12px; color: #475569; flex-shrink: 0; }
+    .adopt-track { flex: 1; height: 16px; background: #f1f5f9; border-radius: 20px; overflow: hidden; }
+    .adopt-fill  { height: 100%; border-radius: 20px; }
+    .adopt-pct   { width: 40px; font-size: 11px; color: #64748b; text-align: right; flex-shrink: 0; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div class="logo">SCOUT APM</div>
+    <div>
+      <div class="header-title">Customer Health Dashboard</div>
+      <div class="header-sub">Managed Book · Q1 2026 · Customer Success &amp; Revenue Operations</div>
+    </div>
+  </div>
+  <div class="header-meta">
+    <div class="header-dte">As of February 24, 2026</div>
+    <div class="header-arr">$818,904</div>
+    <div class="header-arr-label">Active ARR · 43 Accounts</div>
+  </div>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('overview', this)">Portfolio Overview</button>
+  <button class="tab-btn" onclick="showTab('risk', this)">Risk &amp; Watchlist</button>
+  <button class="tab-btn" onclick="showTab('adoption', this)">Adoption &amp; Expansion</button>
+</div>
+
+<!-- ════════════════════════════════════════════
+     TAB 1 — PORTFOLIO OVERVIEW
+════════════════════════════════════════════ -->
+<div id="tab-overview" class="tab-panel active">
+<div class="content">
+
+  <!-- KPI TILES -->
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-label">Active MRR</div>
+      <div class="kpi-value">$68,242</div>
+      <div class="kpi-sub">43 accounts · $818,904 ARR</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Healthy MRR</div>
+      <div class="kpi-value" style="color:#15803d;">$55,047</div>
+      <div class="kpi-sub">80.7% of active book</div>
+      <div class="kpi-badge badge-green">▲ 31 accounts</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">At-Risk MRR</div>
+      <div class="kpi-value" style="color:#dc2626;">$13,195</div>
+      <div class="kpi-sub">19.3% of active book</div>
+      <div class="kpi-badge badge-red">⚠ 12 accounts</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Churned MRR</div>
+      <div class="kpi-value" style="color:#64748b;">$6,487</div>
+      <div class="kpi-sub">5 accounts · $77,844 ARR lost</div>
+      <div class="kpi-badge badge-gray">Already exited</div>
+    </div>
+  </div>
+
+  <!-- HEALTH DISTRIBUTION + CONCENTRATION -->
+  <div class="grid-2 mb16">
+
+    <!-- Dual donuts -->
+    <div class="card">
+      <div class="card-title">Health Distribution</div>
+      <div class="card-sub">Accounts and MRR by health band · Active accounts only</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div>
+          <div style="font-size:11px; font-weight:600; color:#94a3b8; text-align:center; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">By Account Count</div>
+          <div class="chart-wrap" style="height:170px;"><canvas id="chartHealthAcct"></canvas></div>
+        </div>
+        <div>
+          <div style="font-size:11px; font-weight:600; color:#94a3b8; text-align:center; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">By MRR</div>
+          <div class="chart-wrap" style="height:170px;"><canvas id="chartHealthMRR"></canvas></div>
+        </div>
+      </div>
+      <div class="legend" style="margin-top:14px; justify-content:center;">
+        <div class="legend-item"><div class="legend-dot" style="background:#16a34a;"></div>Healthy</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#65a30d;"></div>Low Risk</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div>Moderate</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ef4444;"></div>High Risk</div>
+      </div>
+    </div>
+
+    <!-- Revenue concentration -->
+    <div class="card">
+      <div class="card-title-row">
+        <div>
+          <div class="card-title">Revenue Concentration — Top 10 Accounts</div>
+          <div class="card-sub">% of $68,242 active MRR · Colored by health status</div>
+        </div>
+      </div>
+
+      <div id="concBars"></div>
+
+      <div class="legend" style="margin-top:12px;">
+        <div class="legend-item"><div class="legend-dot" style="background:#16a34a;"></div>Healthy</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#65a30d;"></div>Low Risk</div>
+      </div>
+    </div>
+
+  </div><!-- /grid-2 -->
+
+  <!-- CONTRACT MIX + USER DISTRIBUTION -->
+  <div class="grid-2 mb16">
+
+    <!-- Contract type mix -->
+    <div class="card">
+      <div class="card-title">Contract Type Mix</div>
+      <div class="card-sub">Annual vs. Monthly billing · Active accounts only</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:center;">
+        <div class="chart-wrap" style="height:160px;"><canvas id="chartContract"></canvas></div>
+        <div>
+          <div style="margin-bottom:12px;">
+            <div style="font-size:11px; font-weight:600; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">Annual</div>
+            <div style="font-size:22px; font-weight:800; color:#1d4ed8;">15 accounts</div>
+            <div style="font-size:13px; color:#3b82f6; font-weight:600;">$37,022 MRR · 54.3%</div>
+          </div>
+          <div>
+            <div style="font-size:11px; font-weight:600; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">Monthly / Other</div>
+            <div style="font-size:22px; font-weight:800; color:#f59e0b;">28 accounts</div>
+            <div style="font-size:13px; color:#d97706; font-weight:600;">$31,220 MRR · 45.7%</div>
+          </div>
+          <div style="margin-top:12px; padding:8px 10px; background:#fffbeb; border-radius:6px; font-size:11px; color:#78350f; line-height:1.4;">
+            ⚠ 63% of accounts have no contractual lock-in. Monthly accounts can churn with zero notice.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active user distribution -->
+    <div class="card">
+      <div class="card-title">Active User Distribution</div>
+      <div class="card-sub">Accounts by number of active users · 17 accounts have no data on file</div>
+      <div class="chart-wrap" style="height:160px;"><canvas id="chartUsers"></canvas></div>
+    </div>
+
+  </div><!-- /grid-2 -->
+
+  <!-- CONCENTRATION RISK CALLOUT -->
+  <div class="card mb16">
+    <div class="card-title">⚠ Concentration Risk Alert</div>
+    <div class="card-sub">Revenue distribution is heavily top-weighted</div>
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;">
+      <div style="padding:14px; background:#fef2f2; border-radius:8px; text-align:center;">
+        <div style="font-size:28px; font-weight:800; color:#dc2626;">19.1%</div>
+        <div style="font-size:12px; color:#7f1d1d; margin-top:4px; font-weight:600;">of active MRR is one account</div>
+        <div style="font-size:11px; color:#991b1b; margin-top:4px;">Bank of New York Mellon · $13,000/mo</div>
+        <div style="font-size:11px; color:#ef4444; margin-top:6px; font-weight:600;">No active users on record. No named champion.</div>
+      </div>
+      <div style="padding:14px; background:#fffbeb; border-radius:8px; text-align:center;">
+        <div style="font-size:28px; font-weight:800; color:#b45309;">34.6%</div>
+        <div style="font-size:12px; color:#78350f; margin-top:4px; font-weight:600;">of active MRR is top 5 accounts</div>
+        <div style="font-size:11px; color:#92400e; margin-top:4px;">BNY Mellon + PINC + Maxio + MDLIVE + Academia</div>
+        <div style="font-size:11px; color:#d97706; margin-top:6px; font-weight:600;">One account exit = outsized revenue impact.</div>
+      </div>
+      <div style="padding:14px; background:#f0fdf4; border-radius:8px; text-align:center;">
+        <div style="font-size:28px; font-weight:800; color:#15803d;">$818K</div>
+        <div style="font-size:12px; color:#14532d; margin-top:4px; font-weight:600;">Active ARR across 43 accounts</div>
+        <div style="font-size:11px; color:#166534; margin-top:4px;">Avg account MRR: $1,587</div>
+        <div style="font-size:11px; color:#15803d; margin-top:6px; font-weight:600;">31 of 43 accounts are healthy today.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /content -->
+</div><!-- /tab-overview -->
+
+
+<!-- ════════════════════════════════════════════
+     TAB 2 — RISK & WATCHLIST
+════════════════════════════════════════════ -->
+<div id="tab-risk" class="tab-panel">
+<div class="content">
+
+  <!-- RISK TILES -->
+  <div class="risk-tile-row">
+    <div class="risk-tile rt-healthy">
+      <div class="risk-tile-val">31</div>
+      <div class="risk-tile-mrr">$55,047/mo</div>
+      <div class="risk-tile-lbl">Healthy</div>
+    </div>
+    <div class="risk-tile rt-lowrisk">
+      <div class="risk-tile-val">6</div>
+      <div class="risk-tile-mrr">$7,099/mo</div>
+      <div class="risk-tile-lbl">Low Risk</div>
+    </div>
+    <div class="risk-tile rt-moderate">
+      <div class="risk-tile-val">3</div>
+      <div class="risk-tile-mrr">$3,497/mo</div>
+      <div class="risk-tile-lbl">Moderate Risk</div>
+    </div>
+    <div class="risk-tile rt-high">
+      <div class="risk-tile-val">3</div>
+      <div class="risk-tile-mrr">$2,599/mo</div>
+      <div class="risk-tile-lbl">High Risk</div>
+    </div>
+    <div class="risk-tile rt-churned">
+      <div class="risk-tile-val">5</div>
+      <div class="risk-tile-mrr">$6,487/mo</div>
+      <div class="risk-tile-lbl">Churned</div>
+    </div>
+  </div>
+
+  <!-- EXPOSURE VISUALIZATION -->
+  <div class="card mb16">
+    <div class="card-title">Total Revenue Exposure</div>
+    <div class="card-sub">$74,729 total MRR broken down by health band</div>
+    <div style="margin: 10px 0 14px;">
+      <div style="display:flex; height:36px; border-radius:8px; overflow:hidden; gap:2px;">
+        <div style="flex:55047; background:#16a34a; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:white;">$55,047 Healthy</div>
+        <div style="flex:7099; background:#65a30d; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:white;">$7,099</div>
+        <div style="flex:3497; background:#f59e0b; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:white;">$3,497</div>
+        <div style="flex:2599; background:#ef4444; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:white;">$2,599</div>
+        <div style="flex:6487; background:#94a3b8; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:white;">$6,487</div>
+      </div>
+    </div>
+    <div style="display:flex; gap:20px; font-size:11px; color:#64748b; flex-wrap:wrap;">
+      <div><span style="color:#16a34a; font-weight:700;">■</span> Healthy: 73.7%</div>
+      <div><span style="color:#65a30d; font-weight:700;">■</span> Low Risk: 9.5%</div>
+      <div><span style="color:#f59e0b; font-weight:700;">■</span> Moderate Risk: 4.7%</div>
+      <div><span style="color:#ef4444; font-weight:700;">■</span> High Risk: 3.5%</div>
+      <div><span style="color:#94a3b8; font-weight:700;">■</span> Churned: 8.7%</div>
+    </div>
+    <div style="margin-top:12px; padding:10px 14px; background:#fef2f2; border-radius:6px; font-size:12px; color:#7f1d1d; line-height:1.5;">
+      <b>$13,195/mo (19.3% of active MRR)</b> is in accounts with active risk flags. Combined with <b>$6,487/mo already churned</b>, total revenue exposure is <b>$19,682/mo — $236K annualized</b>.
+    </div>
+  </div>
+
+  <!-- WATCHLIST TABLE -->
+  <div class="card mb16">
+    <div class="card-title">Account Risk Watchlist — 12 Active At-Risk Accounts</div>
+    <div class="card-sub">Sorted by risk severity and MRR. All require active CSM intervention.</div>
+    <div class="tbl-scroll">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Account</th>
+            <th>MRR</th>
+            <th>Status</th>
+            <th>Active Users</th>
+            <th>Risk Since</th>
+            <th>Months Open</th>
+            <th>Champion</th>
+            <th>Key Issue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:600;">Symantec SEP Mobile</td>
+            <td class="mrr-cell">$1,511</td>
+            <td><span class="hb hb-moderate">Moderate Risk</span></td>
+            <td><span class="users-zero">0</span></td>
+            <td>Jan 2022</td>
+            <td><b style="color:#dc2626;">49 mo</b></td>
+            <td><span class="champion-missing">✗ Undeliverable email</span></td>
+            <td style="font-size:11px; color:#64748b;">No contact in 4 years. Ghost account.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Academia</td>
+            <td class="mrr-cell">$2,062</td>
+            <td><span class="hb hb-lowrisk">Low Risk</span></td>
+            <td><span class="users-ok">1</span></td>
+            <td>Jun 2023</td>
+            <td><b style="color:#dc2626;">32 mo</b></td>
+            <td><span class="champion-ok">✓ Bob Tucker</span></td>
+            <td style="font-size:11px; color:#64748b;">No engagement despite a named contact.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Funion LP</td>
+            <td class="mrr-cell">$1,162</td>
+            <td><span class="hb hb-moderate">Moderate Risk</span></td>
+            <td><span class="users-ok">1</span></td>
+            <td>Mar 2024</td>
+            <td><b style="color:#b45309;">23 mo</b></td>
+            <td><span class="champion-ok">✓ Rene IJnema</span></td>
+            <td style="font-size:11px; color:#64748b;">Product usage but zero engagement with CS.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Beeple</td>
+            <td class="mrr-cell">$824</td>
+            <td><span class="hb hb-lowrisk">Low Risk</span></td>
+            <td><span class="users-none">—</span></td>
+            <td>Jun 2024</td>
+            <td><b style="color:#b45309;">20 mo</b></td>
+            <td><span class="champion-ok">✓ Nathan Samson</span></td>
+            <td style="font-size:11px; color:#64748b;">No active usage signal on file.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">taskey</td>
+            <td class="mrr-cell">$887</td>
+            <td><span class="hb hb-lowrisk">Low Risk</span></td>
+            <td><span class="users-none">—</span></td>
+            <td>Sep 2024</td>
+            <td><b style="color:#b45309;">17 mo</b></td>
+            <td><span class="champion-missing">✗ Unknown</span></td>
+            <td style="font-size:11px; color:#64748b;">No engagement, no champion. Language barrier noted.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Heard</td>
+            <td class="mrr-cell">$824</td>
+            <td><span class="hb hb-high">High Risk</span></td>
+            <td><span class="users-zero">0</span></td>
+            <td>Sep 2024</td>
+            <td><b style="color:#b45309;">17 mo</b></td>
+            <td><span class="champion-missing">✗ Umar (no email)</span></td>
+            <td style="font-size:11px; color:#64748b;">0 users, 0 product usage. Pre-churn.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">FullContour</td>
+            <td class="mrr-cell">$824</td>
+            <td><span class="hb hb-moderate">Moderate Risk</span></td>
+            <td><span class="users-zero">0</span></td>
+            <td>Sep 2024</td>
+            <td><b style="color:#b45309;">17 mo</b></td>
+            <td><span class="champion-missing">✗ Unknown</span></td>
+            <td style="font-size:11px; color:#64748b;">No users. No champion. Likely pre-churn.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">GoodMeasures</td>
+            <td class="mrr-cell">$824</td>
+            <td><span class="hb hb-high">High Risk</span></td>
+            <td><span class="users-zero">0</span></td>
+            <td>Dec 2024</td>
+            <td><b style="color:#b45309;">14 mo</b></td>
+            <td><span class="champion-ok">✓ Rob Mathews</span></td>
+            <td style="font-size:11px; color:#64748b;">0 active users. Flagged risk for over a year.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Workit Health</td>
+            <td class="mrr-cell">$1,083</td>
+            <td><span class="hb hb-lowrisk">Low Risk</span></td>
+            <td><span class="users-zero">0</span></td>
+            <td>Jan 2025</td>
+            <td style="color:#475569;">13 mo</td>
+            <td><span class="champion-ok">✓ Patrick Schoeps</span></td>
+            <td style="font-size:11px; color:#64748b;">0 active users within 30 days.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">CloudBolt</td>
+            <td class="mrr-cell">$1,099</td>
+            <td><span class="hb hb-lowrisk">Low Risk</span></td>
+            <td><span class="users-ok">1</span></td>
+            <td>Jan 2025</td>
+            <td style="color:#475569;">13 mo</td>
+            <td><span class="champion-missing">✗ Champion changed</span></td>
+            <td style="font-size:11px; color:#64748b;">1 of 16 active users. Champion just changed.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Colossusbets LTD</td>
+            <td class="mrr-cell">$1,144</td>
+            <td><span class="hb hb-lowrisk">Low Risk</span></td>
+            <td><span class="users-ok">2</span></td>
+            <td>Jun 2025</td>
+            <td style="color:#475569;">8 mo</td>
+            <td><span class="champion-ok">✓ Alberto Zuin</span></td>
+            <td style="font-size:11px; color:#64748b;">Low usage. Budget issues at renewal.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Julio</td>
+            <td class="mrr-cell">$951</td>
+            <td><span class="hb hb-high">High Risk</span></td>
+            <td><span class="users-none">—</span></td>
+            <td>Dec 2025</td>
+            <td style="color:#475569;">2 mo</td>
+            <td><span class="champion-missing">✗ Champion changed</span></td>
+            <td style="font-size:11px; color:#64748b;">New risk — champion just left. No contact.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RISK FLAG AGE -->
+  <div class="card mb16">
+    <div class="card-title">Risk Flag Age — How Long Each Account Has Been at Risk</div>
+    <div class="card-sub">Older unresolved flags indicate either process failure or accounts drifting toward inevitable churn</div>
+
+    <div style="display:flex; gap:6px; justify-content:flex-end; margin-bottom:12px; font-size:11px; color:#94a3b8;">
+      <span style="color:#dc2626; font-weight:600;">■</span> High Risk &nbsp;
+      <span style="color:#f59e0b; font-weight:600;">■</span> Moderate &nbsp;
+      <span style="color:#65a30d; font-weight:600;">■</span> Low Risk
+    </div>
+
+    <div id="riskAgeBars"></div>
+
+    <div style="margin-top:14px; padding:10px 14px; background:#fef2f2; border-radius:6px; font-size:12px; color:#7f1d1d; line-height:1.5;">
+      <b>Symantec SEP Mobile has been flagged for 49 months</b> with no resolution. Three accounts (Heard, FullContour, GoodMeasures) have been in High/Moderate Risk status for 14–17 months with zero active users. These accounts are unlikely to recover without immediate executive-level intervention.
+    </div>
+  </div>
+
+  <!-- FRAGILE HIGH-VALUE ACCOUNTS CALLOUT -->
+  <div class="card">
+    <div class="card-title">High-Value Fragile Accounts — Labeled Healthy but Carrying Structural Risk</div>
+    <div class="card-sub">These accounts are not in the watchlist above but carry flags that warrant executive awareness</div>
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;">
+      <div style="border:1px solid #fde68a; border-radius:8px; padding:14px; background:#fffbeb;">
+        <div style="font-size:10px; font-weight:700; color:#b45309; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">⚠ No Active Users on Record</div>
+        <div style="font-size:15px; font-weight:700; color:#0f172a;">Bank of New York Mellon</div>
+        <div style="font-size:22px; font-weight:800; color:#b45309; margin-top:4px;">$13,000<span style="font-size:12px; font-weight:400; color:#64748b;">/mo</span></div>
+        <div style="font-size:11px; color:#78350f; margin-top:8px; line-height:1.4;">19% of active MRR. No user or champion recorded. APM only. If relationship is not embedded, renewal is a cold call.</div>
+      </div>
+      <div style="border:1px solid #fde68a; border-radius:8px; padding:14px; background:#fffbeb;">
+        <div style="font-size:10px; font-weight:700; color:#b45309; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">⚠ Active Layoffs &amp; Restructuring</div>
+        <div style="font-size:15px; font-weight:700; color:#0f172a;">Vndly (Workday)</div>
+        <div style="font-size:22px; font-weight:800; color:#b45309; margin-top:4px;">$2,000<span style="font-size:12px; font-weight:400; color:#64748b;">/mo</span></div>
+        <div style="font-size:11px; color:#78350f; margin-top:8px; line-height:1.4;">Labeled Healthy but CSM noted ongoing layoffs and AI-led restructuring through 2026. Budget holder may not survive the reorg.</div>
+      </div>
+      <div style="border:1px solid #fde68a; border-radius:8px; padding:14px; background:#fffbeb;">
+        <div style="font-size:10px; font-weight:700; color:#b45309; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">⚠ Unmet Product Need</div>
+        <div style="font-size:15px; font-weight:700; color:#0f172a;">PINC Solutions / Kaleris</div>
+        <div style="font-size:22px; font-weight:800; color:#b45309; margin-top:4px;">$3,800<span style="font-size:12px; font-weight:400; color:#64748b;">/mo</span></div>
+        <div style="font-size:11px; color:#78350f; margin-top:8px; line-height:1.4;">Needs application grouping for 300+ servers. No active users on record. Unresolved product gap becomes a renewal negotiation lever.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /content -->
+</div><!-- /tab-risk -->
+
+
+<!-- ════════════════════════════════════════════
+     TAB 3 — ADOPTION & EXPANSION
+════════════════════════════════════════════ -->
+<div id="tab-adoption" class="tab-panel">
+<div class="content">
+
+  <!-- ADOPTION SUMMARY -->
+  <div class="kpi-row" style="grid-template-columns: repeat(3,1fr);">
+    <div class="kpi-card" style="background:#fef2f2; border-color:#fecaca;">
+      <div class="kpi-label" style="color:#b91c1c;">Logs Management Adoption</div>
+      <div class="kpi-value" style="color:#dc2626;">0%</div>
+      <div class="kpi-sub" style="color:#b91c1c;">0 of 43 active accounts use Logs</div>
+    </div>
+    <div class="kpi-card" style="background:#fffbeb; border-color:#fde68a;">
+      <div class="kpi-label" style="color:#b45309;">Errors Monitoring Adoption</div>
+      <div class="kpi-value" style="color:#b45309;">4.7%</div>
+      <div class="kpi-sub" style="color:#b45309;">2 of 43 active accounts use Errors</div>
+      <div class="kpi-badge badge-amber">+1 pending (Veracross)</div>
+    </div>
+    <div class="kpi-card" style="background:#f0fdf4; border-color:#bbf7d0;">
+      <div class="kpi-label" style="color:#15803d;">APM Coverage</div>
+      <div class="kpi-value" style="color:#15803d;">100%</div>
+      <div class="kpi-sub" style="color:#15803d;">All 43 active accounts use APM</div>
+      <div class="kpi-badge badge-green">Cross-sell opportunity: 41 accounts</div>
+    </div>
+  </div>
+
+  <div class="highlight-red" style="margin-bottom:16px;">
+    <b>Zero accounts use Logs Management. Only 2 use Errors Monitoring.</b> The entire book is single-product. Multi-product customers churn significantly less often and generate higher NRR. This is the highest-leverage growth lever in the portfolio.
+  </div>
+
+  <!-- FEATURE ADOPTION MATRIX -->
+  <div class="card mb16">
+    <div class="card-title">Feature Adoption Matrix — All Active Accounts</div>
+    <div class="card-sub">APM is universal. Errors and Logs represent the full cross-sell surface area.</div>
+    <div class="tbl-scroll">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Account</th>
+            <th>MRR</th>
+            <th>Health</th>
+            <th style="text-align:center;">APM</th>
+            <th style="text-align:center;">Errors Monitoring</th>
+            <th style="text-align:center;">Logs Management</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="featureMatrixBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- EXPANSION PIPELINE -->
+  <div class="card mb16">
+    <div class="card-title">Expansion Pipeline</div>
+    <div class="card-sub">Accounts showing explicit signals for upsell, cross-sell, or contract expansion</div>
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <div class="exp-type exp-type-achieved">✓ Achieved</div>
+        <div class="exp-name">Backlotcars</div>
+        <div class="exp-mrr">$1,900/mo · Annual · 7 users</div>
+        <div class="exp-signal">
+          Expanded MRR by <b>+$295/month</b>. Signed 2-year agreement. Offered Errors free tier — no response yet. Strong expansion model.
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-type exp-type-confirmed">● Confirmed</div>
+        <div class="exp-name">Veracross</div>
+        <div class="exp-mrr">$1,300/mo · Annual · 4 users</div>
+        <div class="exp-signal">
+          Errors Monitoring included in <b>2026 renewal</b>. This is a confirmed product expansion at next renewal — prioritize a smooth handoff.
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-type exp-type-confirmed">● Active Interest</div>
+        <div class="exp-name">ParkWhiz</div>
+        <div class="exp-mrr">$1,600/mo · Annual · 5 users</div>
+        <div class="exp-signal">
+          Re-engaged champion. Signed <b>2-year agreement</b>. Excellent utilization metrics. A relationship to invest in — most likely to expand further.
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-type exp-type-opportunity">◆ Opportunity</div>
+        <div class="exp-name">itsacheckmate</div>
+        <div class="exp-mrr">$951/mo · Monthly · 4 users</div>
+        <div class="exp-signal">
+          Expressed <b>active interest in front-end monitoring</b>. Healthy account with engaged users. Prime candidate for a product demo.
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-type exp-type-opportunity">◆ Opportunity</div>
+        <div class="exp-name">Home Chef</div>
+        <div class="exp-mrr">$1,242/mo · Annual · 3 users</div>
+        <div class="exp-signal">
+          <b>Evaluating Logs Management month-to-month</b>. Needs advanced filtering to reduce volume. Engineering contact (Dan) is the key decision-maker.
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-type exp-type-opportunity">◆ Re-engage</div>
+        <div class="exp-name">ComunidadFeliz</div>
+        <div class="exp-mrr">$1,240/mo · Annual · 11 users</div>
+        <div class="exp-signal">
+          <b>Declined Errors Monitoring</b> (was using Rollbar). Highest active user count in portfolio. Re-engage with a direct value comparison against Rollbar.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CROSS-SELL ACTION PLAN -->
+  <div class="card">
+    <div class="card-title">Cross-Sell Opportunity Summary</div>
+    <div class="card-sub">Prioritized by MRR and engagement signal</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+      <div>
+        <div style="font-size:12px; font-weight:700; color:#0f172a; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.4px;">Errors Monitoring — Top Cross-Sell Targets</div>
+        <table class="tbl" style="font-size:12px;">
+          <thead>
+            <tr><th>Account</th><th>MRR</th><th>Users</th><th>Signal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="font-weight:600;">Veracross</td><td>$1,300</td><td>4</td><td><span style="color:#15803d; font-size:11px; font-weight:600;">✓ In 2026 renewal</span></td></tr>
+            <tr><td style="font-weight:600;">ComunidadFeliz</td><td>$1,240</td><td>11</td><td><span style="color:#b45309; font-size:11px; font-weight:600;">Re-engage</span></td></tr>
+            <tr><td style="font-weight:600;">Backlotcars</td><td>$1,900</td><td>7</td><td><span style="color:#b45309; font-size:11px; font-weight:600;">No response yet</span></td></tr>
+            <tr><td style="font-weight:600;">Amagi</td><td>$999</td><td>8</td><td><span style="color:#64748b; font-size:11px;">High users, no outreach</span></td></tr>
+            <tr><td style="font-weight:600;">Introhive</td><td>$1,063</td><td>7</td><td><span style="color:#64748b; font-size:11px;">High users, no outreach</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div style="font-size:12px; font-weight:700; color:#0f172a; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.4px;">Logs Management — Top Cross-Sell Targets</div>
+        <table class="tbl" style="font-size:12px;">
+          <thead>
+            <tr><th>Account</th><th>MRR</th><th>Users</th><th>Signal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="font-weight:600;">Home Chef</td><td>$1,242</td><td>3</td><td><span style="color:#15803d; font-size:11px; font-weight:600;">Active evaluation</span></td></tr>
+            <tr><td style="font-weight:600;">ComunidadFeliz</td><td>$1,240</td><td>11</td><td><span style="color:#b45309; font-size:11px; font-weight:600;">High user count</span></td></tr>
+            <tr><td style="font-weight:600;">Amagi</td><td>$999</td><td>8</td><td><span style="color:#64748b; font-size:11px;">High users, no outreach</span></td></tr>
+            <tr><td style="font-weight:600;">Backlotcars</td><td>$1,900</td><td>7</td><td><span style="color:#64748b; font-size:11px;">Engaged — ask directly</span></td></tr>
+            <tr><td style="font-weight:600;">Introhive</td><td>$1,063</td><td>7</td><td><span style="color:#64748b; font-size:11px;">High users, no outreach</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top:14px; padding:10px 14px; background:#f0fdf4; border-radius:6px; font-size:12px; color:#14532d; line-height:1.5;">
+      <b>If 8 accounts adopt one additional feature at $300/mo each, that is $2,400 new MRR ($28,800 ARR)</b> — equal to recovering more than a third of the current at-risk exposure through organic expansion alone.
+    </div>
+  </div>
+
+</div><!-- /content -->
+</div><!-- /tab-adoption -->
+
+<div class="footer">Scout APM · Customer Health Dashboard · Q1 2026 · Prepared by Customer Success &amp; Revenue Operations · As of February 24, 2026</div>
+
+<!-- ════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════ -->
+<script>
+// ── TAB SWITCHING ──────────────────────────────────────
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── COLORS ────────────────────────────────────────────
+const C = {
+  healthy:  '#16a34a',
+  lowrisk:  '#65a30d',
+  moderate: '#f59e0b',
+  high:     '#ef4444',
+  churned:  '#94a3b8',
+};
+
+function healthColor(h) {
+  if (h === 'Healthy')       return C.healthy;
+  if (h === 'Low Risk')      return C.lowrisk;
+  if (h === 'Moderate Risk') return C.moderate;
+  if (h === 'High Risk')     return C.high;
+  return C.churned;
+}
+
+function healthBadgeClass(h) {
+  if (h === 'Healthy')       return 'hb hb-healthy';
+  if (h === 'Low Risk')      return 'hb hb-lowrisk';
+  if (h === 'Moderate Risk') return 'hb hb-moderate';
+  if (h === 'High Risk')     return 'hb hb-high';
+  return 'hb hb-churned';
+}
+
+// ── CHART DEFAULTS ───────────────────────────────────
+Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+Chart.defaults.font.size = 12;
+
+const DONUT_OPTS = {
+  responsive: true,
+  maintainAspectRatio: false,
+  cutout: '68%',
+  plugins: {
+    legend: { display: false },
+    tooltip: {
+      callbacks: {
+        label: ctx => {
+          const val = ctx.parsed;
+          const total = ctx.dataset.data.reduce((a,b)=>a+b,0);
+          const pct = ((val/total)*100).toFixed(1);
+          return ` ${ctx.label}: ${val} (${pct}%)`;
+        }
+      }
+    }
+  }
+};
+
+// ── CHART 1: Health by Account Count ─────────────────
+new Chart(document.getElementById('chartHealthAcct'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Healthy', 'Low Risk', 'Moderate Risk', 'High Risk'],
+    datasets: [{
+      data: [31, 6, 3, 3],
+      backgroundColor: [C.healthy, C.lowrisk, C.moderate, C.high],
+      borderWidth: 2,
+      borderColor: '#fff',
+    }]
+  },
+  options: {
+    ...DONUT_OPTS,
+    plugins: {
+      ...DONUT_OPTS.plugins,
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const labels = ['31 accts', '6 accts', '3 accts', '3 accts'];
+            const pcts   = ['72.1%', '14.0%', '7.0%', '7.0%'];
+            return ` ${ctx.label}: ${labels[ctx.dataIndex]} · ${pcts[ctx.dataIndex]}`;
+          }
+        }
+      }
+    }
+  }
+});
+
+// ── CHART 2: Health by MRR ───────────────────────────
+new Chart(document.getElementById('chartHealthMRR'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Healthy', 'Low Risk', 'Moderate Risk', 'High Risk'],
+    datasets: [{
+      data: [55047, 7099, 3497, 2599],
+      backgroundColor: [C.healthy, C.lowrisk, C.moderate, C.high],
+      borderWidth: 2,
+      borderColor: '#fff',
+    }]
+  },
+  options: {
+    ...DONUT_OPTS,
+    plugins: {
+      ...DONUT_OPTS.plugins,
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const vals = ['$55,047', '$7,099', '$3,497', '$2,599'];
+            const pcts = ['80.7%', '10.4%', '5.1%', '3.8%'];
+            return ` ${ctx.label}: ${vals[ctx.dataIndex]} · ${pcts[ctx.dataIndex]}`;
+          }
+        }
+      }
+    }
+  }
+});
+
+// ── CONCENTRATION BARS (custom HTML) ─────────────────
+const top10 = [
+  { name: 'Bank of New York Mellon', mrr: 13000, health: 'Healthy' },
+  { name: 'PINC Solutions / Kaleris', mrr: 3800,  health: 'Healthy' },
+  { name: 'Chargify / Maxio',         mrr: 2500,  health: 'Healthy' },
+  { name: 'MDLIVE',                   mrr: 2244,  health: 'Healthy' },
+  { name: 'Academia',                 mrr: 2062,  health: 'Low Risk' },
+  { name: 'Vndly (Workday)',          mrr: 2000,  health: 'Healthy' },
+  { name: 'Newline (Fifth Third)',     mrr: 1900,  health: 'Healthy' },
+  { name: 'Backlotcars',              mrr: 1900,  health: 'Healthy' },
+  { name: 'Cookpad Inc.',             mrr: 1814,  health: 'Healthy' },
+  { name: 'Kesko Senukai Digital',    mrr: 1770,  health: 'Healthy' },
+];
+const activeMRR = 68242;
+const maxMRR = top10[0].mrr;
+
+const concContainer = document.getElementById('concBars');
+top10.forEach(a => {
+  const pct = ((a.mrr / activeMRR) * 100).toFixed(1);
+  const fillPct = (a.mrr / maxMRR) * 100;
+  const color = healthColor(a.health);
+  concContainer.innerHTML += `
+    <div class="conc-row">
+      <div class="conc-name" title="${a.name}">${a.name}</div>
+      <div class="conc-track">
+        <div class="conc-fill" style="width:${fillPct}%; background:${color};">
+          $${(a.mrr/1000).toFixed(1)}K
+        </div>
+      </div>
+      <div class="conc-pct">${pct}%</div>
+    </div>`;
+});
+
+// ── CHART 3: Contract Type ───────────────────────────
+new Chart(document.getElementById('chartContract'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Annual / Annual (paid monthly)', 'Monthly / Other'],
+    datasets: [{
+      data: [37022, 31220],
+      backgroundColor: ['#1d4ed8', '#f59e0b'],
+      borderWidth: 2,
+      borderColor: '#fff',
+    }]
+  },
+  options: {
+    ...DONUT_OPTS,
+    plugins: {
+      ...DONUT_OPTS.plugins,
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const vals = ['$37,022 (54.3%)', '$31,220 (45.7%)'];
+            return ` ${ctx.label}: ${vals[ctx.dataIndex]}`;
+          }
+        }
+      }
+    }
+  }
+});
+
+// ── CHART 4: User Distribution ───────────────────────
+new Chart(document.getElementById('chartUsers'), {
+  type: 'bar',
+  data: {
+    labels: ['0 users', '1 user', '2–3 users', '4–5 users', '6–10 users', '11+ users', 'Unknown'],
+    datasets: [{
+      label: 'Accounts',
+      data: [2, 6, 6, 8, 3, 1, 17],
+      backgroundColor: ['#ef4444','#f59e0b','#f59e0b','#16a34a','#16a34a','#16a34a','#cbd5e1'],
+      borderRadius: 4,
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` ${ctx.parsed.y} accounts`
+        }
+      }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 10.5 } } },
+      y: {
+        beginAtZero: true,
+        ticks: { stepSize: 2, font: { size: 11 } },
+        grid: { color: '#f1f5f9' }
+      }
+    }
+  }
+});
+
+// ── RISK AGE BARS (custom HTML) ───────────────────────
+const riskAccts = [
+  { name: 'Symantec SEP Mobile', months: 49, health: 'Moderate Risk', mrr: '$1,511' },
+  { name: 'Academia',            months: 32, health: 'Low Risk',      mrr: '$2,062' },
+  { name: 'Funion LP',           months: 23, health: 'Moderate Risk', mrr: '$1,162' },
+  { name: 'Beeple',              months: 20, health: 'Low Risk',      mrr: '$824'   },
+  { name: 'taskey',              months: 17, health: 'Low Risk',      mrr: '$887'   },
+  { name: 'Heard',               months: 17, health: 'High Risk',     mrr: '$824'   },
+  { name: 'FullContour',         months: 17, health: 'Moderate Risk', mrr: '$824'   },
+  { name: 'GoodMeasures',        months: 14, health: 'High Risk',     mrr: '$824'   },
+  { name: 'Workit Health',       months: 13, health: 'Low Risk',      mrr: '$1,083' },
+  { name: 'CloudBolt',           months: 13, health: 'Low Risk',      mrr: '$1,099' },
+  { name: 'Colossusbets LTD',    months: 8,  health: 'Low Risk',      mrr: '$1,144' },
+  { name: 'Julio',               months: 2,  health: 'High Risk',     mrr: '$951'   },
+];
+const maxMonths = 49;
+const riskContainer = document.getElementById('riskAgeBars');
+riskAccts.forEach(a => {
+  const fillPct = (a.months / maxMonths) * 100;
+  const color = healthColor(a.health);
+  const label = a.months >= 6 ? `${a.months} mo` : '';
+  riskContainer.innerHTML += `
+    <div class="risk-row">
+      <div class="risk-name" title="${a.name}">${a.name}</div>
+      <div class="risk-track">
+        <div class="risk-fill" style="width:${fillPct}%; background:${color};">${label}</div>
+      </div>
+      <div class="risk-mo">${a.months} mo</div>
+      <div class="risk-mrr">${a.mrr}</div>
+    </div>`;
+});
+
+// ── FEATURE ADOPTION MATRIX ───────────────────────────
+const allAccounts = [
+  { name: 'Bank of New York Mellon',  mrr: 13000, health: 'Healthy',       errors: false,     logs: false, notes: 'APM only per contract' },
+  { name: 'PINC Solutions / Kaleris', mrr: 3800,  health: 'Healthy',       errors: false,     logs: false, notes: 'Needs dashboard grouping' },
+  { name: 'Chargify / Maxio',         mrr: 2500,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'MDLIVE',                   mrr: 2244,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Academia',                 mrr: 2062,  health: 'Low Risk',      errors: false,     logs: false, notes: 'No engagement' },
+  { name: 'Vndly (Workday)',          mrr: 2000,  health: 'Healthy',       errors: false,     logs: false, notes: 'APM only per contract' },
+  { name: 'Newline (Fifth Third)',     mrr: 1900,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Backlotcars',              mrr: 1900,  health: 'Healthy',       errors: false,     logs: false, notes: 'Offered Errors free tier — no response' },
+  { name: 'Cookpad Inc.',             mrr: 1814,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Kesko Senukai Digital',    mrr: 1770,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'ParkWhiz',                 mrr: 1600,  health: 'Healthy',       errors: false,     logs: false, notes: '2-year agreement signed' },
+  { name: 'Symantec SEP Mobile',      mrr: 1511,  health: 'Moderate Risk', errors: false,     logs: false, notes: 'Ghost account — no users' },
+  { name: 'TCI',                      mrr: 1457,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Jewlr',                    mrr: 1452,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Veracross',                mrr: 1300,  health: 'Healthy',       errors: 'pending', logs: false, notes: 'Errors in 2026 renewal' },
+  { name: 'Home Chef',                mrr: 1242,  health: 'Healthy',       errors: false,     logs: 'eval', notes: 'Evaluating Logs M-t-M' },
+  { name: 'ComunidadFeliz',           mrr: 1240,  health: 'Healthy',       errors: false,     logs: false, notes: 'Declined Errors (Rollbar)' },
+  { name: 'Donesafe',                 mrr: 1220,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Funion LP',                mrr: 1162,  health: 'Moderate Risk', errors: false,     logs: false, notes: 'No engagement' },
+  { name: 'giftHealth',               mrr: 1151,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Gymsales',                 mrr: 1144,  health: 'Healthy',       errors: true,      logs: false, notes: '✓ Adopted Errors' },
+  { name: 'Colossusbets LTD',         mrr: 1144,  health: 'Low Risk',      errors: false,     logs: false, notes: 'Budget issues' },
+  { name: 'CloudBolt',                mrr: 1099,  health: 'Low Risk',      errors: false,     logs: false, notes: 'Low adoption' },
+  { name: 'InsureConnect GmbH',       mrr: 1099,  health: 'Healthy',       errors: true,      logs: false, notes: '✓ Healthy Errors usage' },
+  { name: 'Medify Ltd',               mrr: 1099,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Workit Health',            mrr: 1083,  health: 'Low Risk',      errors: false,     logs: false, notes: '0 active users' },
+  { name: 'Introhive',                mrr: 1063,  health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Amagi',                    mrr: 999,   health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'informedk12',              mrr: 989,   health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'itsacheckmate',            mrr: 951,   health: 'Healthy',       errors: false,     logs: false, notes: 'Interest in front-end monitoring' },
+  { name: 'Entera',                   mrr: 951,   health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Julio',                    mrr: 951,   health: 'High Risk',     errors: false,     logs: false, notes: 'Champion changed' },
+  { name: 'Backerkit',                mrr: 929,   health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Platphorm LLC',            mrr: 914,   health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'taskey',                   mrr: 887,   health: 'Low Risk',      errors: false,     logs: false, notes: 'No engagement' },
+  { name: 'Jetpack Workflow',         mrr: 847,   health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Beeple',                   mrr: 824,   health: 'Low Risk',      errors: false,     logs: false, notes: '' },
+  { name: 'GoodMeasures',             mrr: 824,   health: 'High Risk',     errors: false,     logs: false, notes: '0 active users' },
+  { name: 'StreetAcademy',            mrr: 824,   health: 'Healthy',       errors: false,     logs: false, notes: 'No known champion' },
+  { name: 'Nomadix Inc.',             mrr: 824,   health: 'Healthy',       errors: false,     logs: false, notes: '' },
+  { name: 'Heard',                    mrr: 824,   health: 'High Risk',     errors: false,     logs: false, notes: '0 users, 0 usage' },
+  { name: 'FullContour',              mrr: 824,   health: 'Moderate Risk', errors: false,     logs: false, notes: '0 users, no champion' },
+  { name: 'Pandle',                   mrr: 824,   health: 'Healthy',       errors: false,     logs: false, notes: 'Previously low risk, recovered' },
+];
+
+function featCell(val) {
+  if (val === true)      return `<div class="feat-cell"><span class="feat-yes">Yes</span></div>`;
+  if (val === 'pending') return `<div class="feat-cell"><span class="feat-pending">Pending</span></div>`;
+  if (val === 'eval')    return `<div class="feat-cell"><span class="feat-pending">Evaluating</span></div>`;
+  return `<div class="feat-cell"><span class="feat-no">No</span></div>`;
+}
+
+const tbody = document.getElementById('featureMatrixBody');
+allAccounts.forEach(a => {
+  const hc = healthBadgeClass(a.health);
+  tbody.innerHTML += `
+    <tr>
+      <td style="font-weight:600; white-space:nowrap;">${a.name}</td>
+      <td class="mrr-cell">$${a.mrr.toLocaleString()}</td>
+      <td><span class="${hc}">${a.health}</span></td>
+      <td><div class="feat-cell"><span class="feat-yes">Yes</span></div></td>
+      <td>${featCell(a.errors)}</td>
+      <td>${featCell(a.logs)}</td>
+      <td style="font-size:11px; color:#64748b;">${a.notes}</td>
+    </tr>`;
+});
+</script>
+
+</body>
+</html>

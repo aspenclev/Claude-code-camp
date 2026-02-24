@@ -1,0 +1,50 @@
+
+                        TAMPA BAY - ASCII ART
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+         GULF OF MEXICO
+              |
+    ~~~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   ~          |        PINELLAS                        ~~
+  ~    GULF   |        PENINSULA                      ~~~
+  ~           |    St. Pete    Clearwater              ~~
+  ~~    ______| ___________________________            ~~
+   ~   /  TAMPA BAY (mouth)               \           ~~
+    ~ /                                    \          ~~
+     /     ~~~~~~~~~~~~~~~~~~               \         ~
+    |      ~~  OLD TAMPA BAY  ~~             |        ~
+    |      ~~      _____      ~~             |
+    |      ~~     /     \     ~~             |
+    |       ~    | DAVIS |    ~              |
+    |        ~   | ISLAND|   ~               |
+     \        ~   \_____/   ~               /
+      \        ~~~         ~~~   HILLSBOROUGH/
+       \     [ST. PETE]    ~    /COUNTY      |
+        \                 ~   /             |
+         \_______________/   /  [TAMPA]     |
+              \             /   _________   |
+               \   TAMPA   /  /          \  |
+                \   BAY   /  |   TAMPA    | |
+                 \       /   |    CITY    | |
+          [ANNA  /       \    \_________/ /
+           MARIA]         \             /
+                 ~~~~~~~~~  \__________/
+                 ~~~~~~~~~~~
+                   SARASOTA BAY (south)
+                       ~~~~~~~~~~~~~~~
+
+
+  LANDMARKS:
+  [T] = Tampa Downtown       [SP] = St. Petersburg
+  [C] = Clearwater Beach     [BW] = Bradenton/Sarasota
+  [TIA] = Tampa Intl Airport [SI]  = Safety Harbor
+
+        N
+        ^
+        |
+  W <---+---> E
+        |
+        v
+        S
+
+  Scale: Approx. 1 char = 1.5 miles

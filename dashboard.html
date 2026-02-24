@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every — NPS Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Silkscreen&display=swap');
+
+  :root {
+    --bg: #0C120C;
+    --bg2: #320440;
+    --cream: #ECEEF1;
+    --orange: #FF5300;
+    --pink: #F27F0C;
+    --cyan: #27BAAF;
+    --yellow: #F27F0C;
+    --purple: #5B025D;
+    --green: #27BAAF;
+    --red: #FF5300;
+    --dim: #8a8d93;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Scanline overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.08) 2px,
+      rgba(0,0,0,0.08) 4px
+    );
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .header::before {
+    content: '////////////////////////////////////////////////////';
+    display: block;
+    color: var(--dim);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    background: linear-gradient(135deg, #FF5300, #F27F0C, #27BAAF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+  }
+
+  .header .subtitle {
+    font-family: 'Silkscreen', cursive;
+    font-size: 0.75rem;
+    color: var(--cyan);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 0.75rem;
+  }
+
+  .header .meta {
+    font-size: 0.7rem;
+    color: var(--dim);
+    margin-top: 0.5rem;
+  }
+
+  /* Big NPS Score */
+  .nps-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .nps-big {
+    text-align: center;
+    position: relative;
+  }
+
+  .nps-big .score {
+    font-family: 'Roboto', sans-serif; font-weight: 900;
+    font-size: 8rem;
+    line-height: 1;
+    color: var(--cyan);
+    text-shadow: 0 0 40px rgba(0,245,212,0.3), 0 0 80px rgba(0,245,212,0.1);
+  }
+
+  .nps-big .label {
+    font-family: 'Silkscreen', cursive;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--dim);
+    text-transform: uppercase;
+  }
+
+  .nps-gauge {
+    width: 320px;
+  }
+
+  .gauge-bar {
+    display: flex;
+    height: 32px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(245,230,211,0.1);
+  }
+
+  .gauge-bar .detractors { background: var(--red); }
+  .gauge-bar .passives { background: var(--yellow); }
+  .gauge-bar .promoters { background: var(--green); }
+
+  .gauge-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .gauge-labels span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .gauge-labels .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Stats row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .stat-card {
+    background: var(--bg2);
+    border: 1px solid rgba(245,230,211,0.08);
+    border-radius: 8px;
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+  }
+
+  .stat-card:nth-child(1)::before { background: var(--cyan); }
+  .stat-card:nth-child(2)::before { background: var(--green); }
+  .stat-card:nth-child(3)::before { background: var(--yellow); }
+  .stat-card:nth-child(4)::before { background: var(--red); }
+
+  .stat-card .stat-value {
+    font-family: 'Roboto', sans-serif; font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .stat-card:nth-child(1) .stat-value { color: var(--cyan); }
+  .stat-card:nth-child(2) .stat-value { color: var(--green); }
+  .stat-card:nth-child(3) .stat-value { color: var(--yellow); }
+  .stat-card:nth-child(4) .stat-value { color: var(--red); }
+
+  .stat-card .stat-label {
+    font-size: 0.65rem;
+    color: var(--dim);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+
+  /* Section headers */
+  .section-title {
+    font-family: 'Silkscreen', cursive;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--orange), transparent);
+  }
+
+  /* Chart area */
+  .chart-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .chart-box {
+    background: var(--bg2);
+    border: 1px solid rgba(245,230,211,0.08);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  /* Bar chart */
+  .bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 200px;
+    padding-top: 1rem;
+  }
+
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .bar {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+    transition: all 0.5s ease;
+    min-height: 2px;
+  }
+
+  .bar:hover {
+    filter: brightness(1.3);
+  }
+
+  .bar .bar-count {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: var(--cream);
+    font-weight: 700;
+  }
+
+  .bar-label {
+    font-size: 0.7rem;
+    color: var(--dim);
+  }
+
+  /* Donut chart */
+  .donut-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 200px;
+    padding-top: 1rem;
+  }
+
+  .donut-canvas {
+    width: 170px;
+    height: 170px;
+  }
+
+  .donut-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  .legend-item .legend-pct {
+    color: var(--cream);
+    font-weight: 700;
+    min-width: 36px;
+  }
+
+  .legend-item .legend-label {
+    color: var(--dim);
+  }
+
+  /* Word cloud */
+  .word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.7rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 120px;
+  }
+
+  .word-cloud span {
+    display: inline-block;
+    transition: transform 0.2s;
+    cursor: default;
+    line-height: 1.3;
+  }
+
+  .word-cloud span:hover {
+    transform: scale(1.15);
+  }
+
+  /* Search section */
+  .search-section {
+    margin-bottom: 3rem;
+  }
+
+  .search-bar-wrap {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .search-bar {
+    width: 100%;
+    background: var(--bg2);
+    border: 1px solid rgba(245,230,211,0.15);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem 0.9rem 3rem;
+    color: var(--cream);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-bar::placeholder {
+    color: var(--dim);
+  }
+
+  .search-bar:focus {
+    border-color: #27BAAF;
+    box-shadow: 0 0 20px rgba(39,186,175,0.15);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--dim);
+    font-size: 1rem;
+    pointer-events: none;
+  }
+
+  .search-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.7rem;
+    color: var(--dim);
+  }
+
+  .search-filters {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    background: var(--bg2);
+    border: 1px solid rgba(245,230,211,0.1);
+    border-radius: 4px;
+    padding: 0.3rem 0.7rem;
+    color: var(--dim);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.65rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .filter-btn:hover {
+    border-color: rgba(245,230,211,0.3);
+    color: var(--cream);
+  }
+
+  .filter-btn.active {
+    border-color: #27BAAF;
+    color: #27BAAF;
+    background: rgba(39,186,175,0.08);
+  }
+
+  .responses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+
+  .responses-list::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .responses-list::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+
+  .responses-list::-webkit-scrollbar-thumb {
+    background: var(--dim);
+    border-radius: 2px;
+  }
+
+  .response-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--bg2);
+    border: 1px solid rgba(245,230,211,0.06);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    transition: border-color 0.2s;
+  }
+
+  .response-row:hover {
+    border-color: rgba(245,230,211,0.15);
+  }
+
+  .response-score {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--bg);
+  }
+
+  .response-score.promoter { background: var(--green); }
+  .response-score.passive { background: var(--yellow); }
+  .response-score.detractor { background: var(--red); }
+
+  .response-text {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: rgba(245,230,211,0.8);
+    flex: 1;
+  }
+
+  .response-text mark {
+    background: rgba(39,186,175,0.2);
+    color: #27BAAF;
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 3rem;
+    color: var(--dim);
+    font-size: 0.8rem;
+  }
+
+  /* Heatmap */
+  .heatmap-row {
+    margin-bottom: 3rem;
+  }
+
+  .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 4px;
+  }
+
+  .heatmap-cell {
+    aspect-ratio: 1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: default;
+    transition: transform 0.15s;
+    position: relative;
+  }
+
+  .heatmap-cell:hover {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+
+  .heatmap-labels {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  .heatmap-labels span {
+    text-align: center;
+    font-size: 0.65rem;
+    color: var(--dim);
+  }
+
+  /* Quotes ticker */
+  .quotes-section {
+    margin-bottom: 3rem;
+  }
+
+  .quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .quote-card {
+    background: var(--bg2);
+    border: 1px solid rgba(245,230,211,0.08);
+    border-radius: 8px;
+    padding: 1.25rem;
+    position: relative;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: rgba(245,230,211,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .quote-card::before {
+    content: '\201C';
+    font-family: 'Roboto', sans-serif; font-weight: 900;
+    font-size: 3rem;
+    line-height: 1;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    opacity: 0.15;
+  }
+
+  .quote-card .quote-text {
+    margin-top: 1rem;
+  }
+
+  .quote-card .quote-score {
+    font-family: 'Silkscreen', cursive;
+    font-size: 0.65rem;
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(245,230,211,0.06);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .score-pip {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: var(--bg);
+  }
+
+  /* Animated ticker */
+  .ticker-wrap {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border-top: 1px solid rgba(236,238,241,0.06);
+    border-bottom: 1px solid rgba(236,238,241,0.06);
+    padding: 0.8rem 0;
+    position: relative;
+  }
+
+  .ticker-wrap::before,
+  .ticker-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+  }
+
+  .ticker-wrap::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--bg), transparent);
+  }
+
+  .ticker-wrap::after {
+    right: 0;
+    background: linear-gradient(90deg, transparent, var(--bg));
+  }
+
+  .ticker {
+    display: flex;
+    gap: 2rem;
+    animation: ticker 30s linear infinite;
+    width: max-content;
+  }
+
+  .ticker span {
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .ticker .t-orange { color: #FF5300; }
+  .ticker .t-teal { color: #27BAAF; }
+  .ticker .t-amber { color: #F27F0C; }
+  .ticker .t-dim { color: var(--dim); }
+
+  .ticker .t-sep {
+    color: rgba(236,238,241,0.15);
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Animated pulse on NPS */
+  .nps-big .score {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { text-shadow: 0 0 40px rgba(39,186,175,0.3), 0 0 80px rgba(39,186,175,0.1); }
+    50% { text-shadow: 0 0 60px rgba(39,186,175,0.5), 0 0 120px rgba(39,186,175,0.2); }
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(245,230,211,0.06);
+    font-size: 0.65rem;
+    color: var(--dim);
+  }
+
+  .footer::after {
+    content: '////////////////////////////////////////////////////';
+    display: block;
+    color: var(--dim);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .chart-row { grid-template-columns: 1fr; }
+    .quotes-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 2.5rem; }
+    .nps-big .score { font-size: 5rem; }
+    .nps-hero { gap: 1.5rem; }
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate {
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  .animate:nth-child(2) { animation-delay: 0.1s; }
+  .animate:nth-child(3) { animation-delay: 0.2s; }
+  .animate:nth-child(4) { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header animate">
+    <h1>Every NPS</h1>
+    <div class="subtitle">Net Promoter Score Dashboard</div>
+    <div class="meta">195 responses · Survey 2025</div>
+  </div>
+
+  <!-- Hero NPS -->
+  <div class="nps-hero animate">
+    <div class="nps-big">
+      <div class="score" id="npsScore">0</div>
+      <div class="label">NPS Score</div>
+    </div>
+    <div class="nps-gauge">
+      <div class="gauge-bar">
+        <div class="detractors" style="width: 9.7%"></div>
+        <div class="passives" style="width: 35.4%"></div>
+        <div class="promoters" style="width: 54.9%"></div>
+      </div>
+      <div class="gauge-labels">
+        <span><span class="dot" style="background:var(--red)"></span>Detractors 9.7%</span>
+        <span><span class="dot" style="background:var(--yellow)"></span>Passives 35.4%</span>
+        <span><span class="dot" style="background:var(--green)"></span>Promoters 54.9%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-card animate">
+      <div class="stat-value">195</div>
+      <div class="stat-label">Total Responses</div>
+    </div>
+    <div class="stat-card animate">
+      <div class="stat-value">107</div>
+      <div class="stat-label">Promoters (9–10)</div>
+    </div>
+    <div class="stat-card animate">
+      <div class="stat-value">69</div>
+      <div class="stat-label">Passives (7–8)</div>
+    </div>
+    <div class="stat-card animate">
+      <div class="stat-value">19</div>
+      <div class="stat-label">Detractors (0–6)</div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="section-title">Score Distribution</div>
+  <div class="chart-row">
+    <div class="chart-box animate">
+      <div class="bar-chart" id="barChart"></div>
+    </div>
+    <div class="chart-box animate">
+      <div class="donut-container">
+        <canvas class="donut-canvas" id="donutCanvas" width="170" height="170"></canvas>
+        <div class="donut-legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background:var(--green)"></div>
+            <span class="legend-pct">54.9%</span>
+            <span class="legend-label">Promoters</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:var(--yellow)"></div>
+            <span class="legend-pct">35.4%</span>
+            <span class="legend-label">Passives</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:var(--red)"></div>
+            <span class="legend-pct">9.7%</span>
+            <span class="legend-label">Detractors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Heatmap -->
+  <div class="heatmap-row">
+    <div class="section-title">Response Heatmap</div>
+    <div class="chart-box animate">
+      <div class="heatmap-grid" id="heatmap"></div>
+      <div class="heatmap-labels" id="heatmapLabels"></div>
+    </div>
+  </div>
+
+  <!-- Word cloud -->
+  <div class="section-title">Common Themes</div>
+  <div class="chart-box animate" style="margin-bottom: 3rem;">
+    <div class="word-cloud" id="wordCloud"></div>
+  </div>
+
+  <!-- Animated Ticker -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="t-teal">NPS +45</span><span class="t-sep">///</span>
+      <span class="t-orange">107 PROMOTERS</span><span class="t-sep">///</span>
+      <span class="t-dim">195 RESPONSES</span><span class="t-sep">///</span>
+      <span class="t-amber">54.9% RECOMMEND</span><span class="t-sep">///</span>
+      <span class="t-teal">"CUTTING EDGE"</span><span class="t-sep">///</span>
+      <span class="t-orange">"AI NEWSLETTER"</span><span class="t-sep">///</span>
+      <span class="t-dim">"BLEEDING EDGE"</span><span class="t-sep">///</span>
+      <span class="t-amber">"MUST-READ"</span><span class="t-sep">///</span>
+      <span class="t-teal">"BOUTIQUE CODERS"</span><span class="t-sep">///</span>
+      <span class="t-orange">"VIBE CODING"</span><span class="t-sep">///</span>
+      <span class="t-dim">"DELIGHTS ME"</span><span class="t-sep">///</span>
+      <span class="t-amber">"AI GURUS"</span><span class="t-sep">///</span>
+      <!-- duplicate for seamless loop -->
+      <span class="t-teal">NPS +45</span><span class="t-sep">///</span>
+      <span class="t-orange">107 PROMOTERS</span><span class="t-sep">///</span>
+      <span class="t-dim">195 RESPONSES</span><span class="t-sep">///</span>
+      <span class="t-amber">54.9% RECOMMEND</span><span class="t-sep">///</span>
+      <span class="t-teal">"CUTTING EDGE"</span><span class="t-sep">///</span>
+      <span class="t-orange">"AI NEWSLETTER"</span><span class="t-sep">///</span>
+      <span class="t-dim">"BLEEDING EDGE"</span><span class="t-sep">///</span>
+      <span class="t-amber">"MUST-READ"</span><span class="t-sep">///</span>
+      <span class="t-teal">"BOUTIQUE CODERS"</span><span class="t-sep">///</span>
+      <span class="t-orange">"VIBE CODING"</span><span class="t-sep">///</span>
+      <span class="t-dim">"DELIGHTS ME"</span><span class="t-sep">///</span>
+      <span class="t-amber">"AI GURUS"</span><span class="t-sep">///</span>
+    </div>
+  </div>
+
+  <!-- Search Responses -->
+  <div class="search-section">
+    <div class="section-title">Search Responses</div>
+    <div class="search-bar-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" class="search-bar" id="searchInput" placeholder="Search descriptions... try 'newsletter', 'tools', 'cutting edge'">
+    </div>
+    <div class="search-meta">
+      <span id="resultCount">Showing all 195 responses</span>
+      <div class="search-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="promoter">Promoters</button>
+        <button class="filter-btn" data-filter="passive">Passives</button>
+        <button class="filter-btn" data-filter="detractor">Detractors</button>
+      </div>
+    </div>
+    <div class="responses-list" id="responsesList"></div>
+  </div>
+
+  <!-- Quotes -->
+  <div class="quotes-section">
+    <div class="section-title">Highlights</div>
+    <div class="quotes-grid" id="quotesGrid"></div>
+  </div>
+
+  <div class="footer">
+    Every · NPS Dashboard · Rendered with love & pixels
+  </div>
+
+</div>
+
+<script>
+// ── Raw Data ──
+const rawData = [
+  [9,"media co meets blog meets startup studio"],
+  [10,"The best resource for having any hope of actually using AI in your daily work"],
+  [6,"Nerdy"],
+  [10,"Tech/AI insight and news"],
+  [10,"Media that also incubate apps"],
+  [8,"Deep articles about important subjects and sophisticated apps"],
+  [10,"boutique coders"],
+  [3,"It was... a collection of the best writers in tech & business as one bundle. Now.. I think it's a collection of the best on AI?"],
+  [4,"I like the blog, but I find the products very confusing. And I have been underwhelmed with customer service"],
+  [10,"Tech Hub Newsletter for practical applications."],
+  [8,"Very cool ai awareness site"],
+  [10,"The easiest way to stay up to date on AI things without being overwhelmed. plus you get some helpful apps."],
+  [8,"Really sharp writing and a useful set of tools"],
+  [9,"They run an AI newsletter and use AI to build their own products"],
+  [10,"Accessible insights on cutting edge AL + useful tools."],
+  [8,"News for LLM users"],
+  [7,"An AI content and product studio ? Smart useful ai stuff."],
+  [9,"Great. Have recommended it to two other people."],
+  [6,"Magazine an products about ai"],
+  [8,"Useful tools with good AI hot takes"],
+  [10,"Ai studio with newsletter and useful tools with the subscription"],
+  [9,"A cool AI lab company that writes about what it does."],
+  [8,"AI oriented editorials + software"],
+  [10,"Great insights, building cool stuff, very approachable, humble, good thinkers, fun, smart"],
+  [6,"Interesting combination of AI apps and content"],
+  [10,"an innovative company that produces great content and has great products"],
+  [8,"Your AI source of useful news, insights, commentary and killer useful apps all in one."],
+  [8,"A bunch of really smart people who sit inside the world of tech and VC culture but who do good things."],
+  [7,"No idea honestly"],
+  [8,"Great subscription with in-depth interesting content."],
+  [7,"A modern media company"],
+  [10,"If you want to take AI seriously, and get better at working with it, go here"],
+  [10,"Media/venture studio with a community"],
+  [0,"Good content, but they will abuse the trust and relationship and fleece you for more money."],
+  [8,"Newsletter and early AI products"],
+  [8,"Ai newsletters + cute software products"],
+  [8,"Media Company meets Product Building Studio"],
+  [8,"A really innovative portfolio company who produces a ton of content and tools."],
+  [9,"High signal resource on ai and tech"],
+  [9,"Good value. Good articles and software"],
+  [10,"Super smart and useful content on AI innovation, great community and subscriber benefits"],
+  [7,"AI trends"],
+  [9,"A leading edge thinkers paper and bundles with some great tools."],
+  [8,"One of the best ai information sources out there to get the big picture on ai"],
+  [10,"Delights me"],
+  [10,"The place to learn how to use AI"],
+  [10,"Tech articles written by authors who provided insights beyond just the surface level"],
+  [8,"The best and most practical set of guides for using AI."],
+  [10,"AI newsletter/guide and tools to help keep on top of latest and greatest."],
+  [10,"Insights from the frontier of AI IRL from people who build a lot and reflect even more"],
+  [7,"An AI think-tank covering the non-technical side of things"],
+  [5,"Cool people doing cool things that I would like to have the time to learn more about"],
+  [10,"Cutting edge practitioners of ai-assisted coding tools"],
+  [8,"Learn about ai and new models"],
+  [8,"good product"],
+  [8,"Premium newsletter bundle with products I should be using."],
+  [7,"Cutting edge and insightful but not easy reading"],
+  [8,"An AI writing and product studio"],
+  [7,"An AI-first software and consulting house."],
+  [10,"A must-read for AI and Tech enthusiasts"],
+  [2,"Company that does interesting newsletter, with bunch of AI apps"],
+  [0,"too much"],
+  [9,"Interesting company to watch and study in terms of how it builds products"],
+  [10,"AI newsletter + monologue"],
+  [7,"An AI newsletter with some interesting experimental products"],
+  [9,"The AI newsletter you need to read"],
+  [10,"A next gen media company/incubator, run by really cool people with an abundance mindset"],
+  [7,"A publication to learn about the AI and how to use it effectively. And some nice software"],
+  [9,"Extremely knowledgeable in the AI content space and beyond"],
+  [8,"An AI focused web publication that also builds apps."],
+  [9,"New generation media company"],
+  [8,"Thought leaders on AI and technology"],
+  [8,"AI Product studio that writes practical essays"],
+  [10,"Thoughtful and practical writing on AI"],
+  [8,"A newsletter that digs deeper to look at AI from a philosophical angle"],
+  [9,"Good bundle of AI expertise and products"],
+  [8,"A thoughtful and balanced way to stay on the AI front lines without getting overwhelmed."],
+  [10,"Highly recommended"],
+  [10,"An essential resource to learn about applied AI"],
+  [10,"A team that loves tech and AI and lets their curiosity determine how that manifests"],
+  [10,"My main resource for understanding actual AI developments without the usual hype"],
+  [8,"A thoughtful ecosystem of writing and apps"],
+  [10,"A place to learn about how ai is actually used"],
+  [6,"Interesting (but not all essays)"],
+  [10,"The best most bleeding edge ai newsletter"],
+  [8,"Sharpness meter"],
+  [9,"THE place to date, engaged, and educated about the practical uses of AI, plus useful apps"],
+  [7,"Good content"],
+  [10,"smart publisher of new ways to work"],
+  [8,"Mostly a blog from AI thought leaders, but they also have a suite of AI-powered products."],
+  [7,"Great AI newsletter and information source"],
+  [6,"I don't know"],
+  [7,"Where you hear about AI stuff before the masses"],
+  [8,"AI work company"],
+  [8,"Interesting hybrid company"],
+  [10,"smartest people i've found talking about how to actually leverage ai"],
+  [9,"A must have if you're a developer in 2025. A knowledge hub curated by experts who are educators at heart."],
+  [7,"Set of newsletters about tech, AI, and startup culture, who also make their own AI tools"],
+  [8,"High quality tech & ai newsletter from really good writers combined with software bundle"],
+  [10,"top 3 newsletter, super team"],
+  [8,"Forward looking, thoughtful content"],
+  [8,"It's this eclectic forward-looking newsletter that I pay a decent amount for but somehow it's worth it!"],
+  [9,"An AI native company that is building AI tools and publishing AI thought leadership at the edge"],
+  [9,"People building AI with AI and helping others do the same."],
+  [10,"Combo AI newsletter and cutting edge tools to put AI into daily use"],
+  [8,"A newsletter that helps you stay on the cutting edge of AI tools"],
+  [10,"Cutting edge no fluff AI newsletter"],
+  [10,"Useful AI news, knowledge, and products"],
+  [10,"AI startup incubator for writing, products, and consulting"],
+  [10,"Rather than trying to catch up on every piece of AI news, I find it far more efficient to learn from the things you share."],
+  [9,"A curated collection of thought leaders in technology, with some really cool software"],
+  [7,"Favorite thought pieces on AI."],
+  [10,"The most balanced AI resource for AI philosophy and application."],
+  [7,"It WAS a great resource for how people were using the AI for life and biz"],
+  [8,"A helpful AI newsletter with a few apps bundled with it"],
+  [10,"A no nonsense, no slop, company with products that deliver real AI assisted value"],
+  [10,"Ai gurus"],
+  [9,"Newsletter for startups"],
+  [9,"A great way to see what can be done with AI"],
+  [0,"Good until a point. While the marketing talks about the tools I can use, I did not find out until after I subscribed that the majority are for Mac users."],
+  [7,"An AI forward media and product company"],
+  [10,"The best tech newsletter"],
+  [10,"A masterfully done AI-generated but human-in-the-loop perfected highly stylized newsletter"],
+  [8,"Deeper insight into the reality of AI"],
+  [8,"Blacksmiths hammering AI into useful tools"],
+  [10,"A company that started out as a newsletter collective but has pivoted to being an AI product development house"],
+  [8,"One of the most amazing AI first media companies on the planet."],
+  [8,"Where you can obtain the Frontier information of AI?"],
+  [10,"Bleeding edge of vibe coding writing"],
+  [8,"Very informative and well researched"],
+  [7,"Every provides deep insights into Agentic coding and workflows."],
+  [10,"Bleeding edge of AI"],
+  [9,"An integrated media, product, and consulting/teaching firm"],
+  [8,"An example of what future teams are going to look like."],
+  [10,"If you have any intent on leveling up, subscribe. Frankly, I tell them it's a steal!"],
+  [9,"At first a newsletter about AI, but now more a platform about AI with some useful tools"],
+  [3,"I would about 2 years ago, but not anymore. I find Every less interesting after it switched over to AI"],
+  [10,"Every is a place where you can use tools for everything and gain knowledge about everything"],
+  [10,"Best ai/tech newsletter in the world."],
+  [9,"Big brother in this AI driven world. Unofficial mentor and go to space for high calibre AI information."],
+  [10,"A product studio combined with an online magazine and it's all about cutting edge AI"],
+  [10,"A playbook for how to work AI-first"],
+  [10,"Automations to speed up email management, desktop cleaner, and social media content creator"],
+  [10,"Best source of AI related content, not just news but more philosophical topics"],
+  [7,"They build apps and write about it?"],
+  [10,"Boosts productivity and creativity"],
+  [5,"Kinda weird intersection of nerdy AI shit and crafty business thinking"],
+  [8,"Daily AI Newsletter + AI software bundle wrapped in a monthly subscription service"],
+  [4,"A sub to a bundle of apps"],
+  [9,"A small suite of AI apps that instantly help you to be more productive."],
+  [5,"a well-written AI newsletter"],
+  [9,"A really cool business model for people who like in depth content"],
+  [9,"subscription that gives u newsletters & apps"],
+  [8,"they build AI products and have a good overview and opinions on all matters related to AI"],
+  [10,"Good writing plus personal insights into AI"],
+  [9,"A non-ego oriented publishing and software startup"],
+  [10,"Innovative media / software / consulting company: the future of business!"],
+  [10,"One of the best sources for how to think about and use AI"],
+  [10,"The best AI-newsletter in the world"],
+  [3,"Learning about and Building AI in Public"],
+  [6,"A tech newsletter that also makes their own tools and apps"],
+  [10,"My go to source for AI news"],
+  [9,"Good, actionable, timely reads on AI"],
+  [7,"An ideas company with premium media, training and scrappy software products"],
+  [10,"A newsletter and software subscription"],
+  [10,"Every is the rare publication that sits comfortably between worlds"],
+  [8,"Amazing writing, cool products, and really beneficial workshops, all related to AI"],
+  [9,"Valued content"],
+  [5,"Product company that explains how they build their products"],
+  [9,"valued content"],
+  [10,"A relevant collaborative AI product and news source"],
+  [10,"Exceptional journalism and relevance to the emerging field of AI"],
+  [9,"Modern and fresh ideas to AI where they borrow things from journalism"],
+  [10,"My go-to source of AI info"],
+  [9,"Every is your insider pass into the rooms where it happens"],
+  [8,"journalistic startup that builds software targeted for journalists"],
+  [7,"Forward thinking AI newsletter that has applications to those interested in productivity."],
+  [10,"Best AI analysis"],
+  [9,"Great combo of info and tools"],
+  [10,"Leading edge; on point; interesting"],
+  [10,"Suite of applications that can power whatever you need to do."],
+  [9,"A suite of products focused on QoL through AI that seeks to augment what we as humans are trying to accomplish."],
+  [9,"Super smart people navigating this tech/human moment with insight, creativity, and humility."],
+  [10,"Subscription worth it for the writing alone, incredible benefit for writing + Cora + Monologue"],
+  [7,"Pretty relevant perspectives on AI usage"],
+  [7,"Ai native dev shop that also offers consulting on ai development"],
+  [10,"Company that creates AI tools that also writes about the process and shares their experience"],
+  [9,"The most useful AI subscription to learn how to use AI for productivity"],
+  [9,"A suite of tools and news that make your life easier"],
+  [9,"A subscription that lets you access a suite of great AI product + great content"],
+  [9,"Doing the grunt work of keeping you up to speed on what's relevant & useful, building unique products"],
+  [7,"An AI product lab"],
+  [7,"Tech/AI magazine slash software incubating studio"],
+  [7,"An AI focused newsletter with a collection of cool apps"],
+  [10,"A collective of technologists"],
+];
+
+const scoreCounts = [3, 0, 1, 3, 2, 4, 6, 25, 44, 38, 69];
+const total = 195;
+const promoters = 107;
+const passives = 69;
+const detractors = 19;
+const nps = Math.round(((promoters - detractors) / total) * 100);
+
+// ── Animate NPS number ──
+const npsEl = document.getElementById('npsScore');
+let current = 0;
+const step = nps / 40;
+function animateNPS() {
+  current += step;
+  if (current >= nps) {
+    npsEl.textContent = nps;
+    return;
+  }
+  npsEl.textContent = Math.round(current);
+  requestAnimationFrame(animateNPS);
+}
+setTimeout(animateNPS, 400);
+
+// ── Bar Chart ──
+const barChart = document.getElementById('barChart');
+const maxCount = Math.max(...scoreCounts);
+const barColors = [
+  '#FF5300','#FF5300','#FF5300','#FF5300','#FF5300','#FF5300','#FF5300',
+  '#F27F0C','#F27F0C',
+  '#27BAAF','#27BAAF'
+];
+
+scoreCounts.forEach((count, i) => {
+  const col = document.createElement('div');
+  col.className = 'bar-col';
+  const bar = document.createElement('div');
+  bar.className = 'bar';
+  const pct = maxCount > 0 ? (count / maxCount) * 100 : 0;
+  bar.style.height = Math.max(pct, 1) + '%';
+  bar.style.background = barColors[i];
+  const countLabel = document.createElement('span');
+  countLabel.className = 'bar-count';
+  countLabel.textContent = count;
+  bar.appendChild(countLabel);
+  const label = document.createElement('span');
+  label.className = 'bar-label';
+  label.textContent = i;
+  col.appendChild(bar);
+  col.appendChild(label);
+  barChart.appendChild(col);
+});
+
+// ── Donut Chart ──
+const canvas = document.getElementById('donutCanvas');
+const ctx = canvas.getContext('2d');
+const cx = 85, cy = 85, r = 70, lw = 28;
+const segments = [
+  { pct: detractors / total, color: '#FF5300' },
+  { pct: passives / total, color: '#F27F0C' },
+  { pct: promoters / total, color: '#27BAAF' }
+];
+let angle = -Math.PI / 2;
+segments.forEach(seg => {
+  const sweep = seg.pct * Math.PI * 2;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, angle, angle + sweep);
+  ctx.strokeStyle = seg.color;
+  ctx.lineWidth = lw;
+  ctx.lineCap = 'butt';
+  ctx.stroke();
+  angle += sweep;
+});
+ctx.fillStyle = '#f5e6d3';
+ctx.font = '900 28px "Roboto", sans-serif';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText('+' + nps, cx, cy);
+
+// ── Heatmap ──
+const heatmap = document.getElementById('heatmap');
+const heatmapLabels = document.getElementById('heatmapLabels');
+scoreCounts.forEach((count, i) => {
+  const cell = document.createElement('div');
+  cell.className = 'heatmap-cell';
+  const intensity = maxCount > 0 ? count / maxCount : 0;
+  let baseColor;
+  if (i <= 6) baseColor = [255, 83, 0];
+  else if (i <= 8) baseColor = [242, 127, 12];
+  else baseColor = [39, 186, 175];
+  const r = Math.round(baseColor[0] * intensity + 36 * (1 - intensity));
+  const g = Math.round(baseColor[1] * intensity + 24 * (1 - intensity));
+  const b = Math.round(baseColor[2] * intensity + 52 * (1 - intensity));
+  cell.style.background = `rgb(${r},${g},${b})`;
+  cell.style.color = intensity > 0.3 ? 'rgba(0,0,0,0.7)' : 'rgba(245,230,211,0.4)';
+  cell.textContent = count;
+  cell.title = `Score ${i}: ${count} responses`;
+  heatmap.appendChild(cell);
+});
+for (let i = 0; i <= 10; i++) {
+  const lbl = document.createElement('span');
+  lbl.textContent = i;
+  heatmapLabels.appendChild(lbl);
+}
+
+// ── Word Cloud ──
+const words = [
+  ['AI', 60], ['newsletter', 42], ['products', 28], ['tools', 26],
+  ['cutting edge', 18], ['content', 22], ['insights', 16], ['apps', 20],
+  ['writing', 14], ['practical', 12], ['media company', 15], ['useful', 18],
+  ['smart', 10], ['innovative', 9], ['bleeding edge', 8], ['productivity', 10],
+  ['studio', 11], ['frontier', 7], ['subscription', 8], ['AI-first', 6],
+  ['must-read', 5], ['software', 12], ['deep', 6], ['vibe coding', 4],
+  ['thoughtful', 8], ['tech', 14], ['startup', 6], ['workflows', 5],
+  ['learning', 7], ['community', 5], ['bundle', 6], ['incubator', 4],
+  ['resource', 9], ['philosophy', 4], ['masterful', 3], ['blog', 5]
+];
+const cloudColors = ['#FF5300', '#F27F0C', '#27BAAF', '#5B025D', '#ECEEF1', '#27BAAF', '#FF5300', '#F27F0C'];
+const cloud = document.getElementById('wordCloud');
+const maxW = Math.max(...words.map(w => w[1]));
+words.forEach(([word, freq]) => {
+  const span = document.createElement('span');
+  span.textContent = word;
+  const scale = 0.6 + (freq / maxW) * 1.8;
+  span.style.fontSize = scale + 'rem';
+  span.style.color = cloudColors[Math.floor(Math.random() * cloudColors.length)];
+  span.style.opacity = 0.6 + (freq / maxW) * 0.4;
+  span.style.fontWeight = freq > 15 ? '700' : '400';
+  if (Math.random() > 0.7) span.style.fontStyle = 'italic';
+  cloud.appendChild(span);
+});
+
+// ── Search & Filter Responses ──
+const searchInput = document.getElementById('searchInput');
+const responsesList = document.getElementById('responsesList');
+const resultCount = document.getElementById('resultCount');
+const filterBtns = document.querySelectorAll('.filter-btn');
+let activeFilter = 'all';
+
+function getCategory(score) {
+  if (score >= 9) return 'promoter';
+  if (score >= 7) return 'passive';
+  return 'detractor';
+}
+
+function highlightText(text, query) {
+  if (!query) return text;
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(`(${escaped})`, 'gi');
+  return text.replace(regex, '<mark>$1</mark>');
+}
+
+function renderResponses() {
+  const query = searchInput.value.trim().toLowerCase();
+  responsesList.innerHTML = '';
+
+  let filtered = rawData.filter(([score, text]) => {
+    const cat = getCategory(score);
+    if (activeFilter !== 'all' && cat !== activeFilter) return false;
+    if (query && !text.toLowerCase().includes(query)) return false;
+    return true;
+  });
+
+  // Sort: promoters first, then passives, then detractors
+  filtered.sort((a, b) => b[0] - a[0]);
+
+  resultCount.textContent = filtered.length === rawData.length
+    ? `Showing all ${rawData.length} responses`
+    : `${filtered.length} of ${rawData.length} responses`;
+
+  if (filtered.length === 0) {
+    responsesList.innerHTML = '<div class="no-results">No responses match your search.</div>';
+    return;
+  }
+
+  filtered.forEach(([score, text]) => {
+    const row = document.createElement('div');
+    row.className = 'response-row';
+
+    const scoreBadge = document.createElement('div');
+    scoreBadge.className = 'response-score ' + getCategory(score);
+    scoreBadge.textContent = score;
+
+    const textEl = document.createElement('div');
+    textEl.className = 'response-text';
+    textEl.innerHTML = highlightText(text, searchInput.value.trim());
+
+    row.appendChild(scoreBadge);
+    row.appendChild(textEl);
+    responsesList.appendChild(row);
+  });
+}
+
+searchInput.addEventListener('input', renderResponses);
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderResponses();
+  });
+});
+
+// Initial render
+renderResponses();
+
+// ── Quotes ──
+const quotes = [
+  { text: "media co meets blog meets startup studio", score: 9 },
+  { text: "boutique coders", score: 10 },
+  { text: "Delights me", score: 10 },
+  { text: "Blacksmiths hammering AI into useful tools", score: 8 },
+  { text: "Cutting edge practitioners of ai-assisted coding tools", score: 10 },
+  { text: "Kinda weird intersection of nerdy AI shit and crafty business thinking", score: 5 },
+  { text: "smart publisher of new ways to work", score: 10 },
+  { text: "Sharpness meter", score: 8 },
+  { text: "Ai gurus", score: 10 },
+  { text: "An example of what future teams are going to look like.", score: 8 },
+  { text: "Bleeding edge of vibe coding writing", score: 10 },
+  { text: "A playbook for how to work AI-first", score: 10 },
+];
+const grid = document.getElementById('quotesGrid');
+quotes.forEach(q => {
+  const card = document.createElement('div');
+  card.className = 'quote-card animate';
+  const text = document.createElement('div');
+  text.className = 'quote-text';
+  text.textContent = q.text;
+  const scoreLine = document.createElement('div');
+  scoreLine.className = 'quote-score';
+  const pip = document.createElement('span');
+  pip.className = 'score-pip';
+  pip.textContent = q.score;
+  if (q.score >= 9) pip.style.background = '#27BAAF';
+  else if (q.score >= 7) pip.style.background = '#F27F0C';
+  else pip.style.background = '#FF5300';
+  const scoreLabel = document.createElement('span');
+  scoreLabel.textContent = 'NPS ' + q.score;
+  scoreLabel.style.color = 'var(--dim)';
+  scoreLine.appendChild(pip);
+  scoreLine.appendChild(scoreLabel);
+  card.appendChild(text);
+  card.appendChild(scoreLine);
+  grid.appendChild(card);
+});
+</script>
+</body>
+</html>
